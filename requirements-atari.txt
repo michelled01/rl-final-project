@@ -1,24 +1,3 @@
-## rl-final-project
-
-# Files 
-* `dqn_atari.py`: Main algorithm
-
-# To Run
-Currently testing on Pong (Atari 2600 Game). 
-
-To execute, cd into `rl-final-project` and run
-```
-python dqn_atari.py --env-id PongNoFrameskip-v4
-tensorboard --logdir runs
-```
-
-<!-- # Errors
-This system does not have apparently enough memory to store the complete replay buffer 28.24GB > 8.13GB -->
-
-# Requirements
-
-Requirements pulled from `https://github.com/vwxyzjn/cleanrl`.
-```
 absl-py==1.4.0 ; python_version >= "3.8" and python_version < "3.11"
 ale-py==0.8.1 ; python_version >= "3.8" and python_version < "3.11"
 appdirs==1.4.4 ; python_version >= "3.8" and python_version < "3.11"
@@ -101,5 +80,3 @@ wandb==0.13.11 ; python_version >= "3.8" and python_version < "3.11"
 werkzeug==2.2.3 ; python_version >= "3.8" and python_version < "3.11"
 wheel==0.40.0 ; python_version >= "3.8" and python_version < "3.11"
 zipp==3.15.0 ; python_version >= "3.8" and python_version < "3.10"
-```
-
