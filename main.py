@@ -13,6 +13,7 @@ def main():
             a = env.action_space.sample()
             obs, reward, terminated, truncated, info = env.step(a)
             print(reward)
+            #print(f"obs = {obs}\nreward = {reward}\nterminated = {terminated}\ntruncated = {truncated}, info = {info}")
 
 if __name__ == '__main__':
     main()
