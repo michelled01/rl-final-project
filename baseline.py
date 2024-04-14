@@ -3,6 +3,7 @@ import stable_baselines3
 import os
 
 def main():
+    # atari example: https://stable-baselines.readthedocs.io/en/master/guide/examples.html#id2
     baseline_algo = stable_baselines3.PPO # or A2C, try getting DQN to work too
     atari_name = 'Pong'
     model_path = f"baseline_{baseline_algo.__name__}_{atari_name}"
