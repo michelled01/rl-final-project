@@ -34,7 +34,6 @@ def main():
         time.sleep(1/60)
 
         with tf.summary.create_file_writer(log_dir).as_default():
-            print(reward, info, info[0])
             tf.summary.scalar('reward', reward.item() ,step=step)
             tf.summary.scalar('episode_length', info[0]['episode_frame_number'],step=step)
         
