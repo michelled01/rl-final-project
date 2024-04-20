@@ -1,46 +1,35 @@
+import time
 import stable_baselines3
 import tensorflow as tf
-from tensorflow.keras.callbacks import TensorBoard
 
 import os
 
 def main():
-
     # atari example: https://stable-baselines.readthedocs.io/en/master/guide/examples.html#id2
-    baseline_algo = stable_baselines3.PPO # or A2C, try getting DQN to work too
-    atari_name = 'Pong'
-    model_path = f"baseline_{baseline_algo.__name__}_{atari_name}"
-    env = stable_baselines3.common.env_util.make_atari_env(f"ALE/{atari_name}-v5")
-    env = stable_baselines3.common.vec_env.VecFrameStack(env, n_stack=4)
-    
-    log_dir = f"logs/{model_path}"
-    tensorboard_callback = TensorBoard(log_dir=log_dir)
+    ATARI_NAME = 'Pong'
+    BASELINE_ALGO = stable_baselines3.PPO # or PPO or A2C, try getting DQN to work too
+    TOTAL_TIMESTEPS = 1_000_000
+    MODEL_PATH = f"baseline_{ATARI_NAME}_{BASELINE_ALGO.__name__}_{TOTAL_TIMESTEPS}"
+    LOG_DIR = f"logs/{MODEL_PATH}/"
+    FRAME_TIME = 1.0 / 24.0
 
-    if not os.path.isfile(f"{model_path}.zip"):
-        model = baseline_algo("CnnPolicy", env, verbose=1)
-        model.learn(total_timesteps=20_000, log_interval=4, callback=tensorboard_callback)
-        model.save(model_path)
+    env = stable_baselines3.common.env_util.make_atari_env(f"ALE/{ATARI_NAME}-v5")
+    env = stable_baselines3.common.vec_env.VecFrameStack(env, n_stack=4)
+
+    if not os.path.isfile(f"{MODEL_PATH}.zip"):
+        model = BASELINE_ALGO("CnnPolicy", env, verbose=1, tensorboard_log=LOG_DIR)
+        model.learn(total_timesteps=TOTAL_TIMESTEPS)
+        model.save(MODEL_PATH)
         del model # remove to demonstrate saving and loading
 
-    model = baseline_algo.load(model_path)
+    model = BASELINE_ALGO.load(MODEL_PATH)
 
     obs = env.reset()
-    step = 0
     while True:
-        action, _states = model.predict(obs, deterministic=False)
+        action, _states = model.predict(obs)
         obs, reward, dones, info = env.step(action)
         env.render('human')
-        import time
-        time.sleep(1/60)
-
-        with tf.summary.create_file_writer(log_dir).as_default():
-            print(reward, info, info[0])
-            tf.summary.scalar('reward', reward.item() ,step=step)
-            tf.summary.scalar('episode_length', info[0]['episode_frame_number'],step=step)
-        
-        tensorboard_callback.on_epoch_end(step)
-        step += 1
-
+        time.sleep(FRAME_TIME)
         if dones: break
 
 if __name__ == '__main__':
