@@ -2,3 +2,4 @@ venv/
 logs/
 deep-q-learning/
 utils/__pycache__/
+google-cloud-sdk/
