@@ -7,7 +7,7 @@ from torch.autograd import Variable
 
 
 def to_variable(arr):
-    arr = torch.autograd.Variable(torch.from_numpy(arr))
+    arr = torch.from_numpy(arr)
 
 def make_dir(directory):
     try:

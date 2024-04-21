@@ -3,13 +3,13 @@ import numpy as np
 from torch import optim
 
 from utils.logger import Logger
-from utils.memory import ReplayMemory, History
+from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
 from utils.preprocess import phi_map
 from utils.dqn import to_variable, DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
 
 flags = {
-    'out_dir' : "Pong/",
-    'in_dir' : "Pong/",
+    'out_dir' : "Pong/1",
+    'in_dir' : "Pong/1/replay_logs",
     'log_dir' : "logs/",
     'log_freq' : 1,
     'save_freq' : 100
@@ -43,8 +43,11 @@ def e_greedy_action(Q, phi, env, step):
     else:
         # Otherwise select action that maximises Q(phi)
         # In other words: a_t = argmax_a Q(phi, a)
-        print(phi)
-        phi = to_variable(phi).float()
+        import torch
+        phi = torch.from_numpy(phi).float()
+        print("PHI",phi)
+        print("Q(phi)",Q(phi))
+        # phi = to_variable(phi).float()
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     
@@ -71,8 +74,8 @@ params = {
 # Initialize logger
 log = Logger(log_dir=flags['log_dir'])
 # Initialize replay memory D to capacity N
-D = ReplayMemory(N=params['memory_size'], load_existing=True, data_dir=flags['out_dir'])
-skip_fill_memory = D.count > 0
+D = WrappedFixedReplayBuffer(data_dir=flags['in_dir'], replay_suffix=0, observation_shape=(84, 84), stack_size=4)
+skip_fill_memory = False
 # Initialize action-value function Q with random weights
 Q = DeepQNetwork(params['num_actions'])
 log.network(Q)
@@ -86,6 +89,7 @@ optimizer = optim.RMSprop(
 H = History.initial(env)
 
 for ep in range(params['num_episodes']):
+    print(ep)
 
     phi = phi_map(H.get())
     # del phi
@@ -112,7 +116,7 @@ for ep in range(params['num_episodes']):
         H.add(image)
         phi_prev, phi = phi, phi_map(H.get())
         # Store transition (phi_t, a_t, r_t, phi_(t+1)) in D
-        D.add((phi_prev, action, reward, phi, done))
+        D.add(phi_prev, action, reward, done)
 
         should_train_model = skip_fill_memory or \
             ((step > params['min_steps_train']) and
