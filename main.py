@@ -5,7 +5,7 @@ from torch import optim
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
 from utils.preprocess import phi_map
-from utils.dqn import to_variable, DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
+from utils.dqn import DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
 
 flags = {
     'out_dir' : "Pong/1",
@@ -45,23 +45,20 @@ def e_greedy_action(Q, phi, env, step):
         # In other words: a_t = argmax_a Q(phi, a)
         import torch
         phi = torch.from_numpy(phi).float()
-        print("PHI",phi)
-        print("Q(phi)",Q(phi))
-        # phi = to_variable(phi).float()
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     
 
 # Tranining
 
-env = gym.make('ALE/Pong-v5')
+env = gym.make('ALE/Pong-v5', render_mode='human')
 # Current iteration
 step = 0
 # Has trained model
 has_trained_model = False
 # Init training params
 params = {
-    'num_episodes': 4000,
+    'num_episodes': 100, # 4000
     'minibatch_size': 32,
     'max_episode_length': int(10e6),  # T
     'memory_size': int(4.5e5),  # N
@@ -98,9 +95,9 @@ for ep in range(params['num_episodes']):
         save_network(Q, ep, out_dir=flags['out_dir'])
 
     for _ in range(params['max_episode_length']):
-        # env.render(mode='human')
+        '''not on windows'''
         # if step % 100 == 0:
-        #     print 'Memory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+        #     print ('Memory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
         step += 1
         # Select action a_t for current state s_t
@@ -108,7 +105,7 @@ for ep in range(params['num_episodes']):
         if step % flags['log_freq'] == 0:
             log.epsilon(epsilon, step)
         # Execute action a_t in emulator and observe reward r_t and image x_(t+1)
-        image, reward, done, _ = env.step(action)
+        image, reward, done, _, _ = env.step(action)
 
         # Clip reward to range [-1, 1]
         reward = max(-1.0, min(reward, 1.0))

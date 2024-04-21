@@ -12,7 +12,7 @@ def phi_map(image_list, as_var=True):
         # Load single image as PIL and convert to Luminance
         pil_im = PIL.Image.fromarray(image_list[i]).convert('L')
         # Resize image
-        pil_im = pil_im.resize((84, 84), PIL.Image.ANTIALIAS)
+        pil_im = pil_im.resize((84, 84), PIL.Image.Resampling.LANCZOS)
         # Transform to numpy array
         im = np.array(pil_im) / 255.
         pil_im.close()
