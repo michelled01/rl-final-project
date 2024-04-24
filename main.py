@@ -34,8 +34,6 @@ def e_greedy_action(Q, phi, env, step):
     # Obtain a random value in range [0,1)
     rand = np.random.uniform()
 
-    # print(Q(phi))
-
     # With probability e select random action a_t
     if rand < epsilon:
         return env.action_space.sample(), epsilon
@@ -58,7 +56,7 @@ step = 0
 has_trained_model = False
 # Init training params
 params = {
-    'num_episodes': 100, # 4000
+    'num_episodes': 4000, # 4000
     'minibatch_size': 32,
     'max_episode_length': int(10e6),  # T
     'memory_size': int(4.5e5),  # N
@@ -72,7 +70,7 @@ params = {
 log = Logger(log_dir=flags['log_dir'])
 # Initialize replay memory D to capacity N
 D = WrappedFixedReplayBuffer(data_dir=flags['in_dir'], replay_suffix=0, observation_shape=(84, 84), stack_size=4)
-skip_fill_memory = False
+skip_fill_memory = True
 # Initialize action-value function Q with random weights
 Q = DeepQNetwork(params['num_actions'])
 log.network(Q)
@@ -126,8 +124,7 @@ for ep in range(params['num_episodes']):
             has_trained_model = True
 
             # Sample random minibatch of transitions ( phi_j, a_j, r_j, phi_(j+1)) from D
-            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb = D.sample(
-                params['minibatch_size'])
+            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)

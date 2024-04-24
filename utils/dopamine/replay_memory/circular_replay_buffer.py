@@ -675,16 +675,16 @@ class OutOfGraphReplayBuffer(object):
             (batch_size,) + self._state_shape,
             self._observation_dtype,
         ),
-        ReplayElement(
-            'next_action',
-            (batch_size,) + self._action_shape,
-            self._action_dtype,
-        ),
-        ReplayElement(
-            'next_reward',
-            (batch_size,) + self._reward_shape,
-            self._reward_dtype,
-        ),
+        # ReplayElement(
+        #     'next_action',
+        #     (batch_size,) + self._action_shape,
+        #     self._action_dtype,
+        # ),
+        # ReplayElement(
+        #     'next_reward',
+        #     (batch_size,) + self._reward_shape,
+        #     self._reward_dtype,
+        # ),
         ReplayElement('terminal', (batch_size,), self._terminal_dtype),
         ReplayElement('indices', (batch_size,), np.int32),
     ]
@@ -1004,8 +1004,8 @@ class WrappedReplayBuffer(object):
     self.actions = self.transition['action']
     self.rewards = self.transition['reward']
     self.next_states = self.transition['next_state']
-    self.next_actions = self.transition['next_action']
-    self.next_rewards = self.transition['next_reward']
+    # self.next_actions = self.transition['next_action']
+    # self.next_rewards = self.transition['next_reward']
     self.terminals = self.transition['terminal']
     self.indices = self.transition['indices']
 

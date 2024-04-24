@@ -106,7 +106,6 @@ class FixedReplayBuffer(object):
                                replay_file_end_index):
     """Get replay buffer indices to be be sampled among all replay buffers."""
     ckpts = gfile.ListDirectory(self._data_dir)  # pytype: disable=attribute-error
-    print("ckpits:",ckpts)
     # Assumes that the checkpoints are saved in a format CKPT_NAME.{SUFFIX}.gz
     ckpt_counters = collections.Counter(
         [name.split('.')[-2] for name in ckpts if name.endswith('gz')])
@@ -127,9 +126,10 @@ class FixedReplayBuffer(object):
     return replay_indices
 
   def _load_replay_buffers(self, num_buffers):
+    print("loading ",num_buffers,"buffers")
     """Loads multiple checkpoints into a list of replay buffers."""
     if not self._loaded_buffers:  # pytype: disable=attribute-error
-      print("replay_indices:",self._replay_indices)
+      # print("replay_indices:",self._replay_indices)
       ckpt_suffixes = np.random.choice(
           self._replay_indices, num_buffers, replace=False)
       self._replay_buffers = []

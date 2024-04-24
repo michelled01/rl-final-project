@@ -6,9 +6,6 @@ import os
 from torch.autograd import Variable
 
 
-def to_variable(arr):
-    arr = torch.from_numpy(arr)
-
 def make_dir(directory):
     try:
         os.makedirs(directory)
@@ -22,19 +19,19 @@ class DeepQNetwork(nn.Module):
     def __init__(self, num_actions):
         super(DeepQNetwork, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(4, 32, kernel_size=8, stride=4),
+            nn.Conv2d(84, 32, kernel_size=3, stride=84, padding=1),
             nn.ReLU()
         )
         self.conv2 = nn.Sequential(
-            nn.Conv2d(32, 64, kernel_size=4, stride=2),
+            nn.Conv2d(32, 64, kernel_size=3, stride=2, padding=1),
             nn.ReLU()
         )
         self.conv3 = nn.Sequential(
-            nn.Conv2d(64, 64, kernel_size=3, stride=1),
+            nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1),
             nn.ReLU()
         )
         self.hidden = nn.Sequential(
-            nn.Linear(64 * 7 * 7, 512, bias=True),
+            nn.Linear(64, 512, bias=True),
             nn.ReLU()
         )
         self.out = nn.Sequential(
@@ -74,20 +71,21 @@ def Q_targets(phi_plus1_mb, r_mb, done_mb, model, gamma=0.99):
     gamma: future reward discount factor
     '''
     # Calculate Q value with given model
-    max_Q, argmax_a = model(to_variable(phi_plus1_mb).float()).max(1)
+    x = torch.from_numpy(phi_plus1_mb).float()
+    max_Q, argmax_a = model(x).max(1)
     max_Q = max_Q.detach()
     # Terminates = 0 if ep. teriminates at step j+1, or = 1 otherwise
-    target = to_variable(r_mb).float() + (gamma * max_Q) * \
-        (1 - to_variable(done_mb).float())
+    target = torch.from_numpy(r_mb).float() + (gamma * max_Q) * \
+        (1 - torch.from_numpy(done_mb).float())
     target = target.unsqueeze(1)
     return target
 
 
 def Q_values(model, phi_mb, action_mb):
     # Obtain Q values of minibatch
-    q_phi = model(to_variable(phi_mb).float())
+    q_phi = model(torch.from_numpy(phi_mb).float())
     # Obtain actions matrix
-    action_mb = to_variable(action_mb).long().unsqueeze(1)
+    action_mb = torch.from_numpy(action_mb).long().unsqueeze(1)
     # Select Q values for given actions
     q_phi = q_phi.gather(1, action_mb)
     return q_phi
