@@ -1,6 +1,6 @@
 multitask-atari:
   n_timesteps: 3600
-  policy: 'CnnPolicy'
+  policy: 'CnnLstmPolicy'
 
 atari:
   env_wrapper:
