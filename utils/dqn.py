@@ -17,13 +17,14 @@ def make_dir(directory):
 class DeepQNetwork(nn.Module):
 
     def __init__(self, num_actions):
+
         super(DeepQNetwork, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(84, 32, kernel_size=3, stride=84, padding=1),
+            nn.Conv2d(84, 32, kernel_size=3, stride=1, padding=1),
             nn.ReLU()
         )
         self.conv2 = nn.Sequential(
-            nn.Conv2d(32, 64, kernel_size=3, stride=2, padding=1),
+            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
             nn.ReLU()
         )
         self.conv3 = nn.Sequential(
@@ -31,7 +32,7 @@ class DeepQNetwork(nn.Module):
             nn.ReLU()
         )
         self.hidden = nn.Sequential(
-            nn.Linear(64, 512, bias=True),
+            nn.Linear(64*84*4, 512, bias=True),
             nn.ReLU()
         )
         self.out = nn.Sequential(
