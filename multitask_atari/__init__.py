@@ -49,7 +49,7 @@ class MultitaskAtari(gym.Env):
         self._cur_env_idx = None
 
     def reset(self, *args, **kwargs):
-        print('env step counts:', list(zip(self._env_names, self._env_step_counts)))
+        #print('env step counts:', list(zip(self._env_names, self._env_step_counts)))
         self._cur_env_idx = self._env_step_counts.argmin()
         #self._cur_env_idx = self.np_random.choice(len(self._envs), p=self._env_weights)
         return self._cur_env.reset(*args, **kwargs)
