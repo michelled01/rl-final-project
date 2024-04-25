@@ -1,36 +1,60 @@
-import time
-import stable_baselines3
-import tensorflow as tf
+import atari_env
 
-import os
+import stable_baselines3 as sb3, stable_baselines3.common.env_checker
+import gymnasium as gym
+
+import os, random, warnings, pathlib
+
+# atari example : https://stable-baselines.readthedocs.io/en/master/guide/examples.html#id2
+
+config = {
+    # seed for random, np.random
+    #seed: 42,
+    'atari-env-names': [
+        'Pong',
+        'Breakout',
+    ],
+    'algo': 'PPO',
+    'policy': 'CnnPolicy',
+    'total-timesteps': 216000, # 1 hour of gameplay
+    'max-episode-steps': 600,  # 10 seconds of gameplay
+}
 
 def main():
-    # atari example: https://stable-baselines.readthedocs.io/en/master/guide/examples.html#id2
-    ATARI_NAME = 'Pong'
-    BASELINE_ALGO = stable_baselines3.PPO # or PPO or A2C, try getting DQN to work too
-    TOTAL_TIMESTEPS = 1_000_000
-    MODEL_PATH = f"baseline_{ATARI_NAME}_{BASELINE_ALGO.__name__}_{TOTAL_TIMESTEPS}"
-    LOG_DIR = f"logs/{MODEL_PATH}/"
-    FRAME_TIME = 1.0 / 24.0
+    if 'seed' in config:
+        import random, numpy as np, torch
+        random.seed(config['seed'])
+        np.random.seed(config['seed'])
+        torch.manual_seed(config['seed'])
+    else:
+        warnings.warn('random number generators have not been seeded')
 
-    env = stable_baselines3.common.env_util.make_atari_env(f"ALE/{ATARI_NAME}-v5")
-    env = stable_baselines3.common.vec_env.VecFrameStack(env, n_stack=4)
+    algo = getattr(sb3, config['algo'])
+    path = pathlib.Path('baselines') / f"{'-'.join(sorted(config['atari-env-names']))}_{config['algo']}_{config['total-timesteps']}"
+    path.mkdir(parents=True, exist_ok=True)
+    log_dir = path / 'logs'
+    model_path = path / 'model.zip'
 
-    if not os.path.isfile(f"{MODEL_PATH}.zip"):
-        model = BASELINE_ALGO("CnnPolicy", env, verbose=1, tensorboard_log=LOG_DIR)
-        model.learn(total_timesteps=TOTAL_TIMESTEPS)
-        model.save(MODEL_PATH)
+    env = atari_env.RandomAtariEnv(env_names=config['atari-env-names'], max_episode_steps=config['max-episode-steps'], render_mode='rgb_array')
+    sb3.common.env_checker.check_env(env.unwrapped, warn=True, skip_render_check=False)
+
+    if not model_path.is_file():
+        model = algo(config['policy'], env, verbose=1, tensorboard_log=log_dir)
+        model.learn(total_timesteps=config['total-timesteps'])
+        model.save(model_path)
         del model # remove to demonstrate saving and loading
 
-    model = BASELINE_ALGO.load(MODEL_PATH)
+    env = gym.wrappers.HumanRendering(env)
+    model = algo.load(model_path)
 
-    obs = env.reset()
+    obs, info = env.reset()
     while True:
         action, _states = model.predict(obs)
-        obs, reward, dones, info = env.step(action)
-        env.render('human')
-        time.sleep(FRAME_TIME)
-        if dones: break
+        obs, reward, terminated, truncated, info = env.step(action)
+        if reward:
+            print(reward)
+        if terminated or truncated:
+            env.reset()
 
 if __name__ == '__main__':
     main()
