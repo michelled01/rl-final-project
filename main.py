@@ -1,12 +1,11 @@
-import logging
-logging.getLogger().setLevel(logging.INFO)
-import gymnasium as gym
+import gymnasium
 import numpy as np
+import torch
 from torch import optim
 
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
-from utils.preprocess import phi_map
+# from utils.preprocess import phi_map
 from utils.dqn import DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
 
 flags = {
@@ -20,7 +19,6 @@ flags = {
 # Learning
 
 def e_greedy_action(Q, phi, env, step):
-    print("phi is",phi.shape, phi.size)
     # Initial values
     initial_epsilon, final_epsilon = 1.0, .1
     # Decay steps
@@ -38,21 +36,22 @@ def e_greedy_action(Q, phi, env, step):
     rand = np.random.uniform()
 
     # With probability e select random action a_t
-    if 0 and rand < epsilon:
-        return env.action_space.sample(), epsilon
+    # TODO: uncomment this
+    # if rand < epsilon:
+    #     return env.action_space.sample(), epsilon
 
-    else:
+    # else:
+    if (0 < 1):
         # Otherwise select action that maximises Q(phi)
         # In other words: a_t = argmax_a Q(phi, a)
-        import torch
-        phi = torch.from_numpy(phi).float()
+        print("calling phi from e_greedy_method")
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     
 
 # Tranining
 
-env = gym.make('ALE/Pong-v5', render_mode=None)
+env = gymnasium.wrappers.AtariPreprocessing(gymnasium.make('ALE/Pong-v5', render_mode=None, frameskip=1))
 # Current iteration
 step = 0
 # Has trained model
@@ -89,7 +88,7 @@ H = History.initial(env)
 for ep in range(params['num_episodes']):
     print(ep)
 
-    phi = phi_map(H.get())
+    phi = torch.from_numpy(np.asarray(H.get())).float()
     # del phi
 
     if (ep % flags['save_freq']) == 0:
@@ -112,7 +111,7 @@ for ep in range(params['num_episodes']):
         reward = max(-1.0, min(reward, 1.0))
         # Set s_(t+1) = s_t, a_t, x_(t+1) and preprocess phi_(t+1) =  phi_map( s_(t+1) )
         H.add(image)
-        phi_prev, phi = phi, phi_map(H.get())
+        phi_prev, phi = phi, torch.from_numpy(np.asarray(H.get())).float()
         # Store transition (phi_t, a_t, r_t, phi_(t+1)) in D
         D.add(phi_prev, action, reward, done)
 
@@ -127,7 +126,7 @@ for ep in range(params['num_episodes']):
             has_trained_model = True
 
             # Sample random minibatch of transitions ( phi_j, a_j, r_j, phi_(j+1)) from D
-            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
+            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=1, indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)

@@ -450,6 +450,7 @@ class OutOfGraphReplayBuffer(object):
     return np.moveaxis(state, 0, -1)
 
   def get_terminal_stack(self, index):
+
     return self.get_range(
         self._store['terminal'], index - self._stack_size + 1, index + 1
     )
@@ -659,7 +660,7 @@ class OutOfGraphReplayBuffer(object):
       signature: A namedtuple describing the method's return type signature.
     """
     batch_size = self._batch_size if batch_size is None else batch_size
-
+    print("google code says ",  (batch_size,) , self._state_shape)
     transition_elements = [
         ReplayElement(
             'state', (batch_size,) + self._state_shape, self._observation_dtype
