@@ -32,6 +32,7 @@ class MultitaskAtari(gym.Env):
         assert render_mode is None or render_mode in self.metadata['render_modes']
         env_names = sorted(env_names)
         self.render_mode = render_mode
+        self._env_names = env_names
         self._envs = [
             gym.wrappers.AtariPreprocessing(
                 gym.make(
@@ -48,6 +49,7 @@ class MultitaskAtari(gym.Env):
         self._cur_env_idx = None
 
     def reset(self, *args, **kwargs):
+        print('env step counts:', list(zip(self._env_names, self._env_step_counts)))
         self._cur_env_idx = self._env_step_counts.argmin()
         #self._cur_env_idx = self.np_random.choice(len(self._envs), p=self._env_weights)
         return self._cur_env.reset(*args, **kwargs)
