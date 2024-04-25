@@ -18,6 +18,7 @@ flags = {
 # Learning
 
 def e_greedy_action(Q, phi, env, step):
+    print("phi is",phi.size)
     # Initial values
     initial_epsilon, final_epsilon = 1.0, .1
     # Decay steps
@@ -49,16 +50,16 @@ def e_greedy_action(Q, phi, env, step):
 
 # Tranining
 
-env = gym.make('ALE/Pong-v5', render_mode='human')
+env = gym.make('ALE/Pong-v5', render_mode=None)
 # Current iteration
 step = 0
 # Has trained model
 has_trained_model = False
 # Init training params
 params = {
-    'num_episodes': 4000, # 4000
+    'num_episodes': 40, # 4000
     'minibatch_size': 32,
-    'max_episode_length': int(10e6),  # T
+    'max_episode_length': 200, # int(10e6),  # T
     'memory_size': int(4.5e5),  # N
     'history_size': 4,  # k
     'train_freq': 4,
