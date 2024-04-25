@@ -44,7 +44,6 @@ class DeepQNetwork(nn.Module):
         self.apply(self.weights_init)
 
     def forward(self, x):
-        print(x.size())
         x = self.conv1(x)
         x = self.conv2(x)
         x = self.conv3(x)
@@ -74,6 +73,7 @@ def Q_targets(phi_plus1_mb, r_mb, done_mb, model, gamma=0.99):
     '''
     # Calculate Q value with given model
     x = torch.from_numpy(phi_plus1_mb).float()
+    print("calling phi from Q_targets")
     max_Q, argmax_a = model(x).max(1)
     max_Q = max_Q.detach()
     # Terminates = 0 if ep. teriminates at step j+1, or = 1 otherwise
@@ -85,6 +85,7 @@ def Q_targets(phi_plus1_mb, r_mb, done_mb, model, gamma=0.99):
 
 def Q_values(model, phi_mb, action_mb):
     # Obtain Q values of minibatch
+    print("calling phi from Q_values")
     q_phi = model(torch.from_numpy(phi_mb).float())
     # Obtain actions matrix
     action_mb = torch.from_numpy(action_mb).long().unsqueeze(1)
