@@ -44,6 +44,7 @@ class DeepQNetwork(nn.Module):
         self.apply(self.weights_init)
 
     def forward(self, x):
+        print(x.size())
         x = self.conv1(x)
         x = self.conv2(x)
         x = self.conv3(x)
