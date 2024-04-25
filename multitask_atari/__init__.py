@@ -13,40 +13,34 @@ def get_env_specs_ale_filtered():
         print(spec.name, env.action_space)
         return env.action_space == gym.spaces.Discrete(4) # TODO
     return [spec for spec in get_env_specs_ale_all() if criteria(spec)]
-'''
 
-'''
 def make_env(env_ids, *, render_mode=None):
     # thunk is necessary to capture env_id by value
     env_thunk = lambda env_id: lambda: gym.make(env_id, full_action_space=True, render_mode=render_mode) # None to disable rendering, 'human' to enable
     return gym.vector.AsyncVectorEnv([env_thunk(env_id) for env_id in env_ids])
 '''
 
-class RandomAtariEnv(gym.Env):
+class MultitaskAtari(gym.Env):
     metadata = {'render_modes': ['rgb_array'], 'render_fps': 60}
     action_space = gym.spaces.Discrete(18)
     observation_space = gym.spaces.Box(0, 255, (84, 84, 1), np.uint8)
 
     def __init__(self, *,
         env_names: list[str],
-        max_episode_steps: int,
         render_mode: str | None = None,
     ):
         assert render_mode is None or render_mode in self.metadata['render_modes']
         env_names = sorted(env_names)
         self.render_mode = render_mode
         self._envs = [
-            gym.wrappers.TimeLimit(
-                gym.wrappers.AtariPreprocessing(
-                    gym.make(
-                        f"ALE/{env_name}-v5",
-                        frameskip=1,
-                        full_action_space=True,
-                        render_mode=render_mode,
-                    ),
-                    grayscale_newaxis=True
+            gym.wrappers.AtariPreprocessing(
+                gym.make(
+                    f"ALE/{env_name}-v5",
+                    frameskip=1,
+                    full_action_space=True,
+                    render_mode=render_mode,
                 ),
-                max_episode_steps=max_episode_steps
+                grayscale_newaxis=True
             )
             for env_name in env_names
         ]
@@ -73,6 +67,7 @@ class RandomAtariEnv(gym.Env):
     def _cur_env(self):
         return None if self._cur_env_idx is None else self._envs[self._cur_env_idx]
 
-if __name__ == '__main__':
-    from pprint import pprint
-    pprint(get_env_specs_ale_all())
+gym.register(
+    id='multitask-atari',
+    entry_point='multitask_atari:MultitaskAtari',
+)

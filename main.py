@@ -1,4 +1,6 @@
-import gym
+import logging
+logging.getLogger().setLevel(logging.INFO)
+import gymnasium as gym
 import numpy as np
 from torch import optim
 
@@ -18,7 +20,7 @@ flags = {
 # Learning
 
 def e_greedy_action(Q, phi, env, step):
-    print("phi is",phi.size)
+    print("phi is",phi.shape, phi.size)
     # Initial values
     initial_epsilon, final_epsilon = 1.0, .1
     # Decay steps
@@ -36,7 +38,7 @@ def e_greedy_action(Q, phi, env, step):
     rand = np.random.uniform()
 
     # With probability e select random action a_t
-    if rand < epsilon:
+    if 0 and rand < epsilon:
         return env.action_space.sample(), epsilon
 
     else:

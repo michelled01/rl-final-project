@@ -1,4 +1,4 @@
-import atari_env
+import multitask_atari
 
 import stable_baselines3 as sb3, stable_baselines3.common.env_checker
 import gymnasium as gym
@@ -35,7 +35,7 @@ def main():
     log_dir = path / 'logs'
     model_path = path / 'model.zip'
 
-    env = atari_env.RandomAtariEnv(env_names=config['atari-env-names'], max_episode_steps=config['max-episode-steps'], render_mode='rgb_array')
+    env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
     sb3.common.env_checker.check_env(env.unwrapped, warn=True, skip_render_check=False)
 
     if not model_path.is_file():
