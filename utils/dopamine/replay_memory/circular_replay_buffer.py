@@ -178,7 +178,7 @@ class OutOfGraphReplayBuffer(object):
     self._reward_dtype = reward_dtype
     self._observation_shape = observation_shape
     self._stack_size = stack_size
-    self._state_shape = self._observation_shape + (self._stack_size,)
+    self._state_shape = (self._stack_size,) + self._observation_shape
     self._replay_capacity = replay_capacity
     self._batch_size = batch_size
     self._update_horizon = update_horizon
@@ -447,10 +447,9 @@ class OutOfGraphReplayBuffer(object):
         self._store[element_name], index - self._stack_size + 1, index + 1
     )
     # The stacking axis is 0 but the agent expects as the last axis.
-    return np.moveaxis(state, 0, -1)
+    return state #np.moveaxis(state, 0, -1)
 
   def get_terminal_stack(self, index):
-
     return self.get_range(
         self._store['terminal'], index - self._stack_size + 1, index + 1
     )
@@ -660,7 +659,7 @@ class OutOfGraphReplayBuffer(object):
       signature: A namedtuple describing the method's return type signature.
     """
     batch_size = self._batch_size if batch_size is None else batch_size
-    print("google code says ",  (batch_size,) , self._state_shape)
+
     transition_elements = [
         ReplayElement(
             'state', (batch_size,) + self._state_shape, self._observation_dtype
