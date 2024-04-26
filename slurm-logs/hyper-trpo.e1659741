@@ -1,0 +1,393 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-25 09:02:05.573675: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-25 09:03:10,286] A new study created in memory with name: no-name-cb5bba8b-e06e-4063-9045-dbb3de935774
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+[I 2024-04-25 09:05:42,749] Trial 4 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 1024, 'gamma': 0.999, 'learning_rate': 0.00019998067400800858, 'n_critic_updates': 5, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:06:29,766] Trial 5 finished with value: -6.4 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.995, 'learning_rate': 0.0575404272015081, 'n_critic_updates': 20, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.98, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:06:40,483] Trial 3 finished with value: -6.4 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.9999, 'learning_rate': 0.03458489213794234, 'n_critic_updates': 5, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:06:50,990] Trial 7 finished with value: -6.4 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 6.55926354530692e-05, 'n_critic_updates': 5, 'cg_max_steps': 5, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:07:24,271] Trial 0 finished with value: -6.4 and parameters: {'batch_size': 32, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.0002983778443016077, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.01, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:08:10,387] Trial 1 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.98, 'learning_rate': 0.0005641657117824412, 'n_critic_updates': 30, 'cg_max_steps': 5, 'target_kl': 0.02, 'gae_lambda': 0.9, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 09:08:27,602] Trial 8 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 5.6561935922863044e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:08:44,278] Trial 6 finished with value: -5.0 and parameters: {'batch_size': 32, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 1.3746878207145257e-05, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:08:58,037] Trial 11 finished with value: -6.4 and parameters: {'batch_size': 32, 'n_steps': 2048, 'gamma': 0.9, 'learning_rate': 0.0042194187056914184, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:09:22,479] Trial 9 finished with value: -6.4 and parameters: {'batch_size': 512, 'n_steps': 128, 'gamma': 0.9999, 'learning_rate': 0.000386887902367311, 'n_critic_updates': 5, 'cg_max_steps': 25, 'target_kl': 0.03, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:09:31,094] Trial 12 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 128, 'gamma': 0.999, 'learning_rate': 0.15563599519779417, 'n_critic_updates': 5, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:11:01,237] Trial 2 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.00010640321278444029, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:11:04,325] Trial 15 pruned. 
+[I 2024-04-25 09:11:32,421] Trial 16 pruned. 
+[I 2024-04-25 09:11:40,214] Trial 17 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 3.731016856496044e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:11:45,481] Trial 13 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 3.8699771409215704e-05, 'n_critic_updates': 25, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:11:50,509] Trial 18 finished with value: -6.4 and parameters: {'batch_size': 8, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 1.9260935281564315e-05, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.9, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:12:48,895] Trial 10 finished with value: -5.0 and parameters: {'batch_size': 8, 'n_steps': 8, 'gamma': 0.9, 'learning_rate': 2.854132232400793e-05, 'n_critic_updates': 20, 'cg_max_steps': 10, 'target_kl': 0.05, 'gae_lambda': 0.9, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:13:26,115] Trial 14 finished with value: -5.0 and parameters: {'batch_size': 8, 'n_steps': 1024, 'gamma': 0.9, 'learning_rate': 0.0060227808169809344, 'n_critic_updates': 30, 'cg_max_steps': 5, 'target_kl': 0.03, 'gae_lambda': 0.8, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:13:45,154] Trial 19 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 4.622621365823845e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:14:58,748] Trial 20 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 256, 'gamma': 0.999, 'learning_rate': 0.0011248187292802702, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:15:53,718] Trial 23 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 2.744047325843412e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:17:06,473] Trial 26 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 1024, 'gamma': 0.99, 'learning_rate': 0.00011852442163901578, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:17:12,171] Trial 25 pruned. 
+[I 2024-04-25 09:17:16,983] Trial 21 pruned. 
+[I 2024-04-25 09:18:12,914] Trial 22 pruned. 
+[I 2024-04-25 09:18:19,880] Trial 28 pruned. 
+[I 2024-04-25 09:19:07,101] Trial 32 pruned. 
+[I 2024-04-25 09:19:13,881] Trial 24 pruned. 
+[I 2024-04-25 09:20:25,781] Trial 29 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 8, 'gamma': 0.99, 'learning_rate': 7.012011365688933e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:20:32,269] Trial 31 pruned. 
+[I 2024-04-25 09:20:33,380] Trial 27 pruned. 
+[I 2024-04-25 09:20:46,995] Trial 33 pruned. 
+[I 2024-04-25 09:21:27,125] Trial 36 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.001286107217714535, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:21:44,314] Trial 30 pruned. 
+[I 2024-04-25 09:21:51,721] Trial 34 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 128, 'gamma': 0.95, 'learning_rate': 0.0001390980497481458, 'n_critic_updates': 25, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:22:23,462] Trial 40 pruned. 
+[I 2024-04-25 09:22:27,358] Trial 35 pruned. 
+[I 2024-04-25 09:23:11,080] Trial 39 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 3.6790890987891124e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:23:45,551] Trial 41 pruned. 
+[I 2024-04-25 09:23:59,450] Trial 42 pruned. 
+[I 2024-04-25 09:24:10,037] Trial 37 pruned. 
+[I 2024-04-25 09:24:22,627] Trial 45 pruned. 
+[I 2024-04-25 09:24:59,518] Trial 43 pruned. 
+[I 2024-04-25 09:25:08,773] Trial 38 pruned. 
+[I 2024-04-25 09:25:31,181] Trial 46 pruned. 
+[I 2024-04-25 09:25:43,615] Trial 44 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.0013649806012413384, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:26:50,780] Trial 47 pruned. 
+[I 2024-04-25 09:27:18,750] Trial 48 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 64, 'gamma': 0.98, 'learning_rate': 0.00010866882879843651, 'n_critic_updates': 25, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:27:28,178] Trial 49 pruned. 
+[I 2024-04-25 09:29:00,522] Trial 52 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 6.381374205279842e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:29:27,345] Trial 53 pruned. 
+[I 2024-04-25 09:29:29,110] Trial 51 pruned. 
+[I 2024-04-25 09:30:04,566] Trial 50 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 0.004989119417998663, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:30:29,866] Trial 54 pruned. 
+[I 2024-04-25 09:31:05,177] Trial 56 pruned. 
+[I 2024-04-25 09:31:38,936] Trial 59 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.9999, 'learning_rate': 0.001936178233792604, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:31:43,772] Trial 57 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 1.3930574169205169e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:32:02,228] Trial 55 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.999, 'learning_rate': 2.2749407986459326e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.1, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:32:06,591] Trial 61 pruned. 
+[I 2024-04-25 09:33:03,336] Trial 63 pruned. 
+[I 2024-04-25 09:33:06,823] Trial 58 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 3.112816748393676e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:34:00,423] Trial 60 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.00401115666387284, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:34:06,394] Trial 64 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.00012895691747802625, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:34:19,534] Trial 62 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 64, 'gamma': 0.9999, 'learning_rate': 0.0001285646386375772, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:34:29,564] Trial 67 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.0036795775468208922, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.01, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:34:56,811] Trial 65 pruned. 
+[I 2024-04-25 09:35:17,223] Trial 66 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 3.3027540306388606e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:35:26,387] Trial 70 pruned. 
+[I 2024-04-25 09:36:13,147] Trial 69 pruned. 
+[I 2024-04-25 09:36:20,542] Trial 68 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 0.00011454303720736279, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:36:30,779] Trial 71 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 8.529932804494425e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.005, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:37:17,789] Trial 73 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 1.67233686700194e-05, 'n_critic_updates': 10, 'cg_max_steps': 10, 'target_kl': 0.005, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:37:48,752] Trial 75 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 1.3037107361773815e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.005, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:38:23,415] Trial 74 pruned. 
+[I 2024-04-25 09:39:20,749] Trial 79 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.000768171767739849, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.02, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:39:50,445] Trial 78 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 0.0011128659756669966, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:40:01,556] Trial 80 pruned. 
+[I 2024-04-25 09:40:36,110] Trial 81 pruned. 
+[I 2024-04-25 09:40:50,415] Trial 72 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.00012618237822727274, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:41:19,806] Trial 82 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.020581372855707304, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:42:00,418] Trial 85 pruned. 
+[I 2024-04-25 09:42:10,397] Trial 77 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.00012633469832128673, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.05, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:42:38,846] Trial 76 pruned. 
+[I 2024-04-25 09:42:47,365] Trial 83 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 0.0020508396074936912, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:43:57,649] Trial 84 pruned. 
+[I 2024-04-25 09:44:32,348] Trial 86 pruned. 
+[I 2024-04-25 09:44:43,434] Trial 91 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.995, 'learning_rate': 0.009572099944358068, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:44:52,825] Trial 92 pruned. 
+[I 2024-04-25 09:45:41,383] Trial 94 pruned. 
+[I 2024-04-25 09:45:52,147] Trial 88 pruned. 
+[I 2024-04-25 09:46:48,644] Trial 96 pruned. 
+[I 2024-04-25 09:47:39,780] Trial 87 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.0002832757061328767, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:48:05,749] Trial 98 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.9, 'learning_rate': 4.411967764458018e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:48:13,546] Trial 93 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.99, 'learning_rate': 0.0007472655363353161, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.9, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:48:33,002] Trial 89 pruned. 
+[I 2024-04-25 09:48:34,306] Trial 90 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.0005908765026586123, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:49:19,040] Trial 95 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 0.007607938134266918, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:50:38,733] Trial 99 pruned. 
+[I 2024-04-25 09:50:42,507] Trial 100 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.00010374174352145569, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.05, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:51:25,032] Trial 97 pruned. 
+[I 2024-04-25 09:52:27,521] Trial 103 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 0.0001949463148865879, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:52:32,033] Trial 104 pruned. 
+[I 2024-04-25 09:52:34,625] Trial 102 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 3.456609642774563e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.99, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:52:53,701] Trial 106 pruned. 
+[I 2024-04-25 09:53:08,204] Trial 107 pruned. 
+[I 2024-04-25 09:53:33,440] Trial 105 pruned. 
+[I 2024-04-25 09:54:09,777] Trial 101 pruned. 
+[I 2024-04-25 09:55:07,029] Trial 113 pruned. 
+[I 2024-04-25 09:55:27,515] Trial 114 pruned. 
+[I 2024-04-25 09:55:53,660] Trial 108 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 5.032786835123517e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:56:19,442] Trial 111 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.01644756431546772, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:56:21,652] Trial 115 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.00011223203070940868, 'n_critic_updates': 10, 'cg_max_steps': 10, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:56:44,460] Trial 109 pruned. 
+[I 2024-04-25 09:57:09,224] Trial 112 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 6.703542269865296e-05, 'n_critic_updates': 30, 'cg_max_steps': 5, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:57:10,812] Trial 110 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 32, 'gamma': 0.98, 'learning_rate': 1.809805058625602e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:57:44,687] Trial 119 pruned. 
+[I 2024-04-25 09:57:57,493] Trial 117 pruned. 
+[I 2024-04-25 09:58:25,608] Trial 122 pruned. 
+[I 2024-04-25 09:58:44,949] Trial 120 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.9999, 'learning_rate': 0.005343437734879471, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:59:13,272] Trial 116 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 4.4370315166790585e-05, 'n_critic_updates': 25, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:59:32,592] Trial 123 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.04225480729702673, 'n_critic_updates': 10, 'cg_max_steps': 20, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 09:59:41,316] Trial 121 pruned. 
+[I 2024-04-25 09:59:53,228] Trial 124 pruned. 
+[I 2024-04-25 10:00:24,579] Trial 125 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.00011857568491054775, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:00:28,629] Trial 118 pruned. 
+[I 2024-04-25 10:00:58,670] Trial 127 pruned. 
+[I 2024-04-25 10:01:48,006] Trial 126 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.0014611285828458622, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:02:37,569] Trial 131 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 7.402586071257491e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:03:44,325] Trial 134 pruned. 
+[I 2024-04-25 10:04:05,910] Trial 129 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 64, 'gamma': 0.9999, 'learning_rate': 0.030745353935291566, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:04:16,534] Trial 130 pruned. 
+[I 2024-04-25 10:04:27,201] Trial 128 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.005965684073548937, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:04:56,570] Trial 132 pruned. 
+[I 2024-04-25 10:05:32,696] Trial 133 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.015899313157971592, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:05:51,093] Trial 137 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 0.0005768252369912934, 'n_critic_updates': 5, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:06:55,877] Trial 135 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.0003053733570492258, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:07:16,839] Trial 139 pruned. 
+[I 2024-04-25 10:08:12,752] Trial 141 pruned. 
+[I 2024-04-25 10:08:37,751] Trial 140 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.01978637917146002, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:08:40,033] Trial 138 pruned. 
+[I 2024-04-25 10:09:17,265] Trial 143 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.95, 'learning_rate': 6.895922280082403e-05, 'n_critic_updates': 20, 'cg_max_steps': 30, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:09:27,142] Trial 136 pruned. 
+[I 2024-04-25 10:09:29,169] Trial 142 pruned. 
+[I 2024-04-25 10:09:40,595] Trial 144 pruned. 
+[I 2024-04-25 10:09:59,652] Trial 145 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 6.95158958697194e-05, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:10:43,016] Trial 146 pruned. 
+[I 2024-04-25 10:10:57,140] Trial 148 pruned. 
+[I 2024-04-25 10:11:14,556] Trial 147 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 1.669484812606026e-05, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:11:40,150] Trial 150 pruned. 
+[I 2024-04-25 10:11:44,423] Trial 151 pruned. 
+[I 2024-04-25 10:12:03,421] Trial 149 pruned. 
+[I 2024-04-25 10:12:29,109] Trial 152 pruned. 
+[I 2024-04-25 10:12:30,923] Trial 153 pruned. 
+[I 2024-04-25 10:12:53,434] Trial 154 pruned. 
+[I 2024-04-25 10:13:02,262] Trial 155 pruned. 
+[I 2024-04-25 10:14:07,299] Trial 157 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.0010823090301621807, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:14:33,742] Trial 158 pruned. 
+[I 2024-04-25 10:14:43,613] Trial 156 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 256, 'gamma': 0.999, 'learning_rate': 0.00021831388938860918, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:15:37,213] Trial 162 pruned. 
+[I 2024-04-25 10:16:05,352] Trial 159 pruned. 
+[I 2024-04-25 10:18:02,094] Trial 164 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 0.003366781621263932, 'n_critic_updates': 20, 'cg_max_steps': 20, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:18:16,746] Trial 161 pruned. 
+[I 2024-04-25 10:18:46,813] Trial 168 pruned. 
+[I 2024-04-25 10:19:20,236] Trial 160 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.00016006967645761815, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.05, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:19:21,857] Trial 163 pruned. 
+[I 2024-04-25 10:19:42,277] Trial 166 pruned. 
+[I 2024-04-25 10:20:09,075] Trial 167 pruned. 
+[I 2024-04-25 10:20:24,305] Trial 169 pruned. 
+[I 2024-04-25 10:20:44,615] Trial 165 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 2.106571913227322e-05, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:21:19,123] Trial 170 pruned. 
+[I 2024-04-25 10:21:55,180] Trial 171 pruned. 
+[I 2024-04-25 10:22:42,479] Trial 174 pruned. 
+[I 2024-04-25 10:23:00,137] Trial 172 pruned. 
+[I 2024-04-25 10:23:22,560] Trial 176 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 0.0002697605252913346, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:24:09,309] Trial 178 pruned. 
+[I 2024-04-25 10:24:11,214] Trial 175 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 0.00016731049638099964, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:24:40,138] Trial 173 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 3.447511240954904e-05, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.05, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:24:47,150] Trial 177 pruned. 
+[I 2024-04-25 10:25:26,703] Trial 181 pruned. 
+[I 2024-04-25 10:26:17,471] Trial 180 pruned. 
+[I 2024-04-25 10:26:37,439] Trial 182 pruned. 
+[I 2024-04-25 10:26:54,048] Trial 183 pruned. 
+[I 2024-04-25 10:27:01,914] Trial 186 pruned. 
+[I 2024-04-25 10:27:05,301] Trial 179 pruned. 
+[I 2024-04-25 10:27:19,841] Trial 187 pruned. 
+[I 2024-04-25 10:27:44,207] Trial 184 pruned. 
+[I 2024-04-25 10:27:59,759] Trial 185 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 256, 'gamma': 0.95, 'learning_rate': 0.0007198196485132995, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.03, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:29:19,716] Trial 189 pruned. 
+[I 2024-04-25 10:29:50,280] Trial 192 pruned. 
+[I 2024-04-25 10:29:52,044] Trial 190 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.0005214780574563037, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.02, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:30:37,999] Trial 191 pruned. 
+[I 2024-04-25 10:30:47,309] Trial 188 pruned. 
+[I 2024-04-25 10:32:09,808] Trial 193 pruned. 
+[I 2024-04-25 10:32:23,250] Trial 199 pruned. 
+[I 2024-04-25 10:32:27,856] Trial 200 pruned. 
+[I 2024-04-25 10:32:39,913] Trial 197 pruned. 
+[I 2024-04-25 10:32:53,584] Trial 196 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 64, 'gamma': 0.9, 'learning_rate': 4.483772875105784e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:33:42,982] Trial 195 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.0032295277885681976, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:34:28,691] Trial 198 pruned. 
+[I 2024-04-25 10:34:34,029] Trial 204 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 2048, 'gamma': 0.995, 'learning_rate': 0.0030559624714275027, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:35:05,307] Trial 201 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.995, 'learning_rate': 0.0032782656761126895, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:35:50,293] Trial 205 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 16, 'gamma': 0.995, 'learning_rate': 0.0913439093787877, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:35:59,736] Trial 206 pruned. 
+[I 2024-04-25 10:36:20,956] Trial 194 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 0.0002332882947873104, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:37:29,949] Trial 209 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 8.074163734103767e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:37:53,621] Trial 210 pruned. 
+[I 2024-04-25 10:38:51,243] Trial 211 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 1.2175309341708923e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:38:52,788] Trial 203 pruned. 
+[I 2024-04-25 10:38:53,797] Trial 207 pruned. 
+[I 2024-04-25 10:39:44,246] Trial 208 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 16, 'gamma': 0.995, 'learning_rate': 0.00013333150097177398, 'n_critic_updates': 25, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.9, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:39:57,942] Trial 214 pruned. 
+[I 2024-04-25 10:40:09,600] Trial 202 pruned. 
+[I 2024-04-25 10:40:53,904] Trial 216 pruned. 
+[I 2024-04-25 10:41:16,769] Trial 212 pruned. 
+[I 2024-04-25 10:42:17,443] Trial 220 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.0015800253570546065, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:42:49,553] Trial 217 pruned. 
+[I 2024-04-25 10:43:47,833] Trial 219 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 4.3342474423956954e-05, 'n_critic_updates': 30, 'cg_max_steps': 10, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:43:50,499] Trial 218 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 2.3481723908660647e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:44:43,278] Trial 213 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 0.057148543552418975, 'n_critic_updates': 20, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:45:00,584] Trial 224 finished with value: -1.8 and parameters: {'batch_size': 256, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.001789426726379034, 'n_critic_updates': 10, 'cg_max_steps': 30, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:45:22,531] Trial 222 pruned. 
+[I 2024-04-25 10:45:51,091] Trial 221 pruned. 
+[I 2024-04-25 10:45:57,926] Trial 215 pruned. 
+[I 2024-04-25 10:46:05,756] Trial 226 pruned. 
+[I 2024-04-25 10:46:14,693] Trial 223 pruned. 
+[I 2024-04-25 10:47:46,535] Trial 225 pruned. 
+[I 2024-04-25 10:48:15,007] Trial 228 pruned. 
+[I 2024-04-25 10:48:20,350] Trial 232 pruned. 
+[I 2024-04-25 10:48:43,095] Trial 229 pruned. 
+[I 2024-04-25 10:48:44,307] Trial 233 pruned. 
+[I 2024-04-25 10:49:15,563] Trial 227 pruned. 
+[I 2024-04-25 10:49:43,023] Trial 231 pruned. 
+[I 2024-04-25 10:50:14,615] Trial 234 pruned. 
+[I 2024-04-25 10:50:27,075] Trial 235 pruned. 
+[I 2024-04-25 10:50:58,871] Trial 237 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.0005641366243784575, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:51:30,731] Trial 236 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 0.0007798806208437168, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.001, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:51:54,443] Trial 230 pruned. 
+[I 2024-04-25 10:52:06,723] Trial 238 finished with value: -1.8 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.002926891849540877, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:52:50,294] Trial 239 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 0.00016416059401657164, 'n_critic_updates': 30, 'cg_max_steps': 10, 'target_kl': 0.001, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:53:20,013] Trial 241 pruned. 
+[I 2024-04-25 10:53:48,413] Trial 240 pruned. 
+[I 2024-04-25 10:54:21,043] Trial 243 pruned. 
+[I 2024-04-25 10:54:55,511] Trial 244 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.0011715333804754996, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:55:13,021] Trial 242 pruned. 
+[I 2024-04-25 10:56:03,250] Trial 245 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.9, 'learning_rate': 0.00021064362896139652, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:56:04,949] Trial 246 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 64, 'gamma': 0.98, 'learning_rate': 0.00010320972342559511, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:57:06,291] Trial 248 pruned. 
+[I 2024-04-25 10:57:30,259] Trial 251 pruned. 
+[I 2024-04-25 10:57:52,302] Trial 250 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 1024, 'gamma': 0.99, 'learning_rate': 0.0020776317275754174, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.99, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:58:05,053] Trial 254 pruned. 
+[I 2024-04-25 10:58:14,125] Trial 253 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 0.00016502867592456052, 'n_critic_updates': 5, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 10:58:36,778] Trial 249 pruned. 
+[I 2024-04-25 10:59:57,663] Trial 247 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 0.00012774520989558452, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:00:09,513] Trial 257 pruned. 
+[I 2024-04-25 11:00:50,004] Trial 260 pruned. 
+[I 2024-04-25 11:01:22,093] Trial 252 pruned. 
+[I 2024-04-25 11:02:12,425] Trial 255 pruned. 
+[I 2024-04-25 11:02:53,413] Trial 262 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 6.751750661655614e-05, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:03:17,258] Trial 258 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.995, 'learning_rate': 0.0040469086021954, 'n_critic_updates': 30, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:03:46,440] Trial 263 pruned. 
+[I 2024-04-25 11:03:54,085] Trial 256 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.035630546580776586, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.02, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:04:17,956] Trial 261 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.9999, 'learning_rate': 0.0008475596284886809, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:05:29,029] Trial 264 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.007544752473825461, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:05:44,632] Trial 267 pruned. 
+[I 2024-04-25 11:06:04,843] Trial 268 pruned. 
+[I 2024-04-25 11:06:11,386] Trial 265 pruned. 
+[I 2024-04-25 11:06:54,435] Trial 269 pruned. 
+[I 2024-04-25 11:07:07,269] Trial 266 pruned. 
+[I 2024-04-25 11:07:52,752] Trial 259 pruned. 
+[I 2024-04-25 11:08:38,428] Trial 274 pruned. 
+[I 2024-04-25 11:09:26,607] Trial 276 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 8.624886034459108e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:09:59,520] Trial 271 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.00012466457762067105, 'n_critic_updates': 30, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:10:11,408] Trial 270 pruned. 
+[I 2024-04-25 11:10:12,336] Trial 277 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.0001246453020065665, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:10:25,870] Trial 273 pruned. 
+[I 2024-04-25 11:11:27,570] Trial 272 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.005248905116277288, 'n_critic_updates': 30, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:11:35,733] Trial 275 finished with value: -1.8 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.002189808702785029, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.9, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:11:46,017] Trial 283 pruned. 
+[I 2024-04-25 11:12:12,973] Trial 278 finished with value: -1.8 and parameters: {'batch_size': 256, 'n_steps': 32, 'gamma': 0.9999, 'learning_rate': 0.0057944002523522345, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:13:10,267] Trial 281 pruned. 
+[I 2024-04-25 11:13:12,824] Trial 279 pruned. 
+[I 2024-04-25 11:14:19,047] Trial 282 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 0.00027321199598864083, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 1.0, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:14:44,748] Trial 284 finished with value: -1.8 and parameters: {'batch_size': 256, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 3.4782299565042836e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:14:47,459] Trial 286 pruned. 
+[I 2024-04-25 11:14:59,469] Trial 287 pruned. 
+[I 2024-04-25 11:15:08,227] Trial 285 pruned. 
+[I 2024-04-25 11:16:21,740] Trial 291 pruned. 
+[I 2024-04-25 11:16:45,594] Trial 289 pruned. 
+[I 2024-04-25 11:17:09,182] Trial 294 pruned. 
+[I 2024-04-25 11:17:29,319] Trial 293 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.001281277078869132, 'n_critic_updates': 10, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:18:30,259] Trial 280 pruned. 
+[I 2024-04-25 11:19:38,144] Trial 292 pruned. 
+[I 2024-04-25 11:20:18,613] Trial 290 pruned. 
+[I 2024-04-25 11:20:27,012] Trial 297 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 0.041024408301821635, 'n_critic_updates': 5, 'cg_max_steps': 5, 'target_kl': 0.005, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:20:27,678] Trial 296 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.0023162856625997532, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:22:06,377] Trial 298 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 0.0007445162491773484, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.1, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:22:15,070] Trial 299 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.95, 'learning_rate': 0.0001930782695140687, 'n_critic_updates': 30, 'cg_max_steps': 10, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:22:19,048] Trial 288 pruned. 
+[I 2024-04-25 11:22:35,618] Trial 300 pruned. 
+[I 2024-04-25 11:24:07,198] Trial 306 pruned. 
+[I 2024-04-25 11:24:18,282] Trial 301 pruned. 
+[I 2024-04-25 11:24:47,441] Trial 295 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 8, 'gamma': 0.95, 'learning_rate': 3.1130185976780276e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:25:05,151] Trial 307 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.9999, 'learning_rate': 1.9793555138757678e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:25:14,144] Trial 303 pruned. 
+[I 2024-04-25 11:25:31,756] Trial 304 finished with value: -1.8 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.00010512752287780194, 'n_critic_updates': 30, 'cg_max_steps': 25, 'target_kl': 0.001, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:26:11,892] Trial 305 pruned. 
+[I 2024-04-25 11:26:24,152] Trial 302 pruned. 
+[I 2024-04-25 11:27:19,943] Trial 308 finished with value: -1.8 and parameters: {'batch_size': 256, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 0.00021940375631742182, 'n_critic_updates': 25, 'cg_max_steps': 10, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:27:29,869] Trial 311 pruned. 
+[I 2024-04-25 11:27:41,503] Trial 314 pruned. 
+[I 2024-04-25 11:28:26,828] Trial 309 pruned. 
+[I 2024-04-25 11:28:35,650] Trial 315 pruned. 
+[I 2024-04-25 11:28:50,129] Trial 313 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 2.3057522697228256e-05, 'n_critic_updates': 20, 'cg_max_steps': 10, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:29:21,215] Trial 312 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 0.00011128054009331873, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.03, 'gae_lambda': 0.95, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:29:49,662] Trial 318 pruned. 
+[I 2024-04-25 11:30:40,962] Trial 321 pruned. 
+[I 2024-04-25 11:30:45,832] Trial 316 pruned. 
+[I 2024-04-25 11:31:14,660] Trial 320 pruned. 
+[I 2024-04-25 11:31:17,491] Trial 317 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 512, 'gamma': 0.995, 'learning_rate': 0.004266924696739036, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.1, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:31:41,982] Trial 319 finished with value: -1.8 and parameters: {'batch_size': 256, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 6.4646981537746e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:32:28,751] Trial 310 finished with value: -1.8 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.999, 'learning_rate': 2.423430179057132e-05, 'n_critic_updates': 30, 'cg_max_steps': 25, 'target_kl': 0.05, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:32:30,508] Trial 323 pruned. 
+[I 2024-04-25 11:33:36,798] Trial 322 pruned. 
+[I 2024-04-25 11:34:23,190] Trial 327 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.999, 'learning_rate': 0.0001421643971038649, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.01, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:34:30,793] Trial 326 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 128, 'gamma': 0.9, 'learning_rate': 0.0006749512009450403, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:34:42,329] Trial 329 pruned. 
+[I 2024-04-25 11:34:50,798] Trial 324 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 0.00010511188143850892, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'small', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:35:33,887] Trial 325 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.99, 'learning_rate': 0.0005129702953435585, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:36:15,198] Trial 328 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.995, 'learning_rate': 0.00031435523667237467, 'n_critic_updates': 25, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:36:52,541] Trial 330 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 1.9607928736370995e-05, 'n_critic_updates': 30, 'cg_max_steps': 20, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:37:00,868] Trial 334 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 2.61571911815929e-05, 'n_critic_updates': 10, 'cg_max_steps': 20, 'target_kl': 0.001, 'gae_lambda': 0.95, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:37:54,898] Trial 331 pruned. 
+[I 2024-04-25 11:38:10,933] Trial 333 pruned. 
+[I 2024-04-25 11:38:22,075] Trial 336 pruned. 
+[I 2024-04-25 11:38:50,124] Trial 335 pruned. 
+[I 2024-04-25 11:40:23,057] Trial 339 pruned. 
+[I 2024-04-25 11:40:26,805] Trial 341 pruned. 
+[I 2024-04-25 11:40:57,418] Trial 337 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 0.011784062985103375, 'n_critic_updates': 20, 'cg_max_steps': 25, 'target_kl': 0.02, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:41:03,221] Trial 342 pruned. 
+[I 2024-04-25 11:41:05,372] Trial 332 pruned. 
+[I 2024-04-25 11:42:07,751] Trial 338 pruned. 
+[I 2024-04-25 11:42:27,475] Trial 340 pruned. 
+[I 2024-04-25 11:42:55,672] Trial 346 pruned. 
+[I 2024-04-25 11:43:03,163] Trial 345 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 64, 'gamma': 0.9, 'learning_rate': 1.873993679178859e-05, 'n_critic_updates': 10, 'cg_max_steps': 5, 'target_kl': 0.05, 'gae_lambda': 0.8, 'net_arch': 'medium', 'activation_fn': 'relu'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:43:16,038] Trial 344 pruned. 
+[I 2024-04-25 11:43:41,797] Trial 348 pruned. 
+[I 2024-04-25 11:43:59,927] Trial 343 pruned. 
+[I 2024-04-25 11:46:10,754] Trial 351 pruned. 
+[I 2024-04-25 11:46:16,602] Trial 349 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 1.289635067268808e-05, 'n_critic_updates': 20, 'cg_max_steps': 20, 'target_kl': 0.02, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:46:40,999] Trial 355 pruned. 
+[I 2024-04-25 11:46:58,106] Trial 350 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 4.005296004750145e-05, 'n_critic_updates': 30, 'cg_max_steps': 5, 'target_kl': 0.001, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:48:06,475] Trial 357 pruned. 
+[I 2024-04-25 11:48:07,841] Trial 353 pruned. 
+[I 2024-04-25 11:48:27,087] Trial 356 pruned. 
+[I 2024-04-25 11:48:41,984] Trial 354 pruned. 
+[I 2024-04-25 11:48:45,043] Trial 347 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 3.13446716240952e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.05, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:50:46,857] Trial 361 pruned. 
+[I 2024-04-25 11:50:58,059] Trial 352 pruned. 
+[I 2024-04-25 11:51:21,952] Trial 359 pruned. 
+[I 2024-04-25 11:51:34,619] Trial 363 pruned. 
+[I 2024-04-25 11:52:53,016] Trial 364 pruned. 
+[I 2024-04-25 11:53:09,728] Trial 366 pruned. 
+[I 2024-04-25 11:54:07,838] Trial 365 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 256, 'gamma': 0.9, 'learning_rate': 0.0034651494340565553, 'n_critic_updates': 20, 'cg_max_steps': 5, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:54:17,436] Trial 358 finished with value: -1.8 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.995, 'learning_rate': 3.090679230890549e-05, 'n_critic_updates': 25, 'cg_max_steps': 25, 'target_kl': 0.01, 'gae_lambda': 0.92, 'net_arch': 'small', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:55:05,660] Trial 370 pruned. 
+[I 2024-04-25 11:55:16,178] Trial 369 pruned. 
+[I 2024-04-25 11:55:17,910] Trial 360 pruned. 
+[I 2024-04-25 11:56:29,946] Trial 367 finished with value: -1.8 and parameters: {'batch_size': 16, 'n_steps': 32, 'gamma': 0.95, 'learning_rate': 1.3147319084171982e-05, 'n_critic_updates': 30, 'cg_max_steps': 30, 'target_kl': 0.005, 'gae_lambda': 0.98, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:57:40,918] Trial 374 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 4.6750768708356204e-05, 'n_critic_updates': 10, 'cg_max_steps': 20, 'target_kl': 0.01, 'gae_lambda': 0.92, 'net_arch': 'medium', 'activation_fn': 'tanh'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 11:58:00,618] Trial 368 pruned. 
+[I 2024-04-25 11:58:11,217] Trial 362 pruned. 
+[I 2024-04-25 11:59:06,831] Trial 373 pruned. 
+[I 2024-04-25 11:59:46,111] Trial 371 pruned. 
+slurmstepd: error: *** JOB 1659741 ON c305-023 CANCELLED AT 2024-04-25T12:00:21 DUE TO TIME LIMIT ***

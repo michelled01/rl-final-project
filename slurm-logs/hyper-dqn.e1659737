@@ -1,0 +1,518 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-25 00:45:15.735653: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-25 00:45:24,462] A new study created in memory with name: no-name-8d4c6dfa-90c3-428f-8748-cc76ab5cf647
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+[I 2024-04-25 00:45:52,969] Trial 6 finished with value: -3.2 and parameters: {'gamma': 0.995, 'learning_rate': 0.05279237699257591, 'batch_size': 16, 'buffer_size': 10000, 'exploration_final_eps': 0.08280798828710179, 'exploration_fraction': 0.4802763373823655, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 4, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 6 with value: -3.2.
+[I 2024-04-25 00:46:08,788] Trial 8 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.0024721629905101634, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.15395820526591514, 'exploration_fraction': 0.12637907762980383, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:09,066] Trial 2 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 1.6867507329600855e-05, 'batch_size': 100, 'buffer_size': 100000, 'exploration_final_eps': 0.12281098733243397, 'exploration_fraction': 0.4620843885954388, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:11,411] Trial 5 finished with value: -6.4 and parameters: {'gamma': 0.999, 'learning_rate': 0.0004986568689602234, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.12111221533798344, 'exploration_fraction': 0.17748333301080182, 'target_update_interval': 1000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:26,792] Trial 11 finished with value: -5.0 and parameters: {'gamma': 0.95, 'learning_rate': 0.009423052592712684, 'batch_size': 64, 'buffer_size': 10000, 'exploration_final_eps': 0.035135769006893684, 'exploration_fraction': 0.04575817139689081, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:33,414] Trial 3 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.03035054580594376, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.1600952294397829, 'exploration_fraction': 0.37090694288015585, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:44,186] Trial 12 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 0.6394167201616922, 'batch_size': 32, 'buffer_size': 50000, 'exploration_final_eps': 0.020240348512539377, 'exploration_fraction': 0.16906758372201708, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:46:55,109] Trial 14 finished with value: -5.0 and parameters: {'gamma': 0.999, 'learning_rate': 0.00016968270610397322, 'batch_size': 32, 'buffer_size': 1000000, 'exploration_final_eps': 0.05385972370047434, 'exploration_fraction': 0.43815092137553613, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:47:18,429] Trial 13 finished with value: -5.0 and parameters: {'gamma': 0.99, 'learning_rate': 0.06598967812440507, 'batch_size': 32, 'buffer_size': 1000000, 'exploration_final_eps': 0.028948076157755742, 'exploration_fraction': 0.334001643460629, 'target_update_interval': 5000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:47:32,462] Trial 16 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 0.1220030706536702, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.170166813002246, 'exploration_fraction': 0.4105005753786225, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:47:40,912] Trial 17 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.0038977304657473394, 'batch_size': 128, 'buffer_size': 10000, 'exploration_final_eps': 0.1369901075123085, 'exploration_fraction': 0.04343122375119329, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:48:22,019] Trial 4 pruned. 
+[I 2024-04-25 00:48:49,366] Trial 7 pruned. 
+[I 2024-04-25 00:48:55,342] Trial 19 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.11238545854986998, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.17681657175512785, 'exploration_fraction': 0.4951734132706175, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:49:10,678] Trial 20 pruned. 
+[I 2024-04-25 00:49:33,115] Trial 18 pruned. 
+[I 2024-04-25 00:49:41,551] Trial 21 pruned. 
+[I 2024-04-25 00:49:57,216] Trial 23 pruned. 
+[I 2024-04-25 00:50:05,846] Trial 24 pruned. 
+[I 2024-04-25 00:50:21,452] Trial 25 pruned. 
+[I 2024-04-25 00:50:29,854] Trial 26 pruned. 
+[I 2024-04-25 00:50:37,353] Trial 27 finished with value: -5.0 and parameters: {'gamma': 0.99, 'learning_rate': 0.18052544397820786, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.17439112368463294, 'exploration_fraction': 0.2582622986771522, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:50:50,374] Trial 29 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.18739903110479822, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.17089071208010814, 'exploration_fraction': 0.4925545150640772, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:51:05,948] Trial 28 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.05843055790786324, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.1921640078766353, 'exploration_fraction': 0.3802617458111036, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:51:22,801] Trial 30 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.40899362379844917, 'batch_size': 256, 'buffer_size': 1000000, 'exploration_final_eps': 0.16707294174831266, 'exploration_fraction': 0.4951944210032756, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 16, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:51:35,922] Trial 9 pruned. 
+[I 2024-04-25 00:51:48,437] Trial 31 pruned. 
+[I 2024-04-25 00:51:57,725] Trial 33 pruned. 
+[I 2024-04-25 00:52:02,102] Trial 34 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.1141464382682503, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.19399050600725629, 'exploration_fraction': 0.43375124292671063, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:52:15,199] Trial 36 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.2727039341516716, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17453209872173353, 'exploration_fraction': 0.4499581361768958, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:52:22,389] Trial 35 pruned. 
+[I 2024-04-25 00:52:36,476] Trial 37 pruned. 
+[I 2024-04-25 00:52:44,464] Trial 38 pruned. 
+[I 2024-04-25 00:53:01,305] Trial 39 pruned. 
+[I 2024-04-25 00:53:08,071] Trial 40 pruned. 
+[I 2024-04-25 00:53:18,364] Trial 41 pruned. 
+[I 2024-04-25 00:53:22,547] Trial 42 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.008541786852430932, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.1431269347309613, 'exploration_fraction': 0.46342621017751745, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:53:30,300] Trial 10 pruned. 
+[I 2024-04-25 00:53:42,584] Trial 43 pruned. 
+[I 2024-04-25 00:53:49,567] Trial 44 pruned. 
+[I 2024-04-25 00:54:04,291] Trial 1 pruned. 
+[I 2024-04-25 00:54:07,043] Trial 0 pruned. 
+[I 2024-04-25 00:54:10,764] Trial 46 pruned. 
+[I 2024-04-25 00:54:34,402] Trial 49 pruned. 
+[I 2024-04-25 00:54:37,346] Trial 50 pruned. 
+[I 2024-04-25 00:54:53,173] Trial 52 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.13697369643177404, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.19766637080604646, 'exploration_fraction': 0.41142253327595135, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:55:00,797] Trial 48 pruned. 
+[I 2024-04-25 00:55:09,781] Trial 53 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.19024215790006824, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.16738027563565663, 'exploration_fraction': 0.46893093381839024, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:55:18,952] Trial 54 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.4204632341810103, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18015980171879475, 'exploration_fraction': 0.47354378166741873, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:55:36,238] Trial 55 pruned. 
+[I 2024-04-25 00:55:44,574] Trial 51 pruned. 
+[I 2024-04-25 00:55:57,048] Trial 57 pruned. 
+[I 2024-04-25 00:56:03,778] Trial 56 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.023521775882615822, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.13697753315129016, 'exploration_fraction': 0.4845790476422177, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:56:12,179] Trial 58 pruned. 
+[I 2024-04-25 00:56:13,109] Trial 32 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.011706319622779491, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.17935517464475473, 'exploration_fraction': 0.4068017842436601, 'target_update_interval': 1000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:56:24,116] Trial 15 pruned. 
+[I 2024-04-25 00:56:45,744] Trial 63 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.0008321871203624822, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.0992946950741109, 'exploration_fraction': 0.46131746939577517, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:56:46,612] Trial 62 pruned. 
+[I 2024-04-25 00:56:47,595] Trial 60 pruned. 
+[I 2024-04-25 00:57:02,601] Trial 61 pruned. 
+[I 2024-04-25 00:57:08,484] Trial 47 pruned. 
+[I 2024-04-25 00:57:11,224] Trial 65 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.06785912043425801, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.1607132283262364, 'exploration_fraction': 0.29997908223605385, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:57:28,047] Trial 68 finished with value: -3.2 and parameters: {'gamma': 0.995, 'learning_rate': 0.1421796902968461, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.19944108590021872, 'exploration_fraction': 0.37323426729128656, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:57:45,021] Trial 67 pruned. 
+[I 2024-04-25 00:57:47,425] Trial 70 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0010597213262260466, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.1384950806342462, 'exploration_fraction': 0.42695850438597477, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:58:19,626] Trial 66 pruned. 
+[I 2024-04-25 00:58:26,992] Trial 71 pruned. 
+[I 2024-04-25 00:58:29,257] Trial 72 pruned. 
+[I 2024-04-25 00:58:30,217] Trial 69 pruned. 
+[I 2024-04-25 00:58:56,387] Trial 76 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.03478973472854338, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.19565901157412455, 'exploration_fraction': 0.4625803519500988, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 00:59:07,774] Trial 73 pruned. 
+[I 2024-04-25 00:59:15,322] Trial 74 pruned. 
+[I 2024-04-25 00:59:19,763] Trial 75 pruned. 
+[I 2024-04-25 00:59:33,425] Trial 77 pruned. 
+[I 2024-04-25 00:59:36,789] Trial 64 pruned. 
+[I 2024-04-25 00:59:46,614] Trial 78 pruned. 
+[I 2024-04-25 00:59:49,980] Trial 79 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.18810712240601127, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.15871320079018963, 'exploration_fraction': 0.3917693399046719, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:00:02,689] Trial 80 pruned. 
+[I 2024-04-25 01:00:05,595] Trial 81 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.2576641551561283, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.14179339962025952, 'exploration_fraction': 0.4884609244738595, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:00:20,575] Trial 84 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.4606881331001175, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.1661006205026928, 'exploration_fraction': 0.36492271231629525, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:00:35,190] Trial 82 pruned. 
+[I 2024-04-25 01:00:41,377] Trial 86 pruned. 
+[I 2024-04-25 01:00:43,513] Trial 83 pruned. 
+[I 2024-04-25 01:00:50,144] Trial 87 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.027384803830575642, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.15645474469606255, 'exploration_fraction': 0.49986654916467316, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:00:58,314] Trial 85 pruned. 
+[I 2024-04-25 01:01:07,787] Trial 88 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.028414508124056412, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.18383296261158524, 'exploration_fraction': 0.3458522185466376, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:01:11,104] Trial 89 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.022651329159860425, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1953868230208033, 'exploration_fraction': 0.4901506982414502, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:01:27,090] Trial 94 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.2026003666792024, 'batch_size': 64, 'buffer_size': 100000, 'exploration_final_eps': 0.1938710875989787, 'exploration_fraction': 0.4349019502957008, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:01:29,404] Trial 91 pruned. 
+[I 2024-04-25 01:01:35,371] Trial 92 pruned. 
+[I 2024-04-25 01:01:38,292] Trial 22 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.8275098487262257, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.15568196407072754, 'exploration_fraction': 0.44143031241259995, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:01:47,287] Trial 96 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.0018111427256549163, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.13730754947160081, 'exploration_fraction': 0.004451034111538479, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:02:08,475] Trial 93 pruned. 
+[I 2024-04-25 01:02:12,958] Trial 95 pruned. 
+[I 2024-04-25 01:02:32,028] Trial 59 pruned. 
+[I 2024-04-25 01:02:38,998] Trial 45 pruned. 
+[I 2024-04-25 01:02:55,908] Trial 99 pruned. 
+[I 2024-04-25 01:03:37,756] Trial 98 pruned. 
+[I 2024-04-25 01:03:53,715] Trial 97 pruned. 
+[I 2024-04-25 01:05:03,134] Trial 104 pruned. 
+[I 2024-04-25 01:05:12,875] Trial 107 pruned. 
+[I 2024-04-25 01:05:19,426] Trial 108 finished with value: -1.8 and parameters: {'gamma': 0.999, 'learning_rate': 0.2984511726115221, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18316042672546362, 'exploration_fraction': 0.37843262505949565, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:05:30,500] Trial 109 pruned. 
+[I 2024-04-25 01:05:39,847] Trial 110 pruned. 
+[I 2024-04-25 01:05:46,153] Trial 111 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.011937479382376923, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.15249530510121323, 'exploration_fraction': 0.148376807801498, 'target_update_interval': 1000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:05:52,597] Trial 112 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.3480585709138617, 'batch_size': 16, 'buffer_size': 1000000, 'exploration_final_eps': 0.16877638571457884, 'exploration_fraction': 0.33867206316513626, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:07:15,702] Trial 100 pruned. 
+[I 2024-04-25 01:07:25,542] Trial 114 pruned. 
+[I 2024-04-25 01:08:31,394] Trial 101 pruned. 
+[I 2024-04-25 01:09:40,411] Trial 102 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.9207681898516532, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1559404331625442, 'exploration_fraction': 0.45044930435136027, 'target_update_interval': 10000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:09:47,168] Trial 117 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.18153778624894215, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.17787071782403618, 'exploration_fraction': 0.3674331252302281, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:10:28,137] Trial 113 pruned. 
+[I 2024-04-25 01:10:37,521] Trial 119 pruned. 
+[I 2024-04-25 01:10:43,863] Trial 120 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.06965641593755656, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.19560241253991192, 'exploration_fraction': 0.4343138086295821, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:10:49,407] Trial 106 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.3614463006756793, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1772652548924213, 'exploration_fraction': 0.43982559337749705, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:10:57,508] Trial 105 pruned. 
+[I 2024-04-25 01:11:03,529] Trial 122 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.15504786783628718, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.1700994633377791, 'exploration_fraction': 0.28618469598691076, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:11:13,905] Trial 123 pruned. 
+[I 2024-04-25 01:11:25,251] Trial 125 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.8975519544689887, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.16958232473675075, 'exploration_fraction': 0.49907634918153926, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:11:34,496] Trial 126 pruned. 
+[I 2024-04-25 01:13:12,654] Trial 127 pruned. 
+[I 2024-04-25 01:13:19,270] Trial 128 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0020167643033004723, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1814296904732877, 'exploration_fraction': 0.2113089514093046, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:13:28,473] Trial 129 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.09590045708973556, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17675572124918307, 'exploration_fraction': 0.2657370167017029, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:13:40,047] Trial 118 pruned. 
+[I 2024-04-25 01:13:51,522] Trial 130 pruned. 
+[I 2024-04-25 01:13:56,222] Trial 131 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.08985246431082537, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1619938367946812, 'exploration_fraction': 0.4887725240834068, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:14:06,736] Trial 90 pruned. 
+[I 2024-04-25 01:14:14,711] Trial 133 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.15163045435682806, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.19107241600471933, 'exploration_fraction': 0.3477299374737974, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:14:23,126] Trial 134 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.10582384685382211, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.16911877466280956, 'exploration_fraction': 0.321219882382533, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:14:26,593] Trial 132 pruned. 
+[I 2024-04-25 01:14:40,899] Trial 136 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.03259626331646834, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.18339291157598983, 'exploration_fraction': 0.46803206170349365, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:14:51,219] Trial 135 pruned. 
+[I 2024-04-25 01:14:57,788] Trial 115 pruned. 
+[I 2024-04-25 01:15:04,726] Trial 137 pruned. 
+[I 2024-04-25 01:15:16,171] Trial 139 pruned. 
+[I 2024-04-25 01:15:17,127] Trial 138 pruned. 
+[I 2024-04-25 01:15:32,335] Trial 140 pruned. 
+[I 2024-04-25 01:15:39,732] Trial 141 pruned. 
+[I 2024-04-25 01:15:51,603] Trial 143 pruned. 
+[I 2024-04-25 01:15:53,609] Trial 142 pruned. 
+[I 2024-04-25 01:16:11,238] Trial 144 pruned. 
+[I 2024-04-25 01:16:14,782] Trial 146 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.011636261371270436, 'batch_size': 512, 'buffer_size': 10000, 'exploration_final_eps': 0.13461672012264062, 'exploration_fraction': 0.20872682669312193, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:16:23,700] Trial 145 pruned. 
+[I 2024-04-25 01:16:26,214] Trial 103 pruned. 
+[I 2024-04-25 01:16:40,259] Trial 149 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.00278168587832694, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.09874438138104957, 'exploration_fraction': 0.03550676653460737, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:16:41,841] Trial 147 pruned. 
+[I 2024-04-25 01:16:51,006] Trial 151 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.00443022456272983, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.1060471330894321, 'exploration_fraction': 0.0697861077754108, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:16:54,407] Trial 150 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.00858803973788005, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.1900944905865066, 'exploration_fraction': 0.44388705908191367, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:17:07,304] Trial 148 pruned. 
+[I 2024-04-25 01:17:08,153] Trial 152 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.007425289893310206, 'batch_size': 64, 'buffer_size': 10000, 'exploration_final_eps': 0.1381287706560339, 'exploration_fraction': 0.005887768713522945, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:17:18,856] Trial 154 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.008841487583028114, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1485524247409493, 'exploration_fraction': 0.11345218216225318, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:17:30,202] Trial 153 pruned. 
+[I 2024-04-25 01:17:38,074] Trial 155 pruned. 
+[I 2024-04-25 01:17:45,527] Trial 156 pruned. 
+[I 2024-04-25 01:17:54,920] Trial 158 pruned. 
+[I 2024-04-25 01:18:06,017] Trial 159 pruned. 
+[I 2024-04-25 01:18:15,478] Trial 161 pruned. 
+[I 2024-04-25 01:18:21,438] Trial 162 pruned. 
+[I 2024-04-25 01:18:29,451] Trial 164 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.07161878414776363, 'batch_size': 16, 'buffer_size': 10000, 'exploration_final_eps': 0.18677768730367036, 'exploration_fraction': 0.4506836972877889, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:18:45,620] Trial 165 pruned. 
+[I 2024-04-25 01:18:47,992] Trial 157 pruned. 
+[I 2024-04-25 01:18:56,083] Trial 166 pruned. 
+[I 2024-04-25 01:19:08,408] Trial 169 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.4200778696385828, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.125362549452369, 'exploration_fraction': 0.3842986209422656, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:19:17,053] Trial 167 pruned. 
+[I 2024-04-25 01:19:19,163] Trial 168 pruned. 
+[I 2024-04-25 01:19:36,252] Trial 171 pruned. 
+[I 2024-04-25 01:19:37,232] Trial 170 pruned. 
+[I 2024-04-25 01:19:38,363] Trial 172 pruned. 
+[I 2024-04-25 01:19:57,613] Trial 175 pruned. 
+[I 2024-04-25 01:20:13,176] Trial 173 pruned. 
+[I 2024-04-25 01:20:27,913] Trial 176 pruned. 
+[I 2024-04-25 01:20:43,197] Trial 177 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.04045832626378228, 'batch_size': 32, 'buffer_size': 50000, 'exploration_final_eps': 0.1602623644478937, 'exploration_fraction': 0.40859715720391665, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:20:48,534] Trial 178 pruned. 
+[I 2024-04-25 01:20:58,162] Trial 179 pruned. 
+[I 2024-04-25 01:21:07,268] Trial 180 pruned. 
+[I 2024-04-25 01:21:09,366] Trial 181 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.0007602879567737504, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.11977839290326688, 'exploration_fraction': 0.3669201668753865, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:21:20,065] Trial 160 pruned. 
+[I 2024-04-25 01:21:30,137] Trial 184 pruned. 
+[I 2024-04-25 01:22:36,435] Trial 174 pruned. 
+[I 2024-04-25 01:22:43,777] Trial 186 pruned. 
+[I 2024-04-25 01:22:57,451] Trial 187 pruned. 
+[I 2024-04-25 01:23:03,563] Trial 116 pruned. 
+[I 2024-04-25 01:23:14,517] Trial 188 pruned. 
+[I 2024-04-25 01:23:27,439] Trial 189 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.35498732220955886, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.15759594871806157, 'exploration_fraction': 0.46229857819699915, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:23:30,232] Trial 190 pruned. 
+[I 2024-04-25 01:23:49,837] Trial 191 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.3254990520407737, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1936193387130995, 'exploration_fraction': 0.4989585472645657, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:23:59,395] Trial 192 pruned. 
+[I 2024-04-25 01:24:07,674] Trial 193 pruned. 
+[I 2024-04-25 01:24:13,324] Trial 194 pruned. 
+[I 2024-04-25 01:24:19,790] Trial 195 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.021477925595148297, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18201101435752443, 'exploration_fraction': 0.3740151402079943, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:24:27,477] Trial 196 pruned. 
+[I 2024-04-25 01:24:29,778] Trial 197 pruned. 
+[I 2024-04-25 01:24:39,194] Trial 199 pruned. 
+[I 2024-04-25 01:24:48,293] Trial 200 pruned. 
+[I 2024-04-25 01:24:55,367] Trial 201 pruned. 
+[I 2024-04-25 01:25:31,826] Trial 183 pruned. 
+[I 2024-04-25 01:30:45,856] Trial 163 pruned. 
+[I 2024-04-25 01:30:52,063] Trial 204 finished with value: -3.2 and parameters: {'gamma': 0.98, 'learning_rate': 0.08311975555175488, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.1581745202779437, 'exploration_fraction': 0.47541065352363426, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:30:58,358] Trial 205 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.14511119576668177, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.17406910410267878, 'exploration_fraction': 0.3571944866457425, 'target_update_interval': 15000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:31:07,159] Trial 206 pruned. 
+[I 2024-04-25 01:31:19,998] Trial 207 pruned. 
+[I 2024-04-25 01:31:30,790] Trial 202 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.02666287950607496, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.1935899307894086, 'exploration_fraction': 0.38107823451435674, 'target_update_interval': 1000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:31:37,674] Trial 209 pruned. 
+[I 2024-04-25 01:31:48,357] Trial 210 pruned. 
+[I 2024-04-25 01:32:30,260] Trial 182 pruned. 
+[I 2024-04-25 01:33:39,348] Trial 185 pruned. 
+[I 2024-04-25 01:36:13,634] Trial 211 pruned. 
+[I 2024-04-25 01:36:28,225] Trial 214 pruned. 
+[I 2024-04-25 01:36:28,985] Trial 203 pruned. 
+[I 2024-04-25 01:36:43,541] Trial 215 pruned. 
+[I 2024-04-25 01:36:50,690] Trial 216 pruned. 
+[I 2024-04-25 01:36:58,294] Trial 217 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.14660639331430814, 'batch_size': 32, 'buffer_size': 50000, 'exploration_final_eps': 0.17308137281580824, 'exploration_fraction': 0.4519078515119721, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:37:09,999] Trial 124 pruned. 
+[I 2024-04-25 01:37:12,346] Trial 218 pruned. 
+[I 2024-04-25 01:37:31,180] Trial 219 pruned. 
+[I 2024-04-25 01:37:34,087] Trial 221 pruned. 
+[I 2024-04-25 01:37:40,036] Trial 220 pruned. 
+[I 2024-04-25 01:37:58,371] Trial 224 pruned. 
+[I 2024-04-25 01:38:08,998] Trial 225 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.0012903874696922359, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.1290118497905075, 'exploration_fraction': 0.11595568103958219, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:38:13,254] Trial 222 pruned. 
+[I 2024-04-25 01:38:29,907] Trial 213 pruned. 
+[I 2024-04-25 01:38:31,217] Trial 227 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.009843752191624273, 'batch_size': 100, 'buffer_size': 10000, 'exploration_final_eps': 0.18052361894237864, 'exploration_fraction': 0.0241678854535337, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:38:46,805] Trial 121 pruned. 
+[I 2024-04-25 01:38:50,319] Trial 208 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.05418459977730983, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.17428763514714835, 'exploration_fraction': 0.36721355901445984, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:39:13,191] Trial 230 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.08950778115844642, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17506270812820968, 'exploration_fraction': 0.3952948558715122, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:39:18,033] Trial 228 pruned. 
+[I 2024-04-25 01:39:19,708] Trial 229 pruned. 
+[I 2024-04-25 01:39:40,733] Trial 223 pruned. 
+[I 2024-04-25 01:39:41,085] Trial 232 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.2862656655385882, 'batch_size': 16, 'buffer_size': 1000000, 'exploration_final_eps': 0.1961104636682658, 'exploration_fraction': 0.4887290305377664, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:39:44,243] Trial 231 pruned. 
+[I 2024-04-25 01:40:06,265] Trial 235 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.23072261753311593, 'batch_size': 512, 'buffer_size': 1000000, 'exploration_final_eps': 0.18840949461368814, 'exploration_fraction': 0.4112791629098739, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:40:12,985] Trial 233 pruned. 
+[I 2024-04-25 01:40:14,021] Trial 234 pruned. 
+[I 2024-04-25 01:40:26,981] Trial 236 pruned. 
+[I 2024-04-25 01:40:30,305] Trial 238 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.0007825108693204466, 'batch_size': 256, 'buffer_size': 100000, 'exploration_final_eps': 0.19899918270926087, 'exploration_fraction': 0.4378395119115123, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:40:44,867] Trial 241 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.7247802646372652, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.19594616201385007, 'exploration_fraction': 0.41167516528618314, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:40:49,280] Trial 239 pruned. 
+[I 2024-04-25 01:40:54,970] Trial 226 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.9727261672261144, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.16639325447874775, 'exploration_fraction': 0.4264442800379629, 'target_update_interval': 5000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:41:05,941] Trial 243 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.024548488125898115, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.16128233520280227, 'exploration_fraction': 0.42990798702179495, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:41:07,077] Trial 242 pruned. 
+[I 2024-04-25 01:41:10,281] Trial 244 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.0588786728564618, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.13632879705395917, 'exploration_fraction': 0.48642591777446365, 'target_update_interval': 15000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:41:25,542] Trial 245 pruned. 
+[I 2024-04-25 01:41:32,887] Trial 212 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.3300248892256875, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1663638143977408, 'exploration_fraction': 0.3948336214640926, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:41:40,483] Trial 248 pruned. 
+[I 2024-04-25 01:41:53,905] Trial 249 pruned. 
+[I 2024-04-25 01:41:57,073] Trial 250 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.002236777539153698, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1550399472557976, 'exploration_fraction': 0.2078489841177282, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:41:59,514] Trial 198 pruned. 
+[I 2024-04-25 01:42:02,509] Trial 251 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.20313638054537395, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.14600014566364183, 'exploration_fraction': 0.13064997979645604, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:42:14,407] Trial 253 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.21617557035984455, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.13051330320973, 'exploration_fraction': 0.41391482806475477, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 4, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:42:19,337] Trial 246 pruned. 
+[I 2024-04-25 01:42:27,048] Trial 255 pruned. 
+[I 2024-04-25 01:42:34,978] Trial 256 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.07751129768386751, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.0955827287416355, 'exploration_fraction': 0.35995645343239013, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:42:51,707] Trial 257 pruned. 
+[I 2024-04-25 01:42:58,623] Trial 258 pruned. 
+[I 2024-04-25 01:43:06,025] Trial 259 pruned. 
+[I 2024-04-25 01:43:16,912] Trial 260 pruned. 
+[I 2024-04-25 01:43:24,745] Trial 261 pruned. 
+[I 2024-04-25 01:43:35,480] Trial 263 pruned. 
+[I 2024-04-25 01:43:37,171] Trial 262 pruned. 
+[I 2024-04-25 01:44:02,717] Trial 252 pruned. 
+[I 2024-04-25 01:44:06,962] Trial 266 pruned. 
+[I 2024-04-25 01:44:19,431] Trial 264 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.06323302668064472, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.1688250534563835, 'exploration_fraction': 0.1345248001270377, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:44:26,851] Trial 268 pruned. 
+[I 2024-04-25 01:44:36,866] Trial 254 pruned. 
+[I 2024-04-25 01:44:43,836] Trial 270 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.9616615158340781, 'batch_size': 512, 'buffer_size': 10000, 'exploration_final_eps': 0.17523742609650708, 'exploration_fraction': 0.34892667255941257, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:44:50,272] Trial 269 pruned. 
+[I 2024-04-25 01:44:53,699] Trial 271 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.03396559169033098, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.08414024612216073, 'exploration_fraction': 0.390513856250611, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:45:06,184] Trial 273 pruned. 
+[I 2024-04-25 01:45:16,765] Trial 275 pruned. 
+[I 2024-04-25 01:45:23,459] Trial 276 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.03456576104046725, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.1677495584623064, 'exploration_fraction': 0.4401220844130058, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:45:32,270] Trial 277 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.03619460805221492, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.10955245025585152, 'exploration_fraction': 0.0015318474109834238, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:45:43,164] Trial 278 pruned. 
+[I 2024-04-25 01:45:56,641] Trial 279 pruned. 
+[I 2024-04-25 01:46:04,469] Trial 280 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.15626348526933834, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.15289582261028586, 'exploration_fraction': 0.49918916263076474, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:46:12,896] Trial 281 pruned. 
+[I 2024-04-25 01:46:23,463] Trial 282 pruned. 
+[I 2024-04-25 01:46:31,121] Trial 283 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.030072069971383016, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.17952204897499366, 'exploration_fraction': 0.3625420663378037, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:46:40,416] Trial 284 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.08523268507223716, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18803752882594194, 'exploration_fraction': 0.43774093037818484, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:47:08,598] Trial 237 pruned. 
+[I 2024-04-25 01:47:20,529] Trial 286 pruned. 
+[I 2024-04-25 01:47:26,139] Trial 272 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.006333870569845956, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.16025426777151458, 'exploration_fraction': 0.4771845052834503, 'target_update_interval': 1, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:47:38,859] Trial 288 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.9422497477574018, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.15913995495778205, 'exploration_fraction': 0.4296277475789154, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:47:42,863] Trial 267 pruned. 
+[I 2024-04-25 01:47:46,317] Trial 287 pruned. 
+[I 2024-04-25 01:47:56,872] Trial 290 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.42348312538954613, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.13404878531256037, 'exploration_fraction': 0.37381537033496504, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:48:03,406] Trial 291 pruned. 
+[I 2024-04-25 01:48:15,245] Trial 240 pruned. 
+[I 2024-04-25 01:48:26,690] Trial 294 pruned. 
+[I 2024-04-25 01:48:38,448] Trial 295 pruned. 
+[I 2024-04-25 01:48:46,048] Trial 296 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.11832392343802461, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.17118640991671003, 'exploration_fraction': 0.44704213150980454, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 4, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:48:53,671] Trial 297 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.16832530448457902, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.09391901146047793, 'exploration_fraction': 0.469189590972474, 'target_update_interval': 1000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:49:37,108] Trial 247 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.01827921971420585, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.15988960346360293, 'exploration_fraction': 0.24394887427558806, 'target_update_interval': 10000, 'learning_starts': 1000, 'train_freq': 1, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:49:48,028] Trial 299 pruned. 
+[I 2024-04-25 01:50:03,476] Trial 265 pruned. 
+[I 2024-04-25 01:50:26,979] Trial 301 pruned. 
+[I 2024-04-25 01:50:39,357] Trial 300 pruned. 
+[I 2024-04-25 01:50:42,762] Trial 292 pruned. 
+[I 2024-04-25 01:51:01,306] Trial 303 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.6244884872559476, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.16048807371862056, 'exploration_fraction': 0.422830687297034, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:51:04,420] Trial 304 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.5900819137314484, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.18390771252820665, 'exploration_fraction': 0.43675055903411264, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 16, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:51:06,332] Trial 302 pruned. 
+[I 2024-04-25 01:51:27,265] Trial 306 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.022416146535389127, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1615345130059556, 'exploration_fraction': 0.4662231989852586, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:51:29,433] Trial 289 pruned. 
+[I 2024-04-25 01:51:37,819] Trial 307 pruned. 
+[I 2024-04-25 01:51:45,701] Trial 305 pruned. 
+[I 2024-04-25 01:51:58,807] Trial 310 pruned. 
+[I 2024-04-25 01:52:02,603] Trial 308 pruned. 
+[I 2024-04-25 01:52:09,699] Trial 311 pruned. 
+[I 2024-04-25 01:52:27,615] Trial 313 pruned. 
+[I 2024-04-25 01:52:33,668] Trial 312 pruned. 
+[I 2024-04-25 01:52:37,470] Trial 314 pruned. 
+[I 2024-04-25 01:52:58,079] Trial 317 pruned. 
+[I 2024-04-25 01:53:09,274] Trial 316 pruned. 
+[I 2024-04-25 01:53:18,327] Trial 319 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.07590073879708367, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18305664811027722, 'exploration_fraction': 0.4543393513075403, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:53:29,406] Trial 320 pruned. 
+[I 2024-04-25 01:53:33,159] Trial 318 pruned. 
+[I 2024-04-25 01:53:42,247] Trial 321 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.09692050486839868, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.1650955189555334, 'exploration_fraction': 0.4828904195359104, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:53:46,605] Trial 322 finished with value: -1.8 and parameters: {'gamma': 0.995, 'learning_rate': 0.22545497089957622, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17115507368104912, 'exploration_fraction': 0.4427937030113263, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:53:52,332] Trial 323 finished with value: -3.2 and parameters: {'gamma': 0.98, 'learning_rate': 0.031108502626853825, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.1118243851521911, 'exploration_fraction': 0.17777548922086855, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:54:01,533] Trial 325 finished with value: -3.2 and parameters: {'gamma': 0.98, 'learning_rate': 0.007741056968187905, 'batch_size': 32, 'buffer_size': 10000, 'exploration_final_eps': 0.1341303063140241, 'exploration_fraction': 0.35448492764469214, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:54:12,117] Trial 324 pruned. 
+[I 2024-04-25 01:54:25,180] Trial 327 pruned. 
+[I 2024-04-25 01:54:28,566] Trial 293 pruned. 
+[I 2024-04-25 01:54:40,477] Trial 329 pruned. 
+[I 2024-04-25 01:54:53,201] Trial 285 finished with value: -1.8 and parameters: {'gamma': 0.995, 'learning_rate': 0.6136349533555294, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1361477797735994, 'exploration_fraction': 0.4445488567015964, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:55:00,089] Trial 330 pruned. 
+[I 2024-04-25 01:55:10,370] Trial 331 pruned. 
+[I 2024-04-25 01:55:20,999] Trial 332 pruned. 
+[I 2024-04-25 01:55:27,005] Trial 333 pruned. 
+[I 2024-04-25 01:55:44,113] Trial 335 pruned. 
+[I 2024-04-25 01:55:49,347] Trial 334 pruned. 
+[I 2024-04-25 01:56:03,444] Trial 298 pruned. 
+[I 2024-04-25 01:56:04,230] Trial 336 pruned. 
+[I 2024-04-25 01:56:17,092] Trial 337 pruned. 
+[I 2024-04-25 01:56:21,339] Trial 339 pruned. 
+[I 2024-04-25 01:56:38,517] Trial 328 pruned. 
+[I 2024-04-25 01:56:46,381] Trial 341 pruned. 
+[I 2024-04-25 01:57:03,131] Trial 340 pruned. 
+[I 2024-04-25 01:57:06,655] Trial 343 pruned. 
+[I 2024-04-25 01:57:17,259] Trial 326 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.19296717759179477, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.18177563005604086, 'exploration_fraction': 0.4917818634159932, 'target_update_interval': 1000, 'learning_starts': 1000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:57:24,288] Trial 344 pruned. 
+[I 2024-04-25 01:57:30,888] Trial 346 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.015598256958124277, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.12822353928017285, 'exploration_fraction': 0.34172378558552247, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:57:39,721] Trial 347 pruned. 
+[I 2024-04-25 01:57:50,764] Trial 349 pruned. 
+[I 2024-04-25 01:57:57,654] Trial 338 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.004681847579318115, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.15168386893982028, 'exploration_fraction': 0.42448211824338866, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:58:04,732] Trial 351 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.5058013840176245, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.18415927558709622, 'exploration_fraction': 0.417118784007941, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:58:16,806] Trial 352 pruned. 
+[I 2024-04-25 01:58:27,284] Trial 353 pruned. 
+[I 2024-04-25 01:58:33,692] Trial 354 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.018109628469883798, 'batch_size': 32, 'buffer_size': 100000, 'exploration_final_eps': 0.1850093381220222, 'exploration_fraction': 0.38285329368750554, 'target_update_interval': 1000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:58:40,582] Trial 355 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.19014169383770524, 'batch_size': 64, 'buffer_size': 100000, 'exploration_final_eps': 0.19972169803764162, 'exploration_fraction': 0.21128781761883128, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:58:58,503] Trial 356 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.3088197173799438, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.18336051256252947, 'exploration_fraction': 0.47854217537532934, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 01:59:10,533] Trial 357 pruned. 
+[I 2024-04-25 01:59:29,951] Trial 358 pruned. 
+[I 2024-04-25 01:59:44,216] Trial 342 pruned. 
+[I 2024-04-25 01:59:47,969] Trial 359 pruned. 
+[I 2024-04-25 01:59:58,001] Trial 361 pruned. 
+[I 2024-04-25 02:00:05,809] Trial 362 pruned. 
+[I 2024-04-25 02:00:42,068] Trial 345 pruned. 
+[I 2024-04-25 02:00:49,793] Trial 364 pruned. 
+[I 2024-04-25 02:01:01,017] Trial 365 pruned. 
+[I 2024-04-25 02:01:12,567] Trial 366 pruned. 
+[I 2024-04-25 02:02:18,521] Trial 348 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.1260769653793682, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.1762199279785972, 'exploration_fraction': 0.4872025656224586, 'target_update_interval': 20000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:02:28,361] Trial 368 pruned. 
+[I 2024-04-25 02:02:34,616] Trial 369 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.22355698284257552, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.1927009717661026, 'exploration_fraction': 0.23849894085346446, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 4, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:02:41,591] Trial 370 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.11234304014736136, 'batch_size': 256, 'buffer_size': 100000, 'exploration_final_eps': 0.153707572485019, 'exploration_fraction': 0.4956317100747087, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:02:49,264] Trial 371 pruned. 
+[I 2024-04-25 02:02:59,073] Trial 372 pruned. 
+[I 2024-04-25 02:03:12,502] Trial 373 pruned. 
+[I 2024-04-25 02:03:15,859] Trial 350 pruned. 
+[I 2024-04-25 02:03:23,764] Trial 374 pruned. 
+[I 2024-04-25 02:03:36,370] Trial 376 pruned. 
+[I 2024-04-25 02:03:47,058] Trial 274 pruned. 
+[I 2024-04-25 02:03:57,235] Trial 378 pruned. 
+[I 2024-04-25 02:04:04,899] Trial 379 pruned. 
+[I 2024-04-25 02:04:12,607] Trial 380 pruned. 
+[I 2024-04-25 02:04:19,234] Trial 381 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.827447665672307, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.16355912557925587, 'exploration_fraction': 0.396311846863993, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:04:29,013] Trial 382 pruned. 
+[I 2024-04-25 02:04:38,902] Trial 383 pruned. 
+[I 2024-04-25 02:04:45,271] Trial 384 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.011614172199317124, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.1450289863842864, 'exploration_fraction': 0.2482659928653066, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 4, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:04:55,460] Trial 385 pruned. 
+[I 2024-04-25 02:05:05,218] Trial 386 pruned. 
+[I 2024-04-25 02:05:12,159] Trial 387 finished with value: -1.8 and parameters: {'gamma': 0.999, 'learning_rate': 0.005071961275170793, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.12898824116411808, 'exploration_fraction': 0.25081121717983423, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:05:18,399] Trial 388 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.0025877048147295873, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.18584439258419908, 'exploration_fraction': 0.3060274774114376, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 16, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:05:33,171] Trial 309 pruned. 
+[I 2024-04-25 02:05:34,071] Trial 389 pruned. 
+[I 2024-04-25 02:05:48,933] Trial 391 pruned. 
+[I 2024-04-25 02:05:52,917] Trial 390 pruned. 
+[I 2024-04-25 02:06:05,616] Trial 375 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.30357628161082595, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.17634315351977747, 'exploration_fraction': 0.46757348691834394, 'target_update_interval': 5000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:06:16,606] Trial 394 pruned. 
+[I 2024-04-25 02:06:26,055] Trial 395 pruned. 
+[I 2024-04-25 02:06:32,396] Trial 396 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.9159575614618244, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.19565810933351643, 'exploration_fraction': 0.3840763051674098, 'target_update_interval': 20000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:06:41,972] Trial 397 finished with value: -1.8 and parameters: {'gamma': 0.995, 'learning_rate': 0.012865429476167317, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.19443780166594438, 'exploration_fraction': 0.4269531736527088, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:06:51,335] Trial 398 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.003784727944779196, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.17726279981924445, 'exploration_fraction': 0.21996988474419224, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:06:54,935] Trial 367 pruned. 
+[I 2024-04-25 02:07:00,887] Trial 400 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.0030325066822408744, 'batch_size': 64, 'buffer_size': 100000, 'exploration_final_eps': 0.1692916076121951, 'exploration_fraction': 0.3466360323697973, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:07:10,018] Trial 401 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.029020794658477983, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.16537720081709217, 'exploration_fraction': 0.33996630641015646, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:07:19,532] Trial 392 pruned. 
+[I 2024-04-25 02:07:25,415] Trial 402 pruned. 
+[I 2024-04-25 02:07:34,580] Trial 404 pruned. 
+[I 2024-04-25 02:08:29,325] Trial 315 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.1198728378617158, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.18752073575888317, 'exploration_fraction': 0.48078102866012806, 'target_update_interval': 1, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:08:36,419] Trial 363 pruned. 
+[I 2024-04-25 02:08:57,723] Trial 393 pruned. 
+[I 2024-04-25 02:09:06,244] Trial 408 pruned. 
+[I 2024-04-25 02:09:08,727] Trial 403 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.08775076513174059, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.14165609772958576, 'exploration_fraction': 0.45270445570949275, 'target_update_interval': 20000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:09:20,498] Trial 410 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.02914143976438295, 'batch_size': 100, 'buffer_size': 1000000, 'exploration_final_eps': 0.1418336328880539, 'exploration_fraction': 0.10570109144928709, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:09:28,392] Trial 409 pruned. 
+[I 2024-04-25 02:09:30,002] Trial 411 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.6296725594410233, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.16880725930829607, 'exploration_fraction': 0.43771455179956553, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 4, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:09:39,638] Trial 413 pruned. 
+[I 2024-04-25 02:09:46,967] Trial 414 pruned. 
+[I 2024-04-25 02:09:56,316] Trial 415 pruned. 
+[I 2024-04-25 02:10:06,416] Trial 416 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.22814870808679097, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1417108332164202, 'exploration_fraction': 0.4824846835846549, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:10:12,512] Trial 417 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.1905314936762055, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.14067990226616486, 'exploration_fraction': 0.43528447994838787, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:10:22,268] Trial 418 pruned. 
+[I 2024-04-25 02:11:23,734] Trial 399 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.47833867653561896, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.19282441342100984, 'exploration_fraction': 0.2518706423500136, 'target_update_interval': 15000, 'learning_starts': 0, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:11:33,332] Trial 420 pruned. 
+[I 2024-04-25 02:11:41,150] Trial 421 pruned. 
+[I 2024-04-25 02:11:50,962] Trial 422 pruned. 
+[I 2024-04-25 02:11:57,429] Trial 423 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.00487713637767551, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.1733202961140441, 'exploration_fraction': 0.2038088525236559, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:12:05,104] Trial 424 pruned. 
+[I 2024-04-25 02:12:15,168] Trial 425 pruned. 
+[I 2024-04-25 02:12:21,561] Trial 426 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.36541105610743335, 'batch_size': 32, 'buffer_size': 100000, 'exploration_final_eps': 0.17478585167406646, 'exploration_fraction': 0.4325756382347635, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 4, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:12:30,239] Trial 427 pruned. 
+[I 2024-04-25 02:12:41,490] Trial 428 pruned. 
+[I 2024-04-25 02:12:57,614] Trial 429 pruned. 
+[I 2024-04-25 02:13:03,925] Trial 430 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.6419875160662105, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.16069462062311263, 'exploration_fraction': 0.33928207274533584, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:13:10,661] Trial 431 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.1775456798714089, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.17368006762895943, 'exploration_fraction': 0.33148991651868187, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:13:25,165] Trial 432 pruned. 
+[I 2024-04-25 02:13:32,234] Trial 433 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 0.00251541917635746, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.1797002468472977, 'exploration_fraction': 0.4530646783642618, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:13:44,330] Trial 434 pruned. 
+[I 2024-04-25 02:13:49,692] Trial 405 pruned. 
+[I 2024-04-25 02:13:57,750] Trial 435 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.0021087355857874607, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.16490062300154246, 'exploration_fraction': 0.4520599698676889, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 4, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:14:09,699] Trial 436 pruned. 
+[I 2024-04-25 02:14:17,186] Trial 437 pruned. 
+[I 2024-04-25 02:14:23,552] Trial 438 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.27048684045588145, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.1512386145754508, 'exploration_fraction': 0.27552786873443036, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:14:33,012] Trial 440 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.005407442008099023, 'batch_size': 256, 'buffer_size': 1000000, 'exploration_final_eps': 0.17735783596159418, 'exploration_fraction': 0.3418719842928721, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:14:36,774] Trial 439 pruned. 
+[I 2024-04-25 02:14:46,484] Trial 442 pruned. 
+[I 2024-04-25 02:15:45,030] Trial 419 pruned. 
+[I 2024-04-25 02:15:47,504] Trial 406 finished with value: -1.8 and parameters: {'gamma': 0.995, 'learning_rate': 0.2649986755866119, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.14953920839407472, 'exploration_fraction': 0.48701471605807517, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:16:00,667] Trial 444 pruned. 
+[I 2024-04-25 02:16:03,240] Trial 445 pruned. 
+[I 2024-04-25 02:16:17,716] Trial 446 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.00804977219589658, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.15162962993897763, 'exploration_fraction': 0.48822242370735236, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:16:18,904] Trial 443 pruned. 
+[I 2024-04-25 02:16:33,395] Trial 449 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 9.432761574419491e-05, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17057892676835604, 'exploration_fraction': 0.23479059829188142, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:16:34,194] Trial 447 pruned. 
+[I 2024-04-25 02:16:44,089] Trial 448 pruned. 
+[I 2024-04-25 02:16:53,042] Trial 450 finished with value: -3.2 and parameters: {'gamma': 0.995, 'learning_rate': 0.0014495721935575384, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.15328279837578207, 'exploration_fraction': 0.0781513381328956, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:17:05,655] Trial 451 pruned. 
+[I 2024-04-25 02:17:10,249] Trial 452 pruned. 
+[I 2024-04-25 02:17:18,885] Trial 453 pruned. 
+[I 2024-04-25 02:17:26,258] Trial 455 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0012120415687891985, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1704621343229834, 'exploration_fraction': 0.43740788885369875, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:17:34,189] Trial 456 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.006824616378344008, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.17705706846458422, 'exploration_fraction': 0.02068647383949762, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:17:49,439] Trial 457 pruned. 
+[I 2024-04-25 02:18:02,006] Trial 459 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.0061297996481192414, 'batch_size': 512, 'buffer_size': 10000, 'exploration_final_eps': 0.1338121624621799, 'exploration_fraction': 0.030168781791188523, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:18:04,344] Trial 454 pruned. 
+[I 2024-04-25 02:18:15,033] Trial 460 finished with value: -1.8 and parameters: {'gamma': 0.95, 'learning_rate': 0.1102924679105177, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17320952041385165, 'exploration_fraction': 0.38665095627807217, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:18:21,407] Trial 458 pruned. 
+[I 2024-04-25 02:18:30,751] Trial 463 pruned. 
+[I 2024-04-25 02:18:40,145] Trial 464 pruned. 
+[I 2024-04-25 02:18:49,210] Trial 465 pruned. 
+[I 2024-04-25 02:19:02,679] Trial 466 pruned. 
+[I 2024-04-25 02:19:11,977] Trial 467 pruned. 
+[I 2024-04-25 02:19:21,347] Trial 468 pruned. 
+[I 2024-04-25 02:19:32,334] Trial 469 pruned. 
+[I 2024-04-25 02:19:41,529] Trial 470 pruned. 
+[I 2024-04-25 02:20:17,148] Trial 412 pruned. 
+[I 2024-04-25 02:20:27,868] Trial 472 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.5010910637174946, 'batch_size': 32, 'buffer_size': 100000, 'exploration_final_eps': 0.1697454539643359, 'exploration_fraction': 0.4527521874728656, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:20:43,474] Trial 441 pruned. 
+[I 2024-04-25 02:20:52,491] Trial 474 pruned. 
+[I 2024-04-25 02:21:03,114] Trial 475 pruned. 
+[I 2024-04-25 02:21:10,170] Trial 476 pruned. 
+[I 2024-04-25 02:21:19,197] Trial 477 pruned. 
+[I 2024-04-25 02:21:31,790] Trial 478 pruned. 
+[I 2024-04-25 02:21:40,838] Trial 471 pruned. 
+[I 2024-04-25 02:21:49,147] Trial 462 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.22733926403997767, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.18693005894135117, 'exploration_fraction': 0.48658452049889117, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:21:52,035] Trial 480 pruned. 
+[I 2024-04-25 02:22:07,366] Trial 481 pruned. 
+[I 2024-04-25 02:22:09,599] Trial 482 pruned. 
+[I 2024-04-25 02:22:18,141] Trial 483 pruned. 
+[I 2024-04-25 02:22:55,637] Trial 360 pruned. 
+[I 2024-04-25 02:23:09,246] Trial 486 pruned. 
+[I 2024-04-25 02:23:36,754] Trial 484 pruned. 
+[I 2024-04-25 02:23:55,846] Trial 488 pruned. 
+[I 2024-04-25 02:24:06,737] Trial 489 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.1171520726216615, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.15392973172653698, 'exploration_fraction': 0.4909622790219937, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:24:16,128] Trial 490 pruned. 
+[I 2024-04-25 02:24:29,826] Trial 485 finished with value: -3.2 and parameters: {'gamma': 0.995, 'learning_rate': 0.8686666924691547, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.07865517021066615, 'exploration_fraction': 0.40027169341641516, 'target_update_interval': 1, 'learning_starts': 1000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:24:39,017] Trial 492 pruned. 
+[I 2024-04-25 02:24:45,283] Trial 493 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.05038104261350485, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.17165166495284057, 'exploration_fraction': 0.30942488159014564, 'target_update_interval': 5000, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:24:52,492] Trial 494 pruned. 
+[I 2024-04-25 02:25:02,533] Trial 495 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.0008502457253122309, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.14682029096459964, 'exploration_fraction': 0.4577476931336234, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:25:11,861] Trial 496 pruned. 
+[I 2024-04-25 02:25:18,187] Trial 497 finished with value: -3.2 and parameters: {'gamma': 0.99, 'learning_rate': 0.21483712788976383, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.17157311237206915, 'exploration_fraction': 0.49118465922236304, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:25:25,588] Trial 498 pruned. 
+[I 2024-04-25 02:27:00,537] Trial 473 pruned. 
+[I 2024-04-25 02:29:03,759] Trial 487 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.20597175216715702, 'batch_size': 128, 'buffer_size': 10000, 'exploration_final_eps': 0.16627425179616753, 'exploration_fraction': 0.4265251501189349, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 8, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:29:59,383] Trial 377 pruned. 
+[I 2024-04-25 02:34:27,646] Trial 407 pruned. 
+[I 2024-04-25 02:35:00,344] Trial 461 pruned. 
+[I 2024-04-25 02:42:12,711] Trial 479 finished with value: -1.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0010209490312749015, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17409039532014772, 'exploration_fraction': 0.08179359210832729, 'target_update_interval': 10000, 'learning_starts': 1000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 8 with value: -1.8.
+[I 2024-04-25 02:56:52,568] Trial 491 finished with value: -1.6 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0009722687647902346, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.17198966248243439, 'exploration_fraction': 0.04629326552135021, 'target_update_interval': 10000, 'learning_starts': 0, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 491 with value: -1.6.
+[I 2024-04-25 02:57:39,622] Trial 499 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.03359966648740523, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.1815498113112482, 'exploration_fraction': 0.36570019292971234, 'target_update_interval': 15000, 'learning_starts': 0, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 491 with value: -1.6.

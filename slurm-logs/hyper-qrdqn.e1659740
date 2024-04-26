@@ -1,0 +1,164 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-25 00:50:05.705352: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-25 00:50:13,708] A new study created in memory with name: no-name-1bbfd265-fbf5-4e24-b815-dbf701f260ba
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+[I 2024-04-25 00:50:49,337] Trial 4 finished with value: -1.6 and parameters: {'gamma': 0.95, 'learning_rate': 0.39172150508860065, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.08922314288050037, 'exploration_fraction': 0.2738526003290353, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 17}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:50:54,840] Trial 6 finished with value: -4.8 and parameters: {'gamma': 0.999, 'learning_rate': 0.11010124035645891, 'batch_size': 512, 'buffer_size': 1000000, 'exploration_final_eps': 0.09815340304730719, 'exploration_fraction': 0.3128218817492537, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'small', 'n_quantiles': 16}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:09,084] Trial 1 finished with value: -6.4 and parameters: {'gamma': 0.98, 'learning_rate': 0.0005668526485980394, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.0359999568109352, 'exploration_fraction': 0.3310986124256525, 'target_update_interval': 15000, 'learning_starts': 10000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 147}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:17,936] Trial 9 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.0067396087894164266, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.05626968766885574, 'exploration_fraction': 0.42034629698468456, 'target_update_interval': 10000, 'learning_starts': 10000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'small', 'n_quantiles': 52}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:34,625] Trial 8 finished with value: -6.4 and parameters: {'gamma': 0.95, 'learning_rate': 0.0047224034870673535, 'batch_size': 16, 'buffer_size': 1000000, 'exploration_final_eps': 0.11856323803014648, 'exploration_fraction': 0.026351490893848584, 'target_update_interval': 1000, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small', 'n_quantiles': 53}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:35,779] Trial 10 finished with value: -4.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.3077448211672256, 'batch_size': 256, 'buffer_size': 1000000, 'exploration_final_eps': 0.12211291845567417, 'exploration_fraction': 0.16669886879480772, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'tiny', 'n_quantiles': 125}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:48,013] Trial 7 finished with value: -4.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0014429974289799918, 'batch_size': 256, 'buffer_size': 10000, 'exploration_final_eps': 0.08937300759209049, 'exploration_fraction': 0.22162770665497927, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 49}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:54,880] Trial 11 finished with value: -6.4 and parameters: {'gamma': 0.99, 'learning_rate': 0.000177401249737965, 'batch_size': 512, 'buffer_size': 50000, 'exploration_final_eps': 0.07512716831055749, 'exploration_fraction': 0.3210606504904754, 'target_update_interval': 15000, 'learning_starts': 5000, 'train_freq': 16, 'subsample_steps': 1, 'net_arch': 'small', 'n_quantiles': 163}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:51:56,380] Trial 13 finished with value: -1.6 and parameters: {'gamma': 0.9999, 'learning_rate': 0.08385313465237768, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.08496000564369317, 'exploration_fraction': 0.35065461708234613, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'tiny', 'n_quantiles': 48}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:52:17,521] Trial 16 finished with value: -1.6 and parameters: {'gamma': 0.999, 'learning_rate': 0.015571272247393813, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.19699499116149857, 'exploration_fraction': 0.2385046932110692, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 49}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:52:24,646] Trial 14 pruned. 
+[I 2024-04-25 00:52:29,913] Trial 15 pruned. 
+[I 2024-04-25 00:52:55,524] Trial 5 finished with value: -4.8 and parameters: {'gamma': 0.999, 'learning_rate': 2.440024017388874e-05, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.10392721077680514, 'exploration_fraction': 0.04723310888469445, 'target_update_interval': 15000, 'learning_starts': 1000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'small', 'n_quantiles': 183}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:53:00,213] Trial 18 pruned. 
+[I 2024-04-25 00:53:07,501] Trial 19 pruned. 
+[I 2024-04-25 00:53:19,964] Trial 20 finished with value: -3.2 and parameters: {'gamma': 0.98, 'learning_rate': 0.013975411078881356, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.10802013985182193, 'exploration_fraction': 0.3372116596263767, 'target_update_interval': 10000, 'learning_starts': 20000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'tiny', 'n_quantiles': 20}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:53:24,205] Trial 17 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.13048290570038207, 'batch_size': 100, 'buffer_size': 100000, 'exploration_final_eps': 0.18858944233834823, 'exploration_fraction': 0.2095183932955722, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 1, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 53}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:53:27,397] Trial 21 finished with value: -4.8 and parameters: {'gamma': 0.9999, 'learning_rate': 0.04653888854118078, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.12846823731705126, 'exploration_fraction': 0.43114581327797086, 'target_update_interval': 1000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 104}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:53:39,492] Trial 22 pruned. 
+[I 2024-04-25 00:53:54,337] Trial 25 pruned. 
+[I 2024-04-25 00:54:04,343] Trial 26 pruned. 
+[I 2024-04-25 00:54:20,075] Trial 28 finished with value: -1.6 and parameters: {'gamma': 0.999, 'learning_rate': 0.002787281164059346, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.18110196471725334, 'exploration_fraction': 0.16943013363193174, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 50}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:54:21,357] Trial 24 pruned. 
+[I 2024-04-25 00:54:41,358] Trial 27 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.04102330064936227, 'batch_size': 64, 'buffer_size': 50000, 'exploration_final_eps': 0.05881313423237869, 'exploration_fraction': 0.22242461565953392, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 8, 'net_arch': 'tiny', 'n_quantiles': 32}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:54:51,581] Trial 29 pruned. 
+[I 2024-04-25 00:54:55,132] Trial 30 pruned. 
+[I 2024-04-25 00:54:59,048] Trial 31 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.2692386642863659, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.08123104061323924, 'exploration_fraction': 0.2904402964363482, 'target_update_interval': 20000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'small', 'n_quantiles': 69}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:55:14,971] Trial 34 finished with value: -1.6 and parameters: {'gamma': 0.999, 'learning_rate': 0.016449280770830656, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.1889777634688036, 'exploration_fraction': 0.3492370095328135, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 54}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:55:15,754] Trial 2 pruned. 
+[I 2024-04-25 00:55:27,313] Trial 32 pruned. 
+[I 2024-04-25 00:55:37,250] Trial 36 pruned. 
+[I 2024-04-25 00:55:43,109] Trial 35 pruned. 
+[I 2024-04-25 00:56:02,432] Trial 39 pruned. 
+[I 2024-04-25 00:56:05,914] Trial 38 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.0033749958882920658, 'batch_size': 16, 'buffer_size': 100000, 'exploration_final_eps': 0.1465604330382679, 'exploration_fraction': 0.22848475063041498, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'small', 'n_quantiles': 80}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:56:15,233] Trial 41 pruned. 
+[I 2024-04-25 00:58:15,811] Trial 33 pruned. 
+[I 2024-04-25 00:58:26,594] Trial 43 finished with value: -1.6 and parameters: {'gamma': 0.98, 'learning_rate': 0.11271796079865008, 'batch_size': 64, 'buffer_size': 100000, 'exploration_final_eps': 0.08182775073564748, 'exploration_fraction': 0.4352639819348777, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 128, 'subsample_steps': 4, 'net_arch': 'medium', 'n_quantiles': 30}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:58:34,157] Trial 3 pruned. 
+[I 2024-04-25 00:58:49,429] Trial 44 pruned. 
+[I 2024-04-25 00:58:54,749] Trial 45 pruned. 
+[I 2024-04-25 00:59:06,768] Trial 47 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.12240204240675884, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.16439037346698554, 'exploration_fraction': 0.20832535946599812, 'target_update_interval': 1000, 'learning_starts': 10000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 8}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:59:19,817] Trial 42 pruned. 
+[I 2024-04-25 00:59:21,224] Trial 48 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.02194588462331332, 'batch_size': 128, 'buffer_size': 10000, 'exploration_final_eps': 0.19969257649183839, 'exploration_fraction': 0.4004090527126762, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 19}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:59:37,546] Trial 50 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.02590787982846223, 'batch_size': 128, 'buffer_size': 1000000, 'exploration_final_eps': 0.1860638612471565, 'exploration_fraction': 0.2552656446895211, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'tiny', 'n_quantiles': 42}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:59:40,491] Trial 49 finished with value: -1.6 and parameters: {'gamma': 0.999, 'learning_rate': 0.0063132243948488004, 'batch_size': 512, 'buffer_size': 1000000, 'exploration_final_eps': 0.19370407071723095, 'exploration_fraction': 0.41444095177889734, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 16, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 75}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 00:59:46,983] Trial 46 finished with value: -1.6 and parameters: {'gamma': 0.9999, 'learning_rate': 0.002442499697948983, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.1877627907169754, 'exploration_fraction': 0.2686878661517425, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 104}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:00:03,217] Trial 52 pruned. 
+[I 2024-04-25 01:00:10,116] Trial 53 pruned. 
+[I 2024-04-25 01:00:17,355] Trial 54 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.194298606548691, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.18555931123179747, 'exploration_fraction': 0.20664759198117702, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 8}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:00:31,355] Trial 56 pruned. 
+[I 2024-04-25 01:00:33,533] Trial 55 pruned. 
+[I 2024-04-25 01:00:54,770] Trial 57 pruned. 
+[I 2024-04-25 01:00:56,306] Trial 58 pruned. 
+[I 2024-04-25 01:01:08,048] Trial 60 pruned. 
+[I 2024-04-25 01:01:17,826] Trial 40 finished with value: -3.2 and parameters: {'gamma': 0.995, 'learning_rate': 0.02890916178803857, 'batch_size': 512, 'buffer_size': 100000, 'exploration_final_eps': 0.18811047147017307, 'exploration_fraction': 0.1988222181553502, 'target_update_interval': 1000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 93}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:01:19,659] Trial 61 finished with value: -1.6 and parameters: {'gamma': 0.9999, 'learning_rate': 0.8537563148672574, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.10602916064422883, 'exploration_fraction': 0.4651099343193228, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'tiny', 'n_quantiles': 22}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:01:43,826] Trial 62 pruned. 
+[I 2024-04-25 01:01:57,622] Trial 64 pruned. 
+[I 2024-04-25 01:02:05,733] Trial 65 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.001080204544942143, 'batch_size': 16, 'buffer_size': 10000, 'exploration_final_eps': 0.19238218064483278, 'exploration_fraction': 0.1812904996293868, 'target_update_interval': 1000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 4, 'net_arch': 'medium', 'n_quantiles': 67}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:02:20,883] Trial 66 pruned. 
+[I 2024-04-25 01:02:30,897] Trial 67 pruned. 
+[I 2024-04-25 01:02:52,062] Trial 68 pruned. 
+[I 2024-04-25 01:03:10,674] Trial 69 pruned. 
+[I 2024-04-25 01:03:18,631] Trial 23 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.5406545441204669, 'batch_size': 100, 'buffer_size': 10000, 'exploration_final_eps': 0.06909125125548282, 'exploration_fraction': 0.3102697647395076, 'target_update_interval': 1000, 'learning_starts': 0, 'train_freq': 1, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 9}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:03:18,984] Trial 59 pruned. 
+[I 2024-04-25 01:03:24,559] Trial 63 pruned. 
+[I 2024-04-25 01:04:17,478] Trial 12 pruned. 
+[I 2024-04-25 01:04:21,691] Trial 71 pruned. 
+[I 2024-04-25 01:04:22,466] Trial 72 pruned. 
+[I 2024-04-25 01:04:34,233] Trial 73 pruned. 
+[I 2024-04-25 01:04:44,498] Trial 37 finished with value: -3.2 and parameters: {'gamma': 0.95, 'learning_rate': 0.1526124423032756, 'batch_size': 256, 'buffer_size': 50000, 'exploration_final_eps': 0.038713236148598465, 'exploration_fraction': 0.33333634202521345, 'target_update_interval': 1, 'learning_starts': 1000, 'train_freq': 256, 'subsample_steps': 2, 'net_arch': 'small', 'n_quantiles': 21}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:04:56,838] Trial 77 finished with value: -1.6 and parameters: {'gamma': 0.98, 'learning_rate': 0.004090834785371961, 'batch_size': 256, 'buffer_size': 100000, 'exploration_final_eps': 0.1639010374992605, 'exploration_fraction': 0.19979290382589787, 'target_update_interval': 20000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'medium', 'n_quantiles': 62}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:05:06,534] Trial 76 pruned. 
+[I 2024-04-25 01:05:08,622] Trial 75 pruned. 
+[I 2024-04-25 01:05:20,075] Trial 0 pruned. 
+[I 2024-04-25 01:05:37,617] Trial 82 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.006104235092889594, 'batch_size': 512, 'buffer_size': 1000000, 'exploration_final_eps': 0.1640961120192758, 'exploration_fraction': 0.449708744641514, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 16, 'subsample_steps': 2, 'net_arch': 'tiny', 'n_quantiles': 83}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:05:43,681] Trial 79 pruned. 
+[I 2024-04-25 01:05:52,379] Trial 80 pruned. 
+[I 2024-04-25 01:05:55,314] Trial 81 pruned. 
+[I 2024-04-25 01:06:03,475] Trial 74 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 0.0004768523547482695, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.17799598343339226, 'exploration_fraction': 0.15118997368054443, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 1000, 'subsample_steps': 2, 'net_arch': 'medium', 'n_quantiles': 118}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:06:23,982] Trial 84 pruned. 
+[I 2024-04-25 01:06:32,628] Trial 85 pruned. 
+[I 2024-04-25 01:06:34,063] Trial 86 pruned. 
+[I 2024-04-25 01:06:53,368] Trial 70 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.0028201095585948543, 'batch_size': 256, 'buffer_size': 1000000, 'exploration_final_eps': 0.1860002911535199, 'exploration_fraction': 0.3947726159542892, 'target_update_interval': 1000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 8, 'net_arch': 'medium', 'n_quantiles': 21}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:07:01,788] Trial 83 pruned. 
+[W 2024-04-25 01:07:02,128] Trial 92 failed with parameters: {'gamma': 0.9999, 'learning_rate': 0.5855446717414514, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.10889326101827489, 'exploration_fraction': 0.38713226669591283, 'target_update_interval': 10000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 4, 'net_arch': 'tiny', 'n_quantiles': 54} because of the following error: MemoryError((1000000, 1, 1, 84, 84), dtype('uint8')).
+Traceback (most recent call last):
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 196, in _run_trial
+    value_or_values = func(trial)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 753, in objective
+    model = ALGOS[self.algo](
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/sb3_contrib/qrdqn/qrdqn.py", line 145, in __init__
+    self._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/sb3_contrib/qrdqn/qrdqn.py", line 148, in _setup_model
+    super()._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 189, in _setup_model
+    self.replay_buffer = self.replay_buffer_class(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/buffers.py", line 212, in __init__
+    self.observations = np.zeros((self.buffer_size, self.n_envs, *self.obs_shape), dtype=observation_space.dtype)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 6.57 GiB for an array with shape (1000000, 1, 1, 84, 84) and data type uint8
+[W 2024-04-25 01:07:02,159] Trial 92 failed with value None.
+[I 2024-04-25 01:07:05,355] Trial 88 pruned. 
+[I 2024-04-25 01:07:09,865] Trial 89 pruned. 
+[I 2024-04-25 01:07:16,899] Trial 91 pruned. 
+[I 2024-04-25 01:07:23,273] Trial 90 pruned. 
+[I 2024-04-25 01:09:13,194] Trial 51 pruned. 
+[I 2024-04-25 01:10:01,451] Trial 87 finished with value: -1.6 and parameters: {'gamma': 0.95, 'learning_rate': 0.2202914146340286, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.0719118177483665, 'exploration_fraction': 0.3536472105320412, 'target_update_interval': 10000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'medium', 'n_quantiles': 6}. Best is trial 4 with value: -1.6.
+[I 2024-04-25 01:36:39,226] Trial 78 pruned. 
+Traceback (most recent call last):
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/train.py", line 279, in <module>
+    train()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/train.py", line 275, in train
+    exp_manager.hyperparameters_optimization()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 873, in hyperparameters_optimization
+    study.optimize(self.objective, n_jobs=self.n_jobs, n_trials=self.n_trials)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 99, in _optimize
+    f.result()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 159, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 247, in _run_trial
+    raise func_err
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 196, in _run_trial
+    value_or_values = func(trial)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 753, in objective
+    model = ALGOS[self.algo](
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/sb3_contrib/qrdqn/qrdqn.py", line 145, in __init__
+    self._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/sb3_contrib/qrdqn/qrdqn.py", line 148, in _setup_model
+    super()._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 189, in _setup_model
+    self.replay_buffer = self.replay_buffer_class(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/buffers.py", line 212, in __init__
+    self.observations = np.zeros((self.buffer_size, self.n_envs, *self.obs_shape), dtype=observation_space.dtype)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 6.57 GiB for an array with shape (1000000, 1, 1, 84, 84) and data type uint8

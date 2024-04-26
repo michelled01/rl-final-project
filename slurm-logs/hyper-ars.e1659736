@@ -1,0 +1,344 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-25 00:35:18.765245: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-25 00:35:24,206] A new study created in memory with name: no-name-be7f2938-b97c-4df9-94f0-539dc77a185f
+[I 2024-04-25 00:36:21,976] Trial 2 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.012697276031111385, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 2 with value: -2.0.
+[I 2024-04-25 00:37:02,620] Trial 1 finished with value: -5.0 and parameters: {'n_delta': 4, 'learning_rate': 3.183080235967623e-05, 'delta_std': 0.025, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 2 with value: -2.0.
+[I 2024-04-25 00:37:30,632] Trial 7 finished with value: -0.8 and parameters: {'n_delta': 4, 'learning_rate': 4.9996577613958807e-05, 'delta_std': 0.3, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:37:48,329] Trial 5 finished with value: -9.6 and parameters: {'n_delta': 8, 'learning_rate': 0.002304301246675025, 'delta_std': 0.025, 'top_frac_size': 0.3, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:37:54,542] Trial 0 finished with value: -9.6 and parameters: {'n_delta': 8, 'learning_rate': 0.017045834059535747, 'delta_std': 0.02, 'top_frac_size': 0.3, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:38:45,385] Trial 8 finished with value: -9.6 and parameters: {'n_delta': 8, 'learning_rate': 0.5783009449998805, 'delta_std': 0.05, 'top_frac_size': 0.1, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:38:56,265] Trial 11 finished with value: -6.4 and parameters: {'n_delta': 4, 'learning_rate': 6.332573856367854e-05, 'delta_std': 0.02, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:40:05,939] Trial 14 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 1.0001240910731581e-05, 'delta_std': 0.03, 'top_frac_size': 0.5, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:40:16,709] Trial 13 finished with value: -6.4 and parameters: {'n_delta': 6, 'learning_rate': 0.00034486518503625956, 'delta_std': 0.02, 'top_frac_size': 0.9, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:41:12,242] Trial 6 finished with value: -1.2 and parameters: {'n_delta': 32, 'learning_rate': 1.2081702667105304e-05, 'delta_std': 0.03, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:42:52,878] Trial 15 pruned. 
+[I 2024-04-25 00:43:04,418] Trial 16 pruned. 
+[I 2024-04-25 00:43:18,103] Trial 17 finished with value: -4.8 and parameters: {'n_delta': 4, 'learning_rate': 1.5179861204377902e-05, 'delta_std': 0.03, 'top_frac_size': 0.9, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:44:47,068] Trial 20 pruned. 
+[I 2024-04-25 00:45:43,703] Trial 19 pruned. 
+[I 2024-04-25 00:46:24,126] Trial 4 pruned. 
+[I 2024-04-25 00:48:12,422] Trial 3 finished with value: -3.2 and parameters: {'n_delta': 64, 'learning_rate': 0.00873500678582563, 'delta_std': 0.03, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:49:36,218] Trial 10 pruned. 
+[I 2024-04-25 00:50:51,203] Trial 18 pruned. 
+[I 2024-04-25 00:50:56,658] Trial 23 pruned. 
+[I 2024-04-25 00:57:18,323] Trial 21 pruned. 
+[I 2024-04-25 00:57:48,105] Trial 27 pruned. 
+[I 2024-04-25 00:58:26,996] Trial 9 pruned. 
+[I 2024-04-25 00:58:39,858] Trial 24 pruned. 
+[I 2024-04-25 00:58:52,469] Trial 22 pruned. 
+[I 2024-04-25 00:59:01,755] Trial 28 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.03280231868643213, 'delta_std': 0.3, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:59:57,041] Trial 29 finished with value: -1.0 and parameters: {'n_delta': 4, 'learning_rate': 0.10011383267795115, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 00:59:59,443] Trial 30 pruned. 
+[I 2024-04-25 01:00:47,436] Trial 33 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.13285837566888567, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:01:28,421] Trial 31 pruned. 
+[I 2024-04-25 01:02:39,396] Trial 12 pruned. 
+[I 2024-04-25 01:03:26,248] Trial 37 pruned. 
+[I 2024-04-25 01:03:59,970] Trial 38 pruned. 
+[I 2024-04-25 01:04:26,812] Trial 26 pruned. 
+[I 2024-04-25 01:04:52,256] Trial 39 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 0.03829763061418544, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:06:30,692] Trial 42 pruned. 
+[I 2024-04-25 01:06:56,331] Trial 25 pruned. 
+[I 2024-04-25 01:07:16,097] Trial 36 pruned. 
+[I 2024-04-25 01:07:56,607] Trial 34 pruned. 
+[I 2024-04-25 01:08:07,156] Trial 35 pruned. 
+[I 2024-04-25 01:08:53,924] Trial 45 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.09452726422381363, 'delta_std': 0.2, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:09:39,034] Trial 46 pruned. 
+[I 2024-04-25 01:09:49,051] Trial 47 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.0017177014679910032, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:10:02,332] Trial 48 pruned. 
+[I 2024-04-25 01:10:34,460] Trial 49 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.17029712292707003, 'delta_std': 0.1, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:10:45,605] Trial 50 pruned. 
+[I 2024-04-25 01:11:32,812] Trial 52 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.05605431227512913, 'delta_std': 0.01, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:11:42,090] Trial 51 pruned. 
+[I 2024-04-25 01:11:55,616] Trial 53 pruned. 
+[I 2024-04-25 01:13:13,747] Trial 56 pruned. 
+[I 2024-04-25 01:13:59,017] Trial 40 pruned. 
+[I 2024-04-25 01:14:01,627] Trial 43 pruned. 
+[I 2024-04-25 01:14:16,870] Trial 54 pruned. 
+[I 2024-04-25 01:14:28,645] Trial 41 pruned. 
+[I 2024-04-25 01:15:20,445] Trial 58 pruned. 
+[I 2024-04-25 01:15:45,071] Trial 61 finished with value: -2.6 and parameters: {'n_delta': 4, 'learning_rate': 0.04650028226831801, 'delta_std': 0.01, 'top_frac_size': 0.2, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:15:52,501] Trial 59 pruned. 
+[I 2024-04-25 01:16:47,604] Trial 44 pruned. 
+[I 2024-04-25 01:17:14,108] Trial 64 pruned. 
+[I 2024-04-25 01:17:22,376] Trial 63 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 1.0704261409008561e-05, 'delta_std': 0.03, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:18:40,217] Trial 67 pruned. 
+[I 2024-04-25 01:18:55,034] Trial 32 pruned. 
+[I 2024-04-25 01:19:57,825] Trial 68 pruned. 
+[I 2024-04-25 01:20:34,944] Trial 69 pruned. 
+[I 2024-04-25 01:22:06,525] Trial 71 pruned. 
+[I 2024-04-25 01:25:13,905] Trial 55 pruned. 
+[I 2024-04-25 01:26:37,066] Trial 65 pruned. 
+[I 2024-04-25 01:27:24,224] Trial 70 pruned. 
+[I 2024-04-25 01:29:07,645] Trial 74 pruned. 
+[I 2024-04-25 01:29:36,429] Trial 60 pruned. 
+[I 2024-04-25 01:29:37,309] Trial 57 pruned. 
+[I 2024-04-25 01:30:19,082] Trial 73 pruned. 
+[I 2024-04-25 01:30:20,317] Trial 66 pruned. 
+[I 2024-04-25 01:30:22,021] Trial 76 pruned. 
+[I 2024-04-25 01:31:30,327] Trial 79 pruned. 
+[I 2024-04-25 01:31:40,439] Trial 80 pruned. 
+[I 2024-04-25 01:31:46,069] Trial 72 pruned. 
+[I 2024-04-25 01:31:53,397] Trial 81 pruned. 
+[I 2024-04-25 01:31:57,782] Trial 77 pruned. 
+[I 2024-04-25 01:31:58,658] Trial 78 pruned. 
+[I 2024-04-25 01:32:17,791] Trial 75 finished with value: -1.8 and parameters: {'n_delta': 32, 'learning_rate': 1.89314603981219e-05, 'delta_std': 0.03, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:32:51,448] Trial 83 pruned. 
+[I 2024-04-25 01:33:13,916] Trial 85 pruned. 
+[I 2024-04-25 01:34:09,439] Trial 82 pruned. 
+[I 2024-04-25 01:34:26,394] Trial 84 pruned. 
+[I 2024-04-25 01:34:44,785] Trial 62 pruned. 
+[I 2024-04-25 01:39:46,240] Trial 93 pruned. 
+[I 2024-04-25 01:40:36,723] Trial 89 pruned. 
+[I 2024-04-25 01:40:57,255] Trial 88 pruned. 
+[I 2024-04-25 01:40:59,924] Trial 94 pruned. 
+[I 2024-04-25 01:41:38,503] Trial 87 pruned. 
+[I 2024-04-25 01:41:58,909] Trial 97 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.04939273678219954, 'delta_std': 0.3, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:42:23,467] Trial 96 pruned. 
+[I 2024-04-25 01:42:48,837] Trial 92 pruned. 
+[I 2024-04-25 01:43:43,385] Trial 91 pruned. 
+[I 2024-04-25 01:44:13,637] Trial 90 pruned. 
+[I 2024-04-25 01:49:23,830] Trial 95 pruned. 
+[I 2024-04-25 01:51:09,883] Trial 86 pruned. 
+[I 2024-04-25 01:52:24,613] Trial 105 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.0006799358084540047, 'delta_std': 0.03, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:54:01,718] Trial 99 pruned. 
+[I 2024-04-25 01:54:05,718] Trial 98 pruned. 
+[I 2024-04-25 01:55:15,159] Trial 107 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.012114568840541339, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:55:33,820] Trial 108 pruned. 
+[I 2024-04-25 01:55:58,659] Trial 101 pruned. 
+[I 2024-04-25 01:56:13,518] Trial 103 pruned. 
+[I 2024-04-25 01:56:42,123] Trial 109 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.009208992211589372, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:56:59,472] Trial 111 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.07294251542015061, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:57:03,202] Trial 110 pruned. 
+[I 2024-04-25 01:57:28,039] Trial 102 pruned. 
+[I 2024-04-25 01:57:28,996] Trial 112 pruned. 
+[I 2024-04-25 01:57:35,866] Trial 100 pruned. 
+[I 2024-04-25 01:57:52,983] Trial 113 pruned. 
+[I 2024-04-25 01:58:29,499] Trial 116 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.015167122617993856, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:58:46,076] Trial 117 pruned. 
+[I 2024-04-25 01:58:49,220] Trial 118 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.02812437078640494, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:58:54,444] Trial 119 pruned. 
+[I 2024-04-25 01:59:32,675] Trial 120 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.02095609872456935, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 01:59:46,635] Trial 115 pruned. 
+[I 2024-04-25 02:00:14,015] Trial 123 pruned. 
+[I 2024-04-25 02:00:22,427] Trial 121 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.002587046803935219, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:01:24,538] Trial 125 pruned. 
+[I 2024-04-25 02:01:29,099] Trial 122 pruned. 
+[I 2024-04-25 02:01:31,402] Trial 126 pruned. 
+[I 2024-04-25 02:01:50,094] Trial 127 pruned. 
+[I 2024-04-25 02:02:48,862] Trial 128 pruned. 
+[I 2024-04-25 02:02:50,334] Trial 130 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.4334469395154706, 'delta_std': 0.01, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:03:05,648] Trial 129 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.013797947276941943, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:04:17,696] Trial 132 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 0.006151980993419653, 'delta_std': 0.01, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:04:24,347] Trial 133 pruned. 
+[I 2024-04-25 02:05:40,861] Trial 136 pruned. 
+[I 2024-04-25 02:05:43,812] Trial 135 pruned. 
+[I 2024-04-25 02:06:19,968] Trial 104 pruned. 
+[I 2024-04-25 02:06:49,345] Trial 138 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.006210049995435725, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:06:55,027] Trial 137 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.35366347946101556, 'delta_std': 0.2, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:06:56,230] Trial 124 pruned. 
+[I 2024-04-25 02:07:39,550] Trial 139 pruned. 
+[I 2024-04-25 02:09:00,123] Trial 143 pruned. 
+[I 2024-04-25 02:10:45,635] Trial 144 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.004807978663541401, 'delta_std': 0.025, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:11:35,455] Trial 145 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 2.09870929930711e-05, 'delta_std': 0.025, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:12:28,557] Trial 134 pruned. 
+[I 2024-04-25 02:13:48,926] Trial 140 pruned. 
+[I 2024-04-25 02:15:09,637] Trial 148 pruned. 
+[I 2024-04-25 02:15:50,065] Trial 106 pruned. 
+[I 2024-04-25 02:17:12,733] Trial 141 pruned. 
+[I 2024-04-25 02:17:22,565] Trial 146 pruned. 
+[I 2024-04-25 02:17:38,740] Trial 149 pruned. 
+[I 2024-04-25 02:18:20,481] Trial 151 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 0.00011502327760051793, 'delta_std': 0.3, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:18:26,388] Trial 147 pruned. 
+[I 2024-04-25 02:18:41,589] Trial 150 pruned. 
+[I 2024-04-25 02:18:46,300] Trial 142 pruned. 
+[I 2024-04-25 02:19:15,424] Trial 152 finished with value: -4.8 and parameters: {'n_delta': 4, 'learning_rate': 0.00010066853670817284, 'delta_std': 0.05, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:19:34,533] Trial 154 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.2096676062057037, 'delta_std': 0.2, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:19:48,526] Trial 155 pruned. 
+[I 2024-04-25 02:19:59,407] Trial 157 pruned. 
+[I 2024-04-25 02:20:04,117] Trial 156 pruned. 
+[I 2024-04-25 02:20:11,213] Trial 153 pruned. 
+[I 2024-04-25 02:20:33,218] Trial 159 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 2.166859723805748e-05, 'delta_std': 0.03, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:20:35,032] Trial 158 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.004796351343702937, 'delta_std': 0.03, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:21:06,423] Trial 114 pruned. 
+[I 2024-04-25 02:21:36,547] Trial 165 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.01481646435898254, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:21:55,630] Trial 164 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.0014496342903767387, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:22:29,325] Trial 163 pruned. 
+[I 2024-04-25 02:22:30,940] Trial 160 pruned. 
+[I 2024-04-25 02:22:33,321] Trial 162 pruned. 
+[I 2024-04-25 02:22:58,447] Trial 168 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 1.3855316486517256e-05, 'delta_std': 0.025, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:23:04,365] Trial 131 pruned. 
+[I 2024-04-25 02:23:31,383] Trial 166 pruned. 
+[I 2024-04-25 02:23:33,279] Trial 171 pruned. 
+[I 2024-04-25 02:24:11,453] Trial 167 pruned. 
+[I 2024-04-25 02:24:21,439] Trial 169 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.01861546745438362, 'delta_std': 0.3, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:24:22,575] Trial 173 pruned. 
+[I 2024-04-25 02:24:37,272] Trial 175 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.25750241350197134, 'delta_std': 0.05, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:24:49,510] Trial 170 pruned. 
+[I 2024-04-25 02:24:57,783] Trial 174 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 1.414597291747767e-05, 'delta_std': 0.3, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:25:12,976] Trial 176 pruned. 
+[I 2024-04-25 02:25:17,153] Trial 177 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 6.620888202185935e-05, 'delta_std': 0.1, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:25:52,179] Trial 178 pruned. 
+[I 2024-04-25 02:26:14,187] Trial 181 pruned. 
+[I 2024-04-25 02:26:18,490] Trial 179 pruned. 
+[I 2024-04-25 02:26:29,942] Trial 182 pruned. 
+[I 2024-04-25 02:27:08,198] Trial 184 pruned. 
+[I 2024-04-25 02:27:21,703] Trial 180 pruned. 
+[I 2024-04-25 02:27:27,955] Trial 185 pruned. 
+[I 2024-04-25 02:27:30,549] Trial 186 pruned. 
+[I 2024-04-25 02:27:38,336] Trial 183 pruned. 
+[I 2024-04-25 02:28:42,916] Trial 189 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.0052047232449543524, 'delta_std': 0.03, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:28:44,694] Trial 190 pruned. 
+[I 2024-04-25 02:28:50,818] Trial 191 pruned. 
+[I 2024-04-25 02:29:05,097] Trial 188 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.0005119260918034712, 'delta_std': 0.03, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:29:50,854] Trial 192 pruned. 
+[I 2024-04-25 02:29:58,884] Trial 193 pruned. 
+[I 2024-04-25 02:30:01,303] Trial 194 pruned. 
+[I 2024-04-25 02:30:07,441] Trial 195 pruned. 
+[I 2024-04-25 02:31:09,999] Trial 198 pruned. 
+[I 2024-04-25 02:31:14,036] Trial 197 finished with value: -2.8 and parameters: {'n_delta': 4, 'learning_rate': 0.07113772693750943, 'delta_std': 0.3, 'top_frac_size': 0.5, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:31:24,470] Trial 196 pruned. 
+[I 2024-04-25 02:32:31,718] Trial 199 pruned. 
+[I 2024-04-25 02:32:37,220] Trial 200 pruned. 
+[I 2024-04-25 02:32:38,870] Trial 203 pruned. 
+[I 2024-04-25 02:32:44,245] Trial 172 pruned. 
+[I 2024-04-25 02:33:29,522] Trial 202 pruned. 
+[I 2024-04-25 02:33:43,375] Trial 207 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 0.018684727983664134, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:33:46,305] Trial 201 pruned. 
+[I 2024-04-25 02:34:05,831] Trial 204 pruned. 
+[I 2024-04-25 02:34:32,527] Trial 205 pruned. 
+[I 2024-04-25 02:34:59,825] Trial 209 pruned. 
+[I 2024-04-25 02:35:06,224] Trial 206 pruned. 
+[I 2024-04-25 02:35:06,695] Trial 210 pruned. 
+[I 2024-04-25 02:35:23,825] Trial 212 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.14489659979006336, 'delta_std': 0.05, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:35:45,750] Trial 187 pruned. 
+[I 2024-04-25 02:35:46,975] Trial 211 pruned. 
+[I 2024-04-25 02:35:55,785] Trial 208 pruned. 
+[I 2024-04-25 02:36:22,273] Trial 213 pruned. 
+[I 2024-04-25 02:36:42,211] Trial 217 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.02428142050611535, 'delta_std': 0.3, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:36:49,190] Trial 216 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.13084091617168092, 'delta_std': 0.3, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:37:14,818] Trial 218 pruned. 
+[I 2024-04-25 02:37:38,804] Trial 214 pruned. 
+[I 2024-04-25 02:38:27,511] Trial 221 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.0031419355770439337, 'delta_std': 0.03, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:39:18,986] Trial 223 pruned. 
+[I 2024-04-25 02:40:29,882] Trial 226 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 3.700117076910769e-05, 'delta_std': 0.02, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:41:03,655] Trial 225 pruned. 
+[I 2024-04-25 02:41:47,204] Trial 161 pruned. 
+[I 2024-04-25 02:41:52,874] Trial 228 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 0.009477922369162714, 'delta_std': 0.02, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:43:08,464] Trial 229 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.08373055781654999, 'delta_std': 0.01, 'top_frac_size': 0.8, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:43:17,746] Trial 219 pruned. 
+[I 2024-04-25 02:43:21,256] Trial 230 pruned. 
+[I 2024-04-25 02:43:32,884] Trial 220 pruned. 
+[I 2024-04-25 02:44:25,395] Trial 224 pruned. 
+[I 2024-04-25 02:44:37,305] Trial 232 pruned. 
+[I 2024-04-25 02:45:00,971] Trial 234 pruned. 
+[I 2024-04-25 02:45:27,040] Trial 231 pruned. 
+[I 2024-04-25 02:45:42,895] Trial 235 pruned. 
+[I 2024-04-25 02:45:53,919] Trial 236 pruned. 
+[I 2024-04-25 02:46:17,282] Trial 237 pruned. 
+[I 2024-04-25 02:46:50,036] Trial 222 pruned. 
+[I 2024-04-25 02:46:57,318] Trial 233 pruned. 
+[I 2024-04-25 02:47:11,628] Trial 239 finished with value: -1.4 and parameters: {'n_delta': 6, 'learning_rate': 0.0971706323994983, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:47:15,783] Trial 240 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.0009403517428968558, 'delta_std': 0.2, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:48:04,622] Trial 243 pruned. 
+[I 2024-04-25 02:48:10,096] Trial 238 pruned. 
+[I 2024-04-25 02:48:13,201] Trial 245 pruned. 
+[I 2024-04-25 02:48:15,334] Trial 242 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 0.02031263908509299, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:48:16,304] Trial 227 pruned. 
+[I 2024-04-25 02:48:33,905] Trial 244 pruned. 
+[I 2024-04-25 02:48:58,901] Trial 246 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 0.022625832610215127, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:49:08,684] Trial 250 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 0.22234229361280303, 'delta_std': 0.01, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:49:26,367] Trial 248 finished with value: -3.2 and parameters: {'n_delta': 6, 'learning_rate': 0.054372413023483, 'delta_std': 0.01, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:49:49,989] Trial 247 pruned. 
+[I 2024-04-25 02:50:02,623] Trial 252 pruned. 
+[I 2024-04-25 02:50:12,456] Trial 253 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.6252116932275817, 'delta_std': 0.3, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:50:21,435] Trial 254 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.354979534581244, 'delta_std': 0.3, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:50:53,986] Trial 249 pruned. 
+[I 2024-04-25 02:51:08,672] Trial 257 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.003363929126090022, 'delta_std': 0.03, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:51:14,618] Trial 256 pruned. 
+[I 2024-04-25 02:51:23,954] Trial 215 pruned. 
+[I 2024-04-25 02:52:12,324] Trial 261 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.0037677517726652306, 'delta_std': 0.03, 'top_frac_size': 0.2, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:52:13,986] Trial 255 pruned. 
+[I 2024-04-25 02:52:15,379] Trial 259 finished with value: -2.0 and parameters: {'n_delta': 8, 'learning_rate': 0.010213151076177523, 'delta_std': 0.01, 'top_frac_size': 0.9, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:52:42,341] Trial 260 pruned. 
+[I 2024-04-25 02:53:11,155] Trial 264 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.005918506089939286, 'delta_std': 0.01, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:53:48,591] Trial 265 pruned. 
+[I 2024-04-25 02:54:15,479] Trial 266 pruned. 
+[I 2024-04-25 02:54:36,941] Trial 267 pruned. 
+[I 2024-04-25 02:54:45,929] Trial 263 pruned. 
+[I 2024-04-25 02:55:57,073] Trial 271 pruned. 
+[I 2024-04-25 02:56:24,987] Trial 251 pruned. 
+[I 2024-04-25 02:56:56,660] Trial 270 pruned. 
+[I 2024-04-25 02:57:01,743] Trial 272 pruned. 
+[I 2024-04-25 02:57:24,098] Trial 273 pruned. 
+[I 2024-04-25 02:58:23,008] Trial 274 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.03018032838025044, 'delta_std': 0.05, 'top_frac_size': 0.3, 'zero_policy': True}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:58:28,497] Trial 276 finished with value: -1.4 and parameters: {'n_delta': 8, 'learning_rate': 0.0019861550313280594, 'delta_std': 0.01, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 02:59:40,919] Trial 277 pruned. 
+[I 2024-04-25 03:00:07,188] Trial 258 pruned. 
+[I 2024-04-25 03:00:16,802] Trial 269 pruned. 
+[I 2024-04-25 03:00:40,579] Trial 268 pruned. 
+[I 2024-04-25 03:01:25,615] Trial 281 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 0.029551382788738104, 'delta_std': 0.02, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:01:28,064] Trial 278 pruned. 
+[I 2024-04-25 03:01:42,150] Trial 279 pruned. 
+[I 2024-04-25 03:03:08,209] Trial 283 pruned. 
+[I 2024-04-25 03:03:18,207] Trial 282 pruned. 
+[I 2024-04-25 03:03:34,206] Trial 285 pruned. 
+[I 2024-04-25 03:04:21,141] Trial 284 pruned. 
+[I 2024-04-25 03:04:30,317] Trial 286 finished with value: -3.2 and parameters: {'n_delta': 8, 'learning_rate': 0.026723307352845616, 'delta_std': 0.03, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:04:41,964] Trial 287 pruned. 
+[I 2024-04-25 03:05:57,179] Trial 289 pruned. 
+[I 2024-04-25 03:05:57,813] Trial 275 pruned. 
+[I 2024-04-25 03:06:17,699] Trial 288 pruned. 
+[I 2024-04-25 03:06:44,743] Trial 241 pruned. 
+[I 2024-04-25 03:07:07,614] Trial 290 pruned. 
+[I 2024-04-25 03:07:32,228] Trial 262 pruned. 
+[I 2024-04-25 03:07:45,496] Trial 295 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 3.713658958325482e-05, 'delta_std': 0.3, 'top_frac_size': 0.1, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:08:50,908] Trial 297 pruned. 
+[I 2024-04-25 03:09:00,658] Trial 294 pruned. 
+[I 2024-04-25 03:09:02,218] Trial 296 pruned. 
+[I 2024-04-25 03:10:26,235] Trial 301 pruned. 
+[I 2024-04-25 03:10:30,008] Trial 299 finished with value: -2.0 and parameters: {'n_delta': 4, 'learning_rate': 0.2300456406139641, 'delta_std': 0.3, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:10:47,524] Trial 280 pruned. 
+[I 2024-04-25 03:11:44,408] Trial 302 pruned. 
+[I 2024-04-25 03:12:10,922] Trial 303 pruned. 
+[I 2024-04-25 03:15:11,962] Trial 304 finished with value: -1.4 and parameters: {'n_delta': 32, 'learning_rate': 0.000156571268555012, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:15:34,153] Trial 292 pruned. 
+[I 2024-04-25 03:16:28,019] Trial 293 pruned. 
+[I 2024-04-25 03:19:05,935] Trial 300 pruned. 
+[I 2024-04-25 03:19:17,308] Trial 298 pruned. 
+[I 2024-04-25 03:19:22,384] Trial 309 pruned. 
+[I 2024-04-25 03:19:25,150] Trial 291 pruned. 
+[I 2024-04-25 03:20:57,463] Trial 313 pruned. 
+[I 2024-04-25 03:22:57,747] Trial 306 pruned. 
+[I 2024-04-25 03:23:20,753] Trial 305 pruned. 
+[I 2024-04-25 03:24:19,074] Trial 316 finished with value: -3.2 and parameters: {'n_delta': 4, 'learning_rate': 0.08993336810906358, 'delta_std': 0.025, 'top_frac_size': 0.8, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:24:39,831] Trial 308 pruned. 
+[I 2024-04-25 03:25:13,110] Trial 307 pruned. 
+[I 2024-04-25 03:25:57,365] Trial 318 pruned. 
+[I 2024-04-25 03:26:42,514] Trial 311 pruned. 
+[I 2024-04-25 03:27:35,806] Trial 320 pruned. 
+[I 2024-04-25 03:27:42,048] Trial 315 finished with value: -1.8 and parameters: {'n_delta': 32, 'learning_rate': 0.0002308379247848521, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:28:27,079] Trial 322 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 2.9834074328211466e-05, 'delta_std': 0.03, 'top_frac_size': 1.0, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:28:38,777] Trial 314 pruned. 
+[I 2024-04-25 03:29:34,155] Trial 325 pruned. 
+[I 2024-04-25 03:30:06,448] Trial 312 pruned. 
+[I 2024-04-25 03:30:13,611] Trial 310 pruned. 
+[I 2024-04-25 03:32:02,292] Trial 327 pruned. 
+[I 2024-04-25 03:32:26,890] Trial 324 finished with value: -1.4 and parameters: {'n_delta': 32, 'learning_rate': 0.0011467209959692818, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:32:27,907] Trial 317 pruned. 
+[I 2024-04-25 03:33:04,007] Trial 329 finished with value: -2.0 and parameters: {'n_delta': 6, 'learning_rate': 4.2385301187086896e-05, 'delta_std': 0.01, 'top_frac_size': 0.3, 'zero_policy': False}. Best is trial 7 with value: -0.8.
+[I 2024-04-25 03:33:39,563] Trial 331 pruned. 
+[I 2024-04-25 03:34:23,151] Trial 319 pruned. 
+slurmstepd: error: *** JOB 1659736 ON c314-021 CANCELLED AT 2024-04-25T03:35:18 DUE TO TIME LIMIT ***

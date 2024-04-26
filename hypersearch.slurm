@@ -22,12 +22,12 @@
 #----------------------------------------------------
 
 #SBATCH -J hyper-trpo       # Job name
-#SBATCH -o %x.o%j          # Name of stdout output file
-#SBATCH -e %x.e%j          # Name of stderr error file
+#SBATCH -o slurm-logs/%x.o%j          # Name of stdout output file
+#SBATCH -e slurm-logs/%x.e%j          # Name of stderr error file
 #SBATCH -p normal          # Queue (partition) name
 #SBATCH -N 1               # Total # of nodes (must be 1 for serial)
 #SBATCH -n 1               # Total # of mpi tasks (should be 1 for serial)
-#SBATCH -t 03:00:00        # Run time (hh:mm:ss)
+#SBATCH -t 06:00:00        # Run time (hh:mm:ss)
 #SBATCH --mail-type=all    # Send email at begin and end of job
 #SBATCH -A IRI24006        # Project/Allocation name (req'd if you have more than 1)
 #SBATCH --mail-user=nicolas.hsu@utexas.edu
@@ -40,4 +40,5 @@ date
 echo $PATH
 
 # Launch serial code...
+sh copy.sh
 python -m rl_zoo3.train --env multitask-atari -optimize --n-jobs 8 --env-kwargs env_names:\[\"Breakout\",\"Pong\"\] max_episode_steps:600 autoreset:True --algo trpo

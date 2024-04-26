@@ -1,0 +1,406 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-25 00:48:10.762725: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-25 00:48:19,427] A new study created in memory with name: no-name-b013a44c-15bf-438c-aff3-64940a8dc2b6
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+[I 2024-04-25 00:49:26,993] Trial 4 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.9186884684258791, 'ent_coef': 2.4658720547760258e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.98, 'max_grad_norm': 1, 'vf_coef': 0.23425487769724107, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 00:50:00,805] Trial 3 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 2048, 'gamma': 0.9999, 'learning_rate': 2.01562739868454e-05, 'ent_coef': 5.332407802489625e-05, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 0.8, 'max_grad_norm': 2, 'vf_coef': 0.945374401694181, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 00:51:29,703] Trial 7 finished with value: -6.4 and parameters: {'batch_size': 256, 'n_steps': 128, 'gamma': 0.98, 'learning_rate': 4.586412224919268e-05, 'ent_coef': 0.00047259006817845886, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.9, 'vf_coef': 0.0883796129000517, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 64}. Best is trial 4 with value: -3.2.
+[I 2024-04-25 00:51:43,366] Trial 5 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.03514826990093197, 'ent_coef': 0.0362986163979863, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.08334824510792027, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:52:41,575] Trial 8 finished with value: -6.4 and parameters: {'batch_size': 64, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.02799464887150146, 'ent_coef': 0.0054613887475311465, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 0.3, 'vf_coef': 0.9811614122457853, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:52:56,912] Trial 2 finished with value: -6.4 and parameters: {'batch_size': 8, 'n_steps': 32, 'gamma': 0.999, 'learning_rate': 0.018995826422778823, 'ent_coef': 2.7948511663788874e-05, 'clip_range': 0.4, 'n_epochs': 5, 'gae_lambda': 0.92, 'max_grad_norm': 0.9, 'vf_coef': 0.0056400808047841755, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': True, 'lstm_hidden_size': 256}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:53:00,561] Trial 10 finished with value: -6.2 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.995, 'learning_rate': 3.779740290306121e-05, 'ent_coef': 1.4134870684588164e-07, 'clip_range': 0.3, 'n_epochs': 1, 'gae_lambda': 0.95, 'max_grad_norm': 0.9, 'vf_coef': 0.3719358583024396, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:53:07,049] Trial 9 finished with value: -6.4 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 0.02605204511954374, 'ent_coef': 5.702175528762458e-08, 'clip_range': 0.4, 'n_epochs': 5, 'gae_lambda': 0.9, 'max_grad_norm': 2, 'vf_coef': 0.10874789802492102, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 256}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:53:22,448] Trial 0 finished with value: -6.4 and parameters: {'batch_size': 64, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 1.5553557636127126e-05, 'ent_coef': 1.4455086185101004e-05, 'clip_range': 0.4, 'n_epochs': 20, 'gae_lambda': 1.0, 'max_grad_norm': 0.8, 'vf_coef': 0.986373021450012, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': True, 'lstm_hidden_size': 64}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:53:58,405] Trial 12 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.03476959622106877, 'ent_coef': 1.4461582584376404e-07, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.8478553448630879, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:54:31,106] Trial 6 finished with value: -5.0 and parameters: {'batch_size': 8, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 0.1486651139259033, 'ent_coef': 3.644102091881307e-07, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.8, 'max_grad_norm': 0.6, 'vf_coef': 0.670360184028923, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:55:25,887] Trial 15 pruned. 
+[I 2024-04-25 00:56:31,465] Trial 13 pruned. 
+[I 2024-04-25 00:56:45,274] Trial 1 finished with value: -6.4 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 0.00672595547844008, 'ent_coef': 3.327655054383455e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.9, 'max_grad_norm': 1, 'vf_coef': 0.5042770102195124, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:57:07,827] Trial 17 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.1419641878441482, 'ent_coef': 0.00018333642040658737, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.10715694631182918, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:57:37,139] Trial 18 finished with value: -4.0 and parameters: {'batch_size': 64, 'n_steps': 128, 'gamma': 0.995, 'learning_rate': 0.051498856905714534, 'ent_coef': 0.08635774165745125, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.8, 'max_grad_norm': 5, 'vf_coef': 0.20041500761630165, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:57:52,075] Trial 16 finished with value: -5.0 and parameters: {'batch_size': 32, 'n_steps': 128, 'gamma': 0.98, 'learning_rate': 0.00018897613642347737, 'ent_coef': 0.08232028957688076, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.40147336138729806, 'net_arch': 'medium', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:57:57,090] Trial 20 pruned. 
+[I 2024-04-25 00:58:17,072] Trial 11 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 1024, 'gamma': 0.9, 'learning_rate': 0.0037097612723405566, 'ent_coef': 1.6290279399915732e-06, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.9, 'vf_coef': 0.9768948564858682, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:58:24,218] Trial 19 pruned. 
+[I 2024-04-25 00:58:37,846] Trial 22 finished with value: -1.4 and parameters: {'batch_size': 16, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.006984666172134339, 'ent_coef': 6.452552723690231e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.4481044330356293, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 00:59:30,884] Trial 25 pruned. 
+[I 2024-04-25 00:59:36,714] Trial 23 pruned. 
+[I 2024-04-25 01:00:21,714] Trial 27 pruned. 
+[I 2024-04-25 01:00:40,643] Trial 21 pruned. 
+[I 2024-04-25 01:01:03,249] Trial 30 pruned. 
+[I 2024-04-25 01:01:12,668] Trial 24 finished with value: -5.0 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.006616891246835704, 'ent_coef': 5.282185527689101e-07, 'clip_range': 0.1, 'n_epochs': 5, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.9630326919113428, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:02:20,104] Trial 29 pruned. 
+[I 2024-04-25 01:03:00,704] Trial 28 finished with value: -5.0 and parameters: {'batch_size': 128, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.011917317498730104, 'ent_coef': 0.00021161084474267917, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.2507197777905483, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:03:06,632] Trial 32 pruned. 
+[I 2024-04-25 01:03:18,800] Trial 33 pruned. 
+[I 2024-04-25 01:03:27,301] Trial 35 finished with value: -5.0 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 0.03409922809738773, 'ent_coef': 2.7683866303663388e-08, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.8, 'vf_coef': 0.9429624437641002, 'net_arch': 'medium', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:03:43,269] Trial 14 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.06981506210795772, 'ent_coef': 1.0890225224818679e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.98, 'max_grad_norm': 2, 'vf_coef': 0.9602706141587753, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:04:24,811] Trial 26 finished with value: -5.0 and parameters: {'batch_size': 128, 'n_steps': 8, 'gamma': 0.99, 'learning_rate': 0.016584042485196966, 'ent_coef': 0.08081320125715714, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 0.9, 'vf_coef': 0.168294628928946, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:04:43,018] Trial 34 finished with value: -1.6 and parameters: {'batch_size': 128, 'n_steps': 64, 'gamma': 0.9, 'learning_rate': 0.06375872304449347, 'ent_coef': 0.00025315975170920105, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.3, 'vf_coef': 0.4015275956098874, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:05:32,881] Trial 38 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 1024, 'gamma': 0.999, 'learning_rate': 0.012737193579204257, 'ent_coef': 1.3436491506099413e-08, 'clip_range': 0.4, 'n_epochs': 5, 'gae_lambda': 0.8, 'max_grad_norm': 5, 'vf_coef': 0.3697577175112726, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:07:14,120] Trial 37 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.03865223107514031, 'ent_coef': 0.0010392162509120747, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.055573803215626896, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:07:15,184] Trial 39 finished with value: -1.4 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.000950686930916773, 'ent_coef': 1.992197512471093e-07, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.426621393492574, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:07:54,542] Trial 42 pruned. 
+[I 2024-04-25 01:08:51,860] Trial 31 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.99, 'learning_rate': 0.034620319521603396, 'ent_coef': 0.011750633606522575, 'clip_range': 0.1, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 2, 'vf_coef': 0.19645304719469092, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:08:55,180] Trial 36 pruned. 
+[I 2024-04-25 01:12:17,339] Trial 47 pruned. 
+[I 2024-04-25 01:12:53,058] Trial 44 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.4350690660164313, 'ent_coef': 2.1571806025929558e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.9388877192438243, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:14:18,699] Trial 40 pruned. 
+[I 2024-04-25 01:14:41,162] Trial 46 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.08948364941283997, 'ent_coef': 7.771037361127386e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.6789989863457893, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:15:37,614] Trial 41 pruned. 
+[I 2024-04-25 01:15:51,657] Trial 52 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 32, 'gamma': 0.999, 'learning_rate': 0.002620538703608209, 'ent_coef': 1.1842186093315985e-07, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.7312304461163833, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:15:58,484] Trial 51 pruned. 
+[I 2024-04-25 01:16:46,065] Trial 53 pruned. 
+[I 2024-04-25 01:17:10,896] Trial 43 pruned. 
+[I 2024-04-25 01:17:45,037] Trial 50 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 32, 'gamma': 0.98, 'learning_rate': 0.011688963019171224, 'ent_coef': 4.304617337990385e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.98, 'max_grad_norm': 0.9, 'vf_coef': 0.883370072401564, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:18:27,901] Trial 55 pruned. 
+[I 2024-04-25 01:18:47,467] Trial 57 pruned. 
+[I 2024-04-25 01:19:44,293] Trial 45 pruned. 
+[I 2024-04-25 01:20:09,471] Trial 58 pruned. 
+[I 2024-04-25 01:20:22,464] Trial 60 pruned. 
+[I 2024-04-25 01:21:12,196] Trial 54 pruned. 
+[I 2024-04-25 01:21:53,740] Trial 59 pruned. 
+[I 2024-04-25 01:22:15,782] Trial 56 pruned. 
+[I 2024-04-25 01:23:05,092] Trial 65 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.20815685111007137, 'ent_coef': 8.130342343460861e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.6665745425731316, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:23:12,111] Trial 48 pruned. 
+[I 2024-04-25 01:23:19,008] Trial 49 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.3212004450764298, 'ent_coef': 3.2485131094889474e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.95, 'max_grad_norm': 2, 'vf_coef': 0.9722716994389246, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:23:54,645] Trial 64 pruned. 
+[I 2024-04-25 01:24:36,185] Trial 62 pruned. 
+[I 2024-04-25 01:25:30,020] Trial 68 pruned. 
+[I 2024-04-25 01:25:45,619] Trial 66 pruned. 
+[I 2024-04-25 01:25:55,296] Trial 69 pruned. 
+[I 2024-04-25 01:26:55,845] Trial 70 pruned. 
+[I 2024-04-25 01:27:09,584] Trial 72 pruned. 
+[I 2024-04-25 01:27:11,963] Trial 61 pruned. 
+[I 2024-04-25 01:27:39,276] Trial 74 pruned. 
+[I 2024-04-25 01:28:30,145] Trial 75 pruned. 
+[I 2024-04-25 01:28:32,274] Trial 67 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.10302289804718807, 'ent_coef': 5.866558573554652e-06, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.034013791848353736, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:28:42,038] Trial 76 pruned. 
+[I 2024-04-25 01:31:00,706] Trial 77 pruned. 
+[I 2024-04-25 01:31:03,388] Trial 80 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.34649048724644427, 'ent_coef': 8.201553447377906e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.9682445826160417, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:32:00,003] Trial 71 pruned. 
+[I 2024-04-25 01:33:32,767] Trial 84 pruned. 
+[I 2024-04-25 01:33:49,186] Trial 82 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.22097623391062707, 'ent_coef': 4.183151417791409e-06, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.8131284711935011, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:33:53,514] Trial 73 pruned. 
+[I 2024-04-25 01:34:00,226] Trial 78 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.9, 'learning_rate': 0.31391631971864004, 'ent_coef': 1.3597287985837737e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.8, 'vf_coef': 0.9389536391347146, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:34:18,120] Trial 83 pruned. 
+[I 2024-04-25 01:35:07,059] Trial 87 pruned. 
+[I 2024-04-25 01:35:26,928] Trial 86 pruned. 
+[I 2024-04-25 01:35:28,431] Trial 79 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.9999, 'learning_rate': 0.15848967735114253, 'ent_coef': 8.644673130723119e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.8806629055539887, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:35:29,249] Trial 63 pruned. 
+[I 2024-04-25 01:35:48,868] Trial 81 pruned. 
+[I 2024-04-25 01:36:39,747] Trial 90 pruned. 
+[I 2024-04-25 01:37:20,507] Trial 94 pruned. 
+[I 2024-04-25 01:37:24,832] Trial 89 pruned. 
+[I 2024-04-25 01:38:19,806] Trial 92 pruned. 
+[I 2024-04-25 01:38:32,307] Trial 95 pruned. 
+[I 2024-04-25 01:39:32,172] Trial 98 pruned. 
+[I 2024-04-25 01:40:22,298] Trial 85 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.6250137309055335, 'ent_coef': 1.19319792307957e-07, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.6872525346381623, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:41:57,444] Trial 91 pruned. 
+[I 2024-04-25 01:42:49,736] Trial 88 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.17787188250678934, 'ent_coef': 1.2384784150178663e-06, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.9976656820054308, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:42:52,547] Trial 99 pruned. 
+[I 2024-04-25 01:42:57,814] Trial 93 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.2117311425842456, 'ent_coef': 4.355031308954058e-05, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 0.5, 'vf_coef': 0.7044504533071002, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:43:14,026] Trial 102 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.0021459348307237103, 'ent_coef': 4.3222480718400084e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.2768577911933843, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:43:55,518] Trial 105 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.001809685611878532, 'ent_coef': 8.19157059276001e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.975386932504482, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:44:13,966] Trial 101 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 64, 'gamma': 0.98, 'learning_rate': 0.4858305444349846, 'ent_coef': 3.063588716302868e-08, 'clip_range': 0.3, 'n_epochs': 20, 'gae_lambda': 0.9, 'max_grad_norm': 5, 'vf_coef': 0.6291889483738597, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:44:28,586] Trial 97 pruned. 
+[I 2024-04-25 01:44:34,193] Trial 106 pruned. 
+[I 2024-04-25 01:44:49,894] Trial 96 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.036553933799902, 'ent_coef': 3.6533678901391057e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.8, 'max_grad_norm': 5, 'vf_coef': 0.7153645150385318, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:45:37,699] Trial 108 pruned. 
+[I 2024-04-25 01:45:52,945] Trial 110 pruned. 
+[I 2024-04-25 01:46:35,201] Trial 100 pruned. 
+[I 2024-04-25 01:48:50,862] Trial 107 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.0066053706873705435, 'ent_coef': 3.2831262707643736e-05, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.98, 'max_grad_norm': 0.9, 'vf_coef': 0.7811816158987113, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:49:16,389] Trial 103 pruned. 
+[I 2024-04-25 01:49:21,024] Trial 109 pruned. 
+[I 2024-04-25 01:49:37,901] Trial 111 pruned. 
+[I 2024-04-25 01:49:57,167] Trial 104 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.02481831373457411, 'ent_coef': 1.3792953620868457e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.4513890854630729, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:50:37,029] Trial 112 pruned. 
+[I 2024-04-25 01:52:35,325] Trial 115 pruned. 
+[I 2024-04-25 01:53:23,164] Trial 117 pruned. 
+[I 2024-04-25 01:53:52,035] Trial 114 pruned. 
+[I 2024-04-25 01:54:08,071] Trial 121 pruned. 
+[I 2024-04-25 01:54:39,210] Trial 118 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.04248365121747131, 'ent_coef': 4.8863593958531215e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.049901649146173704, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:55:36,137] Trial 120 pruned. 
+[I 2024-04-25 01:55:38,792] Trial 124 pruned. 
+[I 2024-04-25 01:56:18,354] Trial 116 pruned. 
+[I 2024-04-25 01:56:20,090] Trial 125 pruned. 
+[I 2024-04-25 01:56:51,024] Trial 119 pruned. 
+[I 2024-04-25 01:57:11,159] Trial 122 pruned. 
+[I 2024-04-25 01:57:52,932] Trial 123 pruned. 
+[I 2024-04-25 01:58:09,310] Trial 113 pruned. 
+[I 2024-04-25 01:58:16,453] Trial 131 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.0963165039251897, 'ent_coef': 2.1159101108903332e-06, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.6786906733750477, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 01:58:45,810] Trial 129 pruned. 
+[I 2024-04-25 01:59:35,035] Trial 130 pruned. 
+[I 2024-04-25 01:59:45,752] Trial 127 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.95, 'learning_rate': 0.08888163821915909, 'ent_coef': 1.8272153877034908e-05, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.95, 'max_grad_norm': 0.6, 'vf_coef': 0.18366525892825172, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:00:15,079] Trial 128 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.40059398934922225, 'ent_coef': 0.00029660585118928564, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.7, 'vf_coef': 0.2871343629494419, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:00:29,705] Trial 132 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.560630878529987, 'ent_coef': 6.031299296210864e-08, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.8294353272237922, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:00:59,194] Trial 135 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 128, 'gamma': 0.9999, 'learning_rate': 0.060014305046349935, 'ent_coef': 1.2874937942987783e-05, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.6101249993577862, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:01:24,842] Trial 138 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.2868398785947216, 'ent_coef': 1.6899123414615544e-07, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 1, 'vf_coef': 0.4953118094801635, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:02:21,586] Trial 140 pruned. 
+[I 2024-04-25 02:02:24,853] Trial 137 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.995, 'learning_rate': 0.16168491941091515, 'ent_coef': 2.4924271477865666e-06, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.8679722337325962, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:02:33,493] Trial 126 pruned. 
+[I 2024-04-25 02:02:59,103] Trial 139 pruned. 
+[I 2024-04-25 02:03:30,940] Trial 136 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.20087285635048055, 'ent_coef': 0.00010801914314750669, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.20403429514245186, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:03:56,278] Trial 141 pruned. 
+[I 2024-04-25 02:04:35,156] Trial 142 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.10162557010714397, 'ent_coef': 5.394636686666194e-06, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.9, 'vf_coef': 0.7796734078051036, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:04:55,678] Trial 144 pruned. 
+[I 2024-04-25 02:05:23,843] Trial 145 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.055082836525328735, 'ent_coef': 2.1755907173799753e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.8, 'vf_coef': 0.9551181230536129, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:05:34,523] Trial 146 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.95, 'learning_rate': 0.19559927787003797, 'ent_coef': 7.734699455870217e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.929683097018399, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:05:55,690] Trial 134 pruned. 
+[I 2024-04-25 02:06:28,217] Trial 151 pruned. 
+[I 2024-04-25 02:06:47,306] Trial 133 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.9, 'learning_rate': 0.013131709281767814, 'ent_coef': 2.87495716379237e-06, 'clip_range': 0.1, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.18376085353142074, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:06:50,221] Trial 143 pruned. 
+[I 2024-04-25 02:07:45,313] Trial 153 pruned. 
+[I 2024-04-25 02:07:52,791] Trial 147 pruned. 
+[I 2024-04-25 02:08:08,829] Trial 148 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.23268536584142155, 'ent_coef': 1.1968977369270082e-07, 'clip_range': 0.3, 'n_epochs': 20, 'gae_lambda': 0.9, 'max_grad_norm': 0.8, 'vf_coef': 0.5084675410323797, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:08:22,110] Trial 149 pruned. 
+[I 2024-04-25 02:08:41,004] Trial 152 pruned. 
+[I 2024-04-25 02:10:14,217] Trial 154 pruned. 
+[I 2024-04-25 02:10:15,636] Trial 155 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 64, 'gamma': 0.98, 'learning_rate': 0.14875098555147342, 'ent_coef': 2.4753474390022693e-07, 'clip_range': 0.4, 'n_epochs': 20, 'gae_lambda': 0.9, 'max_grad_norm': 5, 'vf_coef': 0.797486723727852, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:11:42,018] Trial 158 pruned. 
+[I 2024-04-25 02:11:55,489] Trial 159 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 0.003019853785815916, 'ent_coef': 2.4719049723031096e-08, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.6380191213484924, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:13:21,950] Trial 162 pruned. 
+[I 2024-04-25 02:13:44,501] Trial 156 pruned. 
+[I 2024-04-25 02:14:22,412] Trial 157 pruned. 
+[I 2024-04-25 02:14:35,507] Trial 160 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.9999, 'learning_rate': 0.010935622459831843, 'ent_coef': 8.623398507055992e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.34053912773451855, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:15:22,810] Trial 163 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 1024, 'gamma': 0.9999, 'learning_rate': 0.021388363376359364, 'ent_coef': 1.5974211022729132e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.48436004422078505, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:15:23,595] Trial 150 pruned. 
+[I 2024-04-25 02:15:37,546] Trial 168 pruned. 
+[I 2024-04-25 02:15:59,544] Trial 161 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 64, 'gamma': 0.98, 'learning_rate': 0.024075387974063805, 'ent_coef': 2.2289382377780153e-08, 'clip_range': 0.3, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.7604505423440451, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:16:31,748] Trial 170 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.051833102942904004, 'ent_coef': 1.958221520125533e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.8821848252675494, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:16:37,430] Trial 169 pruned. 
+[I 2024-04-25 02:16:50,281] Trial 165 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 128, 'gamma': 0.98, 'learning_rate': 0.0829500978652512, 'ent_coef': 0.001369181758868253, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.13417746600678698, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:16:54,315] Trial 167 pruned. 
+[I 2024-04-25 02:17:23,902] Trial 171 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.0017180920081133974, 'ent_coef': 2.3239519038292935e-05, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.9880253136769966, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:17:54,798] Trial 174 pruned. 
+[I 2024-04-25 02:18:13,690] Trial 175 pruned. 
+[I 2024-04-25 02:18:41,586] Trial 166 pruned. 
+[I 2024-04-25 02:19:24,167] Trial 164 pruned. 
+[I 2024-04-25 02:19:29,640] Trial 179 pruned. 
+[I 2024-04-25 02:19:38,838] Trial 176 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.18874141504644357, 'ent_coef': 7.184828226402656e-05, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.9, 'vf_coef': 0.8906594982134141, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:20:31,082] Trial 172 pruned. 
+[I 2024-04-25 02:20:42,561] Trial 181 pruned. 
+[I 2024-04-25 02:20:52,176] Trial 182 pruned. 
+[I 2024-04-25 02:21:58,132] Trial 178 pruned. 
+[I 2024-04-25 02:22:18,747] Trial 183 pruned. 
+[I 2024-04-25 02:22:57,664] Trial 186 finished with value: -3.0 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.044958330229460504, 'ent_coef': 0.014949721964939853, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.9, 'max_grad_norm': 5, 'vf_coef': 0.13478624597602068, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:23:05,831] Trial 187 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.2304269323082508, 'ent_coef': 6.409243536729171e-06, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.6933956972890293, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 64}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:24:17,510] Trial 184 finished with value: -3.2 and parameters: {'batch_size': 32, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.03191583605020975, 'ent_coef': 1.1060493089669826e-05, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.7881699081035919, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:24:22,451] Trial 185 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.000911642228705121, 'ent_coef': 3.179311438496824e-05, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.42408789076725373, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:24:23,953] Trial 173 pruned. 
+[I 2024-04-25 02:24:35,227] Trial 177 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.0061161646277079745, 'ent_coef': 9.357457264428198e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.8244326595386202, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 5 with value: -1.4.
+[I 2024-04-25 02:24:45,446] Trial 188 finished with value: -1.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.029152796511548416, 'ent_coef': 1.3143115009970832e-07, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.5090576016386492, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:25:14,935] Trial 190 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.05823260577821315, 'ent_coef': 1.9803904148613362e-06, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.9, 'vf_coef': 0.9732362293985894, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:26:27,410] Trial 191 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.2280569464706267, 'ent_coef': 4.037965405273109e-08, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.7, 'vf_coef': 0.5891120842699675, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:26:37,556] Trial 193 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.09183269398506338, 'ent_coef': 1.8528345600783272e-07, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.7897024108362041, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:26:42,270] Trial 194 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.008531008890623507, 'ent_coef': 3.87730628936621e-08, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.6335806700927213, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:27:21,443] Trial 189 pruned. 
+[I 2024-04-25 02:27:40,219] Trial 199 pruned. 
+[I 2024-04-25 02:28:06,989] Trial 192 pruned. 
+[I 2024-04-25 02:28:46,302] Trial 195 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9, 'learning_rate': 0.007436330364276139, 'ent_coef': 2.6612357635508043e-05, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.8, 'vf_coef': 0.048658086111647174, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:28:47,401] Trial 200 pruned. 
+[I 2024-04-25 02:29:03,994] Trial 201 pruned. 
+[I 2024-04-25 02:29:11,508] Trial 198 pruned. 
+[I 2024-04-25 02:29:22,022] Trial 197 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.006172576164098753, 'ent_coef': 4.157647822023565e-07, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.4342386470271129, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:29:38,315] Trial 202 pruned. 
+[I 2024-04-25 02:30:14,331] Trial 205 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.95, 'learning_rate': 0.011309255347035009, 'ent_coef': 1.4203311314604052e-07, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.9086728893376359, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:31:40,418] Trial 180 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.003640549816805863, 'ent_coef': 1.2310995191174994e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.98, 'max_grad_norm': 0.3, 'vf_coef': 0.9834697007814425, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 128}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:31:42,059] Trial 206 pruned. 
+[I 2024-04-25 02:32:19,615] Trial 203 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.586930846270865, 'ent_coef': 3.934108492813354e-06, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.8990393495498774, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:32:26,610] Trial 196 finished with value: -1.4 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.98, 'learning_rate': 0.01108998290567528, 'ent_coef': 1.4363586912906061e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.98, 'max_grad_norm': 2, 'vf_coef': 0.9816054804256181, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:33:05,456] Trial 207 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.3363723575928559, 'ent_coef': 0.011866509630749731, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.1173650339048514, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:33:11,899] Trial 208 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.21009523703145264, 'ent_coef': 0.00038388588740841004, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 5, 'vf_coef': 0.22862561280436478, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:33:29,574] Trial 204 pruned. 
+[I 2024-04-25 02:34:01,134] Trial 209 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.03892481308446222, 'ent_coef': 0.0009602319750234707, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.8, 'max_grad_norm': 5, 'vf_coef': 0.32322965653736874, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:34:31,931] Trial 213 pruned. 
+[I 2024-04-25 02:35:01,043] Trial 216 pruned. 
+[I 2024-04-25 02:35:37,164] Trial 217 pruned. 
+[I 2024-04-25 02:35:43,497] Trial 211 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.06623733191468607, 'ent_coef': 1.638383474387611e-05, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.32993891292413846, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:35:53,794] Trial 210 pruned. 
+[I 2024-04-25 02:37:00,621] Trial 212 pruned. 
+[I 2024-04-25 02:37:12,737] Trial 219 pruned. 
+[I 2024-04-25 02:37:13,522] Trial 221 pruned. 
+[I 2024-04-25 02:37:47,465] Trial 215 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.03663996019888731, 'ent_coef': 0.0004060460559998912, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.1965701601172896, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:37:50,906] Trial 214 pruned. 
+[I 2024-04-25 02:38:17,534] Trial 218 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 1024, 'gamma': 0.995, 'learning_rate': 0.03140213088076049, 'ent_coef': 1.4480108961925329e-05, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.7592221070701328, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:38:38,049] Trial 220 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.995, 'learning_rate': 0.11684859423080561, 'ent_coef': 5.030074330990071e-06, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.9173649979784643, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:38:43,430] Trial 224 pruned. 
+[I 2024-04-25 02:39:38,759] Trial 222 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 32, 'gamma': 0.9, 'learning_rate': 0.12139990960689201, 'ent_coef': 0.00012883828099506463, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.14242647429749405, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:39:54,912] Trial 226 pruned. 
+[I 2024-04-25 02:39:59,342] Trial 223 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.995, 'learning_rate': 0.054628592374835874, 'ent_coef': 5.296159294252425e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 0.5, 'vf_coef': 0.5418809341399213, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:40:14,334] Trial 227 pruned. 
+[I 2024-04-25 02:40:42,862] Trial 228 pruned. 
+[I 2024-04-25 02:41:08,253] Trial 231 pruned. 
+[I 2024-04-25 02:41:26,148] Trial 225 pruned. 
+[I 2024-04-25 02:42:11,181] Trial 235 pruned. 
+[I 2024-04-25 02:42:22,223] Trial 229 pruned. 
+[I 2024-04-25 02:42:23,103] Trial 233 pruned. 
+[I 2024-04-25 02:42:40,943] Trial 232 pruned. 
+[I 2024-04-25 02:43:30,567] Trial 239 pruned. 
+[I 2024-04-25 02:43:49,470] Trial 234 pruned. 
+[I 2024-04-25 02:43:56,567] Trial 241 pruned. 
+[I 2024-04-25 02:44:13,439] Trial 237 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.002900877228425229, 'ent_coef': 9.157650148853032e-07, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 0.9, 'max_grad_norm': 0.5, 'vf_coef': 0.3027094303176545, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:44:35,411] Trial 230 pruned. 
+[I 2024-04-25 02:44:54,265] Trial 240 finished with value: -3.0 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.9, 'learning_rate': 0.07828270370590458, 'ent_coef': 1.0604851342488673e-08, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.8, 'max_grad_norm': 0.5, 'vf_coef': 0.920097005217301, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:45:36,582] Trial 242 pruned. 
+[I 2024-04-25 02:46:20,556] Trial 238 pruned. 
+[I 2024-04-25 02:46:33,460] Trial 244 pruned. 
+[I 2024-04-25 02:46:35,309] Trial 243 pruned. 
+[I 2024-04-25 02:47:04,057] Trial 236 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.9999, 'learning_rate': 0.13607436321479097, 'ent_coef': 0.037178337323656545, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.030629262854412642, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:47:29,331] Trial 246 pruned. 
+[I 2024-04-25 02:47:31,572] Trial 248 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.48222895666367094, 'ent_coef': 4.787825725037262e-07, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 0.98, 'max_grad_norm': 0.8, 'vf_coef': 0.7237233346672386, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:47:51,793] Trial 247 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 128, 'gamma': 0.98, 'learning_rate': 0.35833423932040254, 'ent_coef': 1.7394704446373776e-08, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.9, 'max_grad_norm': 5, 'vf_coef': 0.8728162099501529, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:49:01,044] Trial 251 pruned. 
+[I 2024-04-25 02:49:04,240] Trial 254 pruned. 
+[I 2024-04-25 02:49:11,522] Trial 253 pruned. 
+[I 2024-04-25 02:49:19,715] Trial 252 pruned. 
+[I 2024-04-25 02:49:25,888] Trial 250 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.95, 'learning_rate': 0.024063402008370333, 'ent_coef': 7.390783558329095e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.9431852688093635, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:50:29,673] Trial 245 pruned. 
+[I 2024-04-25 02:50:44,165] Trial 259 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 1024, 'gamma': 0.999, 'learning_rate': 0.0651126548296244, 'ent_coef': 6.316707046090402e-08, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.9060285044007832, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:51:13,239] Trial 255 pruned. 
+[I 2024-04-25 02:51:35,721] Trial 262 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 512, 'gamma': 0.995, 'learning_rate': 0.09125282912820687, 'ent_coef': 2.707679017755744e-06, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 2, 'vf_coef': 0.9957429927717676, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:51:53,889] Trial 258 pruned. 
+[I 2024-04-25 02:52:46,036] Trial 265 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.9033324157208719, 'ent_coef': 1.8340540559835512e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.3, 'vf_coef': 0.4311248026740397, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:53:30,114] Trial 261 pruned. 
+[I 2024-04-25 02:54:27,880] Trial 260 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.026531549518883004, 'ent_coef': 6.279068046251943e-07, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.99, 'max_grad_norm': 5, 'vf_coef': 0.10962796163594193, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:54:32,166] Trial 263 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.0012899142745640532, 'ent_coef': 0.02374303842192278, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.4225527030494435, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:54:53,932] Trial 257 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.4186502643315275, 'ent_coef': 2.5580414004789986e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.9, 'max_grad_norm': 5, 'vf_coef': 0.29597412759956815, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:56:40,027] Trial 266 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.07993129574993464, 'ent_coef': 8.921495340136205e-07, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.6, 'vf_coef': 0.22901167033106384, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:56:58,917] Trial 264 pruned. 
+[I 2024-04-25 02:57:07,360] Trial 270 pruned. 
+[I 2024-04-25 02:57:22,918] Trial 268 pruned. 
+[I 2024-04-25 02:57:49,059] Trial 271 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 128, 'gamma': 0.98, 'learning_rate': 0.010111042789672326, 'ent_coef': 6.526913591224958e-05, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 0.98, 'max_grad_norm': 2, 'vf_coef': 0.8510089412996502, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:58:04,421] Trial 272 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 0.25297696816003196, 'ent_coef': 1.4205844318961882e-05, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.8354643159029247, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:58:34,945] Trial 274 pruned. 
+[I 2024-04-25 02:59:00,640] Trial 276 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 64, 'gamma': 0.999, 'learning_rate': 0.4824616267387103, 'ent_coef': 4.682788195835472e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.46180500642635547, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 02:59:24,549] Trial 256 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.4162004816578509, 'ent_coef': 3.152915200100875e-07, 'clip_range': 0.1, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.25395685713182076, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:00:22,501] Trial 249 pruned. 
+[I 2024-04-25 03:01:29,160] Trial 269 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.4650065075433656, 'ent_coef': 4.97777776935249e-07, 'clip_range': 0.3, 'n_epochs': 20, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.8219107085051048, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:01:30,235] Trial 275 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.9088127864042317, 'ent_coef': 2.7923975867459473e-06, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.9, 'max_grad_norm': 1, 'vf_coef': 0.9137328140940126, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:02:02,460] Trial 279 pruned. 
+[I 2024-04-25 03:03:15,650] Trial 277 pruned. 
+[I 2024-04-25 03:03:41,828] Trial 267 pruned. 
+[I 2024-04-25 03:03:52,359] Trial 280 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.19693978583348917, 'ent_coef': 2.7250275050429525e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.5605619896933697, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:04:00,716] Trial 281 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 32, 'gamma': 0.98, 'learning_rate': 0.24828233306099642, 'ent_coef': 5.450817922883592e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.9896293836084125, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:04:53,220] Trial 284 pruned. 
+[I 2024-04-25 03:05:10,012] Trial 282 pruned. 
+[I 2024-04-25 03:05:52,694] Trial 278 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.056811671207782244, 'ent_coef': 0.05462279794751288, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.3534303161492255, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:06:08,529] Trial 289 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.04264342072440592, 'ent_coef': 1.4079316412107653e-07, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.06463315238527834, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:07:34,530] Trial 273 pruned. 
+[I 2024-04-25 03:07:36,901] Trial 288 pruned. 
+[I 2024-04-25 03:07:59,143] Trial 285 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 0.11980693661339288, 'ent_coef': 2.222628628016865e-07, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.95, 'max_grad_norm': 0.5, 'vf_coef': 0.9452374068099217, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:08:00,395] Trial 286 pruned. 
+[I 2024-04-25 03:08:39,201] Trial 283 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.95, 'learning_rate': 0.41824923071727343, 'ent_coef': 2.6154999987126064e-08, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 1, 'vf_coef': 0.3552327583937445, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:09:22,018] Trial 292 pruned. 
+[I 2024-04-25 03:09:23,078] Trial 295 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.48536966848499885, 'ent_coef': 8.44431219460611e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.8708920752206202, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:10:07,890] Trial 296 pruned. 
+[I 2024-04-25 03:10:13,983] Trial 291 pruned. 
+[I 2024-04-25 03:11:18,157] Trial 287 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 8, 'gamma': 0.95, 'learning_rate': 0.516166873274198, 'ent_coef': 0.011577710426742662, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.19595897875264168, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:11:44,611] Trial 290 finished with value: -1.4 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.6532844724230918, 'ent_coef': 1.0920611718512713e-05, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.9225656452834599, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:12:11,237] Trial 301 pruned. 
+[I 2024-04-25 03:12:52,097] Trial 298 pruned. 
+[I 2024-04-25 03:13:00,608] Trial 294 pruned. 
+[I 2024-04-25 03:13:19,860] Trial 302 pruned. 
+[I 2024-04-25 03:13:41,053] Trial 299 pruned. 
+[I 2024-04-25 03:13:51,504] Trial 300 pruned. 
+[I 2024-04-25 03:14:25,793] Trial 293 finished with value: -3.2 and parameters: {'batch_size': 8, 'n_steps': 512, 'gamma': 0.999, 'learning_rate': 0.002827744110755079, 'ent_coef': 3.321333030869518e-08, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.24329482179179507, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:15:03,511] Trial 305 pruned. 
+[I 2024-04-25 03:15:18,261] Trial 297 pruned. 
+[I 2024-04-25 03:15:47,650] Trial 303 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.009056683943835173, 'ent_coef': 6.441802384212965e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 2, 'vf_coef': 0.19902831504349172, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:16:03,960] Trial 306 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.1011133948110147, 'ent_coef': 4.023203678838307e-07, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.5, 'vf_coef': 0.20228180014599373, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:16:37,178] Trial 311 pruned. 
+[I 2024-04-25 03:17:41,922] Trial 312 finished with value: -3.2 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.999, 'learning_rate': 0.930678222272225, 'ent_coef': 6.690579917313468e-06, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 1.0, 'max_grad_norm': 0.3, 'vf_coef': 0.7461148017564107, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:17:45,394] Trial 313 pruned. 
+[I 2024-04-25 03:17:49,314] Trial 310 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.04086821326317043, 'ent_coef': 7.543959929352289e-06, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.8, 'vf_coef': 0.9724733903924626, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:18:00,147] Trial 304 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.03324948662649954, 'ent_coef': 1.9283032594563782e-05, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.95, 'max_grad_norm': 5, 'vf_coef': 0.08147708006752906, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:18:20,934] Trial 314 pruned. 
+[I 2024-04-25 03:19:19,521] Trial 317 pruned. 
+[I 2024-04-25 03:19:26,238] Trial 316 pruned. 
+[I 2024-04-25 03:19:40,525] Trial 318 pruned. 
+[I 2024-04-25 03:19:46,305] Trial 309 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.008928836826392415, 'ent_coef': 4.96556109316689e-08, 'clip_range': 0.1, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.38358877709671163, 'net_arch': 'small', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 188 with value: -1.2.
+[I 2024-04-25 03:21:13,845] Trial 323 finished with value: -0.4 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.95, 'learning_rate': 9.975496922925865e-05, 'ent_coef': 8.22682217948378e-06, 'clip_range': 0.1, 'n_epochs': 5, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.9798066166855857, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:21:17,191] Trial 308 pruned. 
+[I 2024-04-25 03:21:21,049] Trial 319 finished with value: -1.4 and parameters: {'batch_size': 32, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.3286195977270457, 'ent_coef': 6.226029164861521e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.8585435560415228, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:21:46,656] Trial 307 pruned. 
+[I 2024-04-25 03:21:55,340] Trial 320 pruned. 
+[I 2024-04-25 03:22:28,230] Trial 321 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.1208663688287076, 'ent_coef': 6.454068787052228e-08, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.7280931272594457, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:22:48,490] Trial 324 pruned. 
+[I 2024-04-25 03:23:10,425] Trial 328 pruned. 
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/numpy/core/_methods.py:187: RuntimeWarning: overflow encountered in reduce
+  ret = umr_sum(x, axis, dtype, out, keepdims=keepdims, where=where)
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/numpy/core/_methods.py:176: RuntimeWarning: overflow encountered in multiply
+  x = um.multiply(x, x, out=x)
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/utils.py:65: RuntimeWarning: invalid value encountered in scalar divide
+  return np.nan if var_y == 0 else 1 - np.var(y_true - y_pred) / var_y
+[I 2024-04-25 03:23:39,857] Trial 322 pruned. 
+[I 2024-04-25 03:23:56,260] Trial 327 pruned. 
+[I 2024-04-25 03:24:27,086] Trial 331 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 128, 'gamma': 0.999, 'learning_rate': 0.07439499822205667, 'ent_coef': 1.0906770495634663e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.373406533031752, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:24:29,153] Trial 325 pruned. 
+[I 2024-04-25 03:24:55,879] Trial 332 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.23948078661721356, 'ent_coef': 2.6403501751689026e-06, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.9116973825167526, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:25:14,013] Trial 333 pruned. 
+[I 2024-04-25 03:25:37,325] Trial 329 pruned. 
+[I 2024-04-25 03:25:42,229] Trial 335 pruned. 
+[I 2024-04-25 03:26:02,710] Trial 315 finished with value: -1.4 and parameters: {'batch_size': 8, 'n_steps': 8, 'gamma': 0.98, 'learning_rate': 0.22549804261055262, 'ent_coef': 1.4544980543239285e-07, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 2, 'vf_coef': 0.8227891214372779, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 256}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:27:13,702] Trial 340 pruned. 
+[I 2024-04-25 03:27:53,466] Trial 334 pruned. 
+[I 2024-04-25 03:28:09,053] Trial 326 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 8, 'gamma': 0.99, 'learning_rate': 0.08687714614357836, 'ent_coef': 1.3643919384606487e-06, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.5, 'vf_coef': 0.9064001996719286, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:29:06,077] Trial 337 pruned. 
+[I 2024-04-25 03:29:45,459] Trial 339 pruned. 
+[I 2024-04-25 03:30:15,691] Trial 342 pruned. 
+[I 2024-04-25 03:30:22,841] Trial 344 pruned. 
+[I 2024-04-25 03:31:22,685] Trial 347 finished with value: -3.2 and parameters: {'batch_size': 16, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.09653761178717431, 'ent_coef': 5.005820907670074e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 0.8, 'max_grad_norm': 5, 'vf_coef': 0.3884921630698822, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:31:26,517] Trial 345 pruned. 
+[I 2024-04-25 03:31:47,563] Trial 341 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 512, 'gamma': 0.99, 'learning_rate': 0.09646992668364193, 'ent_coef': 0.001259596525954961, 'clip_range': 0.3, 'n_epochs': 10, 'gae_lambda': 0.92, 'max_grad_norm': 0.3, 'vf_coef': 0.06384158568796677, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:31:59,747] Trial 343 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 64, 'gamma': 0.9, 'learning_rate': 0.15308820211875795, 'ent_coef': 1.4609830118320735e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 1.0, 'max_grad_norm': 0.9, 'vf_coef': 0.8589773011533753, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:32:10,406] Trial 336 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.98, 'learning_rate': 0.2729164527444965, 'ent_coef': 6.314731770554278e-08, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 0.8, 'vf_coef': 0.5134935073738477, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:32:34,666] Trial 349 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 128, 'gamma': 0.999, 'learning_rate': 0.00942784384837844, 'ent_coef': 2.9156225660307315e-08, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.9, 'vf_coef': 0.7405486502705187, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': True, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:32:59,370] Trial 338 pruned. 
+[I 2024-04-25 03:33:47,344] Trial 350 pruned. 
+[I 2024-04-25 03:33:52,895] Trial 353 finished with value: -1.4 and parameters: {'batch_size': 64, 'n_steps': 256, 'gamma': 0.995, 'learning_rate': 0.005532819478371506, 'ent_coef': 2.163246822631972e-07, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 0.98, 'max_grad_norm': 0.9, 'vf_coef': 0.9747637976622329, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:33:54,323] Trial 348 pruned. 
+[I 2024-04-25 03:34:47,397] Trial 354 pruned. 
+[I 2024-04-25 03:35:14,863] Trial 355 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.10299491441514001, 'ent_coef': 0.0002824787498174462, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.3, 'vf_coef': 0.7672509726620544, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:35:17,673] Trial 352 pruned. 
+[I 2024-04-25 03:35:19,522] Trial 351 finished with value: -3.2 and parameters: {'batch_size': 512, 'n_steps': 256, 'gamma': 0.98, 'learning_rate': 0.3287110226933759, 'ent_coef': 0.00021907736047212627, 'clip_range': 0.2, 'n_epochs': 10, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.870135622713032, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:35:21,736] Trial 357 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 9.936941893125022e-05, 'ent_coef': 2.8679038830125597e-07, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 0.3, 'vf_coef': 0.8776103603671612, 'net_arch': 'medium', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:35:25,153] Trial 330 pruned. 
+[I 2024-04-25 03:36:03,739] Trial 356 finished with value: -1.4 and parameters: {'batch_size': 256, 'n_steps': 512, 'gamma': 0.98, 'learning_rate': 0.047840202679819546, 'ent_coef': 0.001031776143612187, 'clip_range': 0.2, 'n_epochs': 5, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.6547656301178774, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:37:16,911] Trial 364 pruned. 
+[I 2024-04-25 03:37:21,095] Trial 358 finished with value: -1.4 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.95, 'learning_rate': 0.003035049767098697, 'ent_coef': 1.1925626813168967e-06, 'clip_range': 0.1, 'n_epochs': 5, 'gae_lambda': 0.98, 'max_grad_norm': 0.7, 'vf_coef': 0.9218334520266069, 'net_arch': 'small', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 512}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:37:31,222] Trial 363 pruned. 
+[I 2024-04-25 03:38:17,601] Trial 360 pruned. 
+[I 2024-04-25 03:38:30,724] Trial 365 pruned. 
+[I 2024-04-25 03:39:06,756] Trial 362 pruned. 
+[I 2024-04-25 03:39:18,994] Trial 359 pruned. 
+[I 2024-04-25 03:39:41,555] Trial 361 pruned. 
+[I 2024-04-25 03:40:51,387] Trial 366 pruned. 
+[I 2024-04-25 03:41:26,476] Trial 371 pruned. 
+[I 2024-04-25 03:41:55,593] Trial 370 pruned. 
+[I 2024-04-25 03:41:55,960] Trial 373 pruned. 
+[I 2024-04-25 03:43:13,712] Trial 346 pruned. 
+[I 2024-04-25 03:43:57,697] Trial 372 finished with value: -1.4 and parameters: {'batch_size': 16, 'n_steps': 2048, 'gamma': 0.9, 'learning_rate': 0.0012502657920693918, 'ent_coef': 7.38607774793287e-07, 'clip_range': 0.4, 'n_epochs': 10, 'gae_lambda': 1.0, 'max_grad_norm': 5, 'vf_coef': 0.49276962622358855, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 128}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:44:50,500] Trial 375 pruned. 
+[I 2024-04-25 03:45:06,630] Trial 378 pruned. 
+[I 2024-04-25 03:45:21,008] Trial 374 pruned. 
+[I 2024-04-25 03:45:26,837] Trial 376 pruned. 
+[I 2024-04-25 03:45:38,097] Trial 368 finished with value: -3.2 and parameters: {'batch_size': 64, 'n_steps': 16, 'gamma': 0.9999, 'learning_rate': 0.5786626131664916, 'ent_coef': 4.185324670278068e-06, 'clip_range': 0.2, 'n_epochs': 20, 'gae_lambda': 0.99, 'max_grad_norm': 0.8, 'vf_coef': 0.8621756854070218, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:46:05,667] Trial 369 pruned. 
+[I 2024-04-25 03:46:28,021] Trial 381 finished with value: -3.2 and parameters: {'batch_size': 128, 'n_steps': 1024, 'gamma': 0.98, 'learning_rate': 0.04217467912411568, 'ent_coef': 1.9882245097294272e-06, 'clip_range': 0.2, 'n_epochs': 1, 'gae_lambda': 1.0, 'max_grad_norm': 0.5, 'vf_coef': 0.7391264253656759, 'net_arch': 'tiny', 'activation_fn': 'tanh', 'enable_critic_lstm': False, 'lstm_hidden_size': 16}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:46:56,275] Trial 383 finished with value: -1.4 and parameters: {'batch_size': 16, 'n_steps': 16, 'gamma': 0.999, 'learning_rate': 0.007526139314741357, 'ent_coef': 9.170249350378818e-08, 'clip_range': 0.4, 'n_epochs': 1, 'gae_lambda': 0.9, 'max_grad_norm': 0.9, 'vf_coef': 0.4053541797167137, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 32}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:47:31,617] Trial 385 finished with value: -1.6 and parameters: {'batch_size': 128, 'n_steps': 2048, 'gamma': 0.999, 'learning_rate': 0.0025625463207104623, 'ent_coef': 1.5267979694094332e-06, 'clip_range': 0.1, 'n_epochs': 1, 'gae_lambda': 0.92, 'max_grad_norm': 5, 'vf_coef': 0.9876151184332939, 'net_arch': 'tiny', 'activation_fn': 'relu', 'enable_critic_lstm': False, 'lstm_hidden_size': 64}. Best is trial 323 with value: -0.4.
+[I 2024-04-25 03:48:06,400] Trial 380 pruned. 
+slurmstepd: error: *** JOB 1659738 ON c302-014 CANCELLED AT 2024-04-25T03:48:18 DUE TO TIME LIMIT ***
