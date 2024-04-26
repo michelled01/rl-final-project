@@ -84,16 +84,18 @@ class Logger:
             print('{}: {}'.format(key, values[key]))
 
     def reset_episode(self):
+        print("rewards:",self.ep_rewards)
         avg_ep_reward = sum(self.ep_rewards) / float(len(self.ep_rewards))
         nonzero_reward_list = [
             reward for reward in self.ep_rewards if reward != 0]
-        avg_ep_nonzero_reward = sum(
-            nonzero_reward_list) / float(len(nonzero_reward_list))
+        if (len(nonzero_reward_list) != 0):
+            avg_ep_nonzero_reward = sum(
+                nonzero_reward_list) / float(len(nonzero_reward_list))
 
-        self._log('ep.average_reward_nonzero', avg_ep_nonzero_reward, self.ep)
-        self._log('ep.average_reward', avg_ep_reward, self.ep)
-        self._log('ep.min_reward', self.ep_min_reward, self.ep)
-        self._log('ep.max_reward', self.ep_max_reward, self.ep)
+            self._log('ep.average_reward_nonzero', avg_ep_nonzero_reward, self.ep)
+            self._log('ep.average_reward', avg_ep_reward, self.ep)
+            self._log('ep.min_reward', self.ep_min_reward, self.ep)
+            self._log('ep.max_reward', self.ep_max_reward, self.ep)
 
         self.ep += 1
         self.ep_rewards = []

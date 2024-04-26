@@ -72,7 +72,7 @@ def main():
     gen_seed(config)
 
     env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
-
+    env = gym.wrappers.HumanRendering(env)
     params = {
         'num_episodes': 40, # 4000
         'minibatch_size': 32,
@@ -138,7 +138,6 @@ def main():
             phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
-
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
             
