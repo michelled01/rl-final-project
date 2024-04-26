@@ -9,41 +9,32 @@ import warnings
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
 # from utils.preprocess import phi_map
-from utils.dqn import DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
+from utils.dqn import DeepQNetwork, Q_targets, Q_values, copy_network, gradient_descent
 # from learn.py import e_greedy_action
 
 def e_greedy_action(Q, phi, env, step):
-    # Initial values
     initial_epsilon, final_epsilon = 1.0, .1
-    # Decay steps
     decay_steps = float(1e6)
-    # Calculate step size to move from final to initial epsilon with #decay_steps
     step_size = (initial_epsilon - final_epsilon) / decay_steps
-    # Calculate annealed epsilon
     ann_eps = initial_epsilon - step * step_size
-    # Define allowsd min. epsilon
     min_eps = 0.1
-    # Set epsilon as max(min_eps, annealed_epsilon)
     epsilon = max(min_eps, ann_eps)
 
-    # Obtain a random value in range [0,1)
     rand = np.random.uniform()
 
-    # With probability e select random action a_t
     if rand < epsilon:
         return env.action_space.sample(), epsilon
-
     else:
-        # Otherwise select action that maximises Q(phi)
-        # In other words: a_t = argmax_a Q(phi, a)
-        # print("calling phi from e_greedy_method")
+        # a_t = argmax_a Q(phi, a)
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     
 
 config = {
-    'out_dir' : "Pong/1",
-    'in_dir' : "Pong/1/replay_logs",
+    'in_dir' : [
+        "Pong/1/replay_logs",
+        "Breakout/1/replay_logs"
+    ],
     'log_dir' : "logs/",
     'log_freq' : 1,
     'save_freq' : 100,
@@ -111,9 +102,6 @@ def main():
         phi = np.transpose(phi,(3, 0, 1, 2))
         phi = torch.from_numpy(phi).float()
 
-        if (ep % config['save_freq']) == 0:
-            save_network(Q, ep, out_dir=config['out_dir'])
-
         for _ in range(params['max_episode_length']):
             step += 1
             # Select action a_t for current state s_t
@@ -123,10 +111,11 @@ def main():
             # Execute action a_t in emulator and observe reward r_t and obs x_(t+1)
             obs, reward, terminated, truncated, info = env.step(action)
             done = terminated or truncated
-            
+
             # Clip reward to range [-1, 1]
             reward = max(-1.0, min(reward, 1.0))
-            
+            if reward: print(reward)
+
             H.add(obs)
             new_phi = np.asarray(H.get())
             new_phi = np.transpose(new_phi,(3, 0, 1, 2))

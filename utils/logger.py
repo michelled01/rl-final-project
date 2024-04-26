@@ -84,7 +84,6 @@ class Logger:
             print('{}: {}'.format(key, values[key]))
 
     def reset_episode(self):
-        print("rewards:",self.ep_rewards)
         avg_ep_reward = sum(self.ep_rewards) / float(len(self.ep_rewards))
         nonzero_reward_list = [
             reward for reward in self.ep_rewards if reward != 0]

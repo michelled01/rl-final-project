@@ -47,11 +47,12 @@ def main():
 
     env = gym.wrappers.HumanRendering(env)
     model = algo.load(model_path)
-
+    print("cur env is", env.cur_env())
     obs, info = env.reset()
     while True:
         action, _states = model.predict(obs)
         obs, reward, terminated, truncated, info = env.step(action)
+        
         if reward:
             print(reward)
         if terminated or truncated:
