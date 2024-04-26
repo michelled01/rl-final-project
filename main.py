@@ -36,22 +36,25 @@ def e_greedy_action(Q, phi, env, step):
     rand = np.random.uniform()
 
     # With probability e select random action a_t
-    # TODO: uncomment this
-    # if rand < epsilon:
-    #     return env.action_space.sample(), epsilon
+    if rand < epsilon:
+        return env.action_space.sample(), epsilon
 
-    # else:
-    if (0 < 1):
+    else:
+    # if (0 < 1):
         # Otherwise select action that maximises Q(phi)
         # In other words: a_t = argmax_a Q(phi, a)
-        print("calling phi from e_greedy_method")
+        # print("calling phi from e_greedy_method")
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     
 
 # Tranining
 
-env = gymnasium.wrappers.AtariPreprocessing(gymnasium.make('ALE/Pong-v5', render_mode=None, frameskip=1))
+env = gymnasium.wrappers.AtariPreprocessing(
+    gymnasium.make('ALE/Pong-v5', 
+    render_mode=None, 
+    frameskip=1),
+    grayscale_newaxis=True)
 # Current iteration
 step = 0
 # Has trained model
@@ -88,17 +91,16 @@ H = History.initial(env)
 for ep in range(params['num_episodes']):
     print(ep)
 
-    phi = torch.from_numpy(np.asarray(H.get())).float()
+    phi = np.asarray(H.get())
+    phi = np.transpose(phi,(3, 0, 1, 2))
+    phi = torch.from_numpy(phi).float()
+    # print("phi is ",phi.size())
     # del phi
 
     if (ep % flags['save_freq']) == 0:
         save_network(Q, ep, out_dir=flags['out_dir'])
 
     for _ in range(params['max_episode_length']):
-        '''not on windows'''
-        # if step % 100 == 0:
-        #     print ('Memory usage: %s (kb)' % resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
-
         step += 1
         # Select action a_t for current state s_t
         action, epsilon = e_greedy_action(Q, phi, env, step)
@@ -111,7 +113,10 @@ for ep in range(params['num_episodes']):
         reward = max(-1.0, min(reward, 1.0))
         # Set s_(t+1) = s_t, a_t, x_(t+1) and preprocess phi_(t+1) =  phi_map( s_(t+1) )
         H.add(image)
-        phi_prev, phi = phi, torch.from_numpy(np.asarray(H.get())).float()
+        new_phi = np.asarray(H.get())
+        new_phi = np.transpose(new_phi,(3, 0, 1, 2))
+        new_phi = torch.from_numpy(new_phi).float()
+        phi_prev, phi = phi, new_phi
         # Store transition (phi_t, a_t, r_t, phi_(t+1)) in D
         D.add(phi_prev, action, reward, done)
 
@@ -126,9 +131,10 @@ for ep in range(params['num_episodes']):
             has_trained_model = True
 
             # Sample random minibatch of transitions ( phi_j, a_j, r_j, phi_(j+1)) from D
-            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=1, indices=None)
+            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
+            # print("phi from transition batch", torch.from_numpy(phi_mb).float().size())
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
             # Log Loss

@@ -182,7 +182,7 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
                stack_size,
                use_staging=True,
                replay_capacity=5000, # 1M
-               batch_size=32,
+               batch_size=1,
                update_horizon=1,
                gamma=0.99,
                wrapped_memory=None,
