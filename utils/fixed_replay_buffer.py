@@ -112,7 +112,7 @@ class FixedReplayBuffer(object):
     # Should contain the files for add_count, action, observation, reward,
     # terminal and invalid_range
     ckpt_suffixes = [
-        int(x) for x in ckpt_counters if ckpt_counters[x] in [6, 7]]
+        int(x) for x in ckpt_counters if ckpt_counters[x] in [4, 5, 6, 7]]
     # Sort the replay buffer indices. This would correspond to list of indices
     # ranging from [0, 1, 2, ..]
     ckpt_suffixes = sorted(ckpt_suffixes)
@@ -129,7 +129,6 @@ class FixedReplayBuffer(object):
     print("loading ",num_buffers,"buffers")
     """Loads multiple checkpoints into a list of replay buffers."""
     if not self._loaded_buffers:  # pytype: disable=attribute-error
-      # print("replay_indices:",self._replay_indices)
       ckpt_suffixes = np.random.choice(
           self._replay_indices, num_buffers, replace=False)
       self._replay_buffers = []
@@ -143,6 +142,7 @@ class FixedReplayBuffer(object):
         if replay_buffer is not None:
           self._replay_buffers.append(replay_buffer)
           self.add_count = max(replay_buffer.add_count, self.add_count)
+      
       self._num_replay_buffers = len(self._replay_buffers)
       if self._num_replay_buffers:
         self._loaded_buffers = True

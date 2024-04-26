@@ -65,6 +65,9 @@ class MultitaskAtari(gym.Env):
         for env in self._envs:
             env.close(*args, **kwargs)
 
+    def get_cur_env(self):
+        return None if self._cur_env_idx is None else self._envs[self._cur_env_idx]
+
     @property
     def _cur_env(self):
         return None if self._cur_env_idx is None else self._envs[self._cur_env_idx]

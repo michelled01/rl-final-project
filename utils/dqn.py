@@ -115,14 +115,6 @@ def gradient_descent(y, q, optimizer):
     return q, error
 
 
-def save_network(model, episode, out_dir):
-    out_dir = '{}/models'.format(out_dir)
-    # Make Dir
-    make_dir(out_dir)
-    # Save model
-    torch.save(model.state_dict(), '{}/episode_{}'.format(out_dir, episode))
-
-
 def copy_network(Q):
     q2 = copy.deepcopy(Q)
     if torch.cuda.is_available():

@@ -37,7 +37,6 @@ config = {
     ],
     'log_dir' : "logs/",
     'log_freq' : 1,
-    'save_freq' : 100,
     # seed for random, np.random
     #seed: 42,
     'atari-env-names': [
@@ -59,6 +58,15 @@ def gen_seed(config):
     else:
         warnings.warn('random number generators have not been seeded')
 
+def id(env_name):
+    if "Pong" in env_name:
+        return 0
+    elif "Breakout" in env_name:
+        return 1
+    else:
+        return -1
+
+
 def main():
     gen_seed(config)
 
@@ -73,7 +81,8 @@ def main():
         'train_freq': 4,
         'target_update_freq': 10000,  # C: Target nerwork update frequency
         'num_actions': env.action_space.n,
-        'min_steps_train': 50000
+        'min_steps_train': 50000,
+        'cur_env_id': 0
     }
 
     step = 0
@@ -81,7 +90,7 @@ def main():
     log = Logger(log_dir=config['log_dir'])
     
     # Initialize replay memory D to capacity N
-    D = WrappedFixedReplayBuffer(data_dir=config['in_dir'], replay_suffix=0, observation_shape=(84, 84), stack_size=4)
+    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, observation_shape=(84, 84), stack_size=4) for path in config['in_dir']]
    
     # Initialize action-value function Q with random weights
     Q = DeepQNetwork(params['num_actions'])
@@ -122,9 +131,8 @@ def main():
             new_phi = torch.from_numpy(new_phi).float()
             phi_prev, phi = phi, new_phi
             
-            D.add(phi_prev, action, reward, done)
-
-            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
+            D[params['cur_env_id']].add(phi_prev, action, reward, done)
+            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D[params['cur_env_id']].memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)
@@ -143,6 +151,8 @@ def main():
             if done:
                 H = History.initial(env)
                 log.reset_episode()
+                params['cur_env_id'] = id(str(env.get_cur_env()))
+                print(params['cur_env_id'])
                 break
 
 if __name__ == '__main__':
