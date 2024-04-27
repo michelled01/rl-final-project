@@ -1,3 +1,5 @@
+import numpy as np
+
 def e_greedy_action(Q, phi, env, step):
     initial_epsilon, final_epsilon = 1.0, .1
     decay_steps = float(1e6)

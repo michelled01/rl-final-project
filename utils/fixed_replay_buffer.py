@@ -25,9 +25,9 @@ from concurrent import futures
 from absl import logging
 from utils.dopamine.replay_memory import circular_replay_buffer
 import numpy as np
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 
-gfile = tf.gfile
+gfile = tf.io.gfile
 
 STORE_FILENAME_PREFIX = circular_replay_buffer.STORE_FILENAME_PREFIX
 
@@ -105,7 +105,7 @@ class FixedReplayBuffer(object):
   def _get_checkpoint_suffixes(self, replay_file_start_index,
                                replay_file_end_index):
     """Get replay buffer indices to be be sampled among all replay buffers."""
-    ckpts = gfile.ListDirectory(self._data_dir)  # pytype: disable=attribute-error
+    ckpts = gfile.listdir(self._data_dir)  # pytype: disable=attribute-error
     # Assumes that the checkpoints are saved in a format CKPT_NAME.{SUFFIX}.gz
     ckpt_counters = collections.Counter(
         [name.split('.')[-2] for name in ckpts if name.endswith('gz')])
@@ -180,9 +180,8 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
                replay_suffix,
                observation_shape,
                stack_size,
-               use_staging=True,
-               replay_capacity=5000, # 1M
-               batch_size=1,
+               replay_capacity=1000000, # 1M
+               batch_size=512,
                update_horizon=1,
                gamma=0.99,
                wrapped_memory=None,
@@ -204,7 +203,6 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
     super(WrappedFixedReplayBuffer, self).__init__(
         observation_shape,
         stack_size,
-        use_staging=use_staging,
         replay_capacity=replay_capacity,
         batch_size=batch_size,
         update_horizon=update_horizon,

@@ -3,6 +3,7 @@ import gymnasium as gym
 import numpy as np
 import torch
 import warnings
+from PIL import Image
 
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
@@ -11,7 +12,7 @@ from utils.learn import e_greedy_action
 
 config = {
     'in_dir' : [
-        "Pong/1/replay_logs",
+        # "Pong/1/replay_logs",
         "Breakout/1/replay_logs"
     ],
     'log_dir' : "logs/",
@@ -19,7 +20,7 @@ config = {
     # seed for random, np.random
     #seed: 42,
     'atari-env-names': [
-        'Pong',
+        # 'Pong',
         'Breakout',
     ],
     'algo': 'PPO',
@@ -41,7 +42,7 @@ def id(env_name):
     if "Pong" in env_name:
         return 0
     elif "Breakout" in env_name:
-        return 1
+        return 0
     else:
         return -1
 
@@ -50,14 +51,15 @@ def main():
     gen_seed(config)
 
     env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
+    gym.wrappers.FrameStack(env, 4)
     env = gym.wrappers.HumanRendering(env)
     params = {
-        'num_episodes': 40, # 4000
-        'minibatch_size': 32,
-        'max_episode_length': 200, # int(10e6),  # T
+        'num_episodes': 36,
+        'minibatch_size': 1,
+        'max_episode_length': 100, #int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
-        'train_freq': 4,
+        'train_freq': 1000,
         'target_update_freq': 10000,  # C: Target nerwork update frequency
         'num_actions': env.action_space.n,
         'min_steps_train': 50000,
@@ -78,7 +80,7 @@ def main():
     Q_ = copy_network(Q)
     
     optimizer = torch.optim.RMSprop(
-        Q.parameters(), lr=0.00025, alpha=0.95, eps=.01
+        Q.parameters(), lr=0.0009722687647902346, alpha=0.9999, eps=.04629326552135021
     )
     
     H = History.initial(env)
@@ -88,6 +90,8 @@ def main():
 
         phi = np.asarray(H.get())
         phi = np.transpose(phi,(3, 0, 1, 2))
+        # ck similarity to the other transpose using PIL to images
+        # img = Image.fromarray(np.transpose(phi[0, :3, :, :])) # assuming r g b are first 3 values
         phi = torch.from_numpy(phi).float()
 
         for _ in range(params['max_episode_length']):
@@ -101,22 +105,32 @@ def main():
             done = terminated or truncated
 
             # Clip reward to range [-1, 1]
-            reward = max(-1.0, min(reward, 1.0))
+            # reward = max(-1.0, min(reward, 1.0))
             if reward: print(reward)
 
             H.add(obs)
             new_phi = np.asarray(H.get())
             new_phi = np.transpose(new_phi,(3, 0, 1, 2))
+            # img = Image.fromarray(np.transpose(new_phi[0, :3, :, :]))
             new_phi = torch.from_numpy(new_phi).float()
             phi_prev, phi = phi, new_phi
             
             D[params['cur_env_id']].add(phi_prev, action, reward, done)
             phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D[params['cur_env_id']].memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
+            
+            # these images should be relatively similar
+            # phi1 = phi_mb
+            # phi2 = phi_prev.cpu().detach().numpy().astype(np.uint8)
+            # img = Image.fromarray(np.transpose(phi1[0, :3, :, :]))
+            # img.save(f"phi{step}.png")
+            # img = Image.fromarray(np.transpose(phi2[0, :3, :, :]))
+            # img.save(f"phi{step}.png")
+
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
-            
+            # print("loss",loss.item())
             if step % (params['train_freq'] * config['log_freq']) == 0:
                 log.q_loss(q_phi, loss, step)
             # Reset Q_
@@ -130,9 +144,10 @@ def main():
             if done:
                 H = History.initial(env)
                 log.reset_episode()
-                params['cur_env_id'] = id(str(env.get_cur_env()))
+                params['cur_env_id'] = id(str(env.unwrapped.get_cur_env()))
                 print(params['cur_env_id'])
                 break
+# TODO: optuna?
 
 if __name__ == '__main__':
     main()

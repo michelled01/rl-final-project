@@ -784,7 +784,6 @@ class OutOfGraphReplayBuffer(object):
     # loading a partially-specified (i.e. corrupted) replay buffer.
     for attr in save_elements:
       filename = self._generate_filename(checkpoint_dir, attr, suffix)
-
       if not tf.io.gfile.exists(filename):
         if attr == 'episode_end_indices':
           logging.warning(

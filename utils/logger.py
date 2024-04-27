@@ -18,7 +18,6 @@ class Logger:
         self.total_loss = 0.0
         self.mb_loss = 0.0
         self.mb_q = 0.0
-
         # Counters
         self.epsilon_val = 0.0
         self.update_count = 0.0
@@ -58,7 +57,6 @@ class Logger:
         self.ep_min_reward = min(self.ep_min_reward, reward)
 
     def display(self):
-
         avg_loss = None if self.update_count == 0 else self.total_loss / self.update_count
         avg_q = None if self.update_count == 0 else self.total_q / self.update_count
         nonzero_reward_list = [
