@@ -27,6 +27,7 @@ config = {
     'policy': 'CnnPolicy',
     'total-timesteps': 216000, # 1 hour of gameplay
     'max-episode-steps': 600,  # 10 seconds of gameplay
+    'frame_stack_size': 4
 }
 
 def gen_seed(config):
@@ -51,13 +52,12 @@ def main():
     gen_seed(config)
 
     env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
-    print(env.observation_space)
-    env = gym.wrappers.FrameStack(env, 4)
+    env = gym.wrappers.FrameStack(env, config['frame_stack_size'])
     env = gym.wrappers.HumanRendering(env)
     params = {
-        'num_episodes': 1000,
+        'num_episodes': 20,
         'minibatch_size': 4,
-        'max_episode_length': 400, #int(10e6),  # T
+        'max_episode_length': 30, #int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
         'train_freq': 1000,
@@ -72,7 +72,7 @@ def main():
     log = Logger(log_dir=config['log_dir'])
     
     # Initialize replay memory D to capacity N
-    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, observation_shape=(84, 84), stack_size=4) for path in config['in_dir']]
+    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, observation_shape=(84, 84), stack_size=config['frame_stack_size']) for path in config['in_dir']]
    
     # Initialize action-value function Q with random weights
     Q = DeepQNetwork(params['num_actions'])
@@ -90,11 +90,10 @@ def main():
         print(ep)
 
         phi = np.asarray(H.get())
-        phi = np.transpose(phi,(0,1,2,3))
         # ck similarity to the other transpose using PIL to images
-        # img = Image.fromarray(np.transpose(phi[0, :3, :, :])) # assuming r g b are first 3 values
+        # img = Image.fromarray(np.transpose(phi[0, 0, :, :])) # first value framestacking
+        # img.save(f"img{step}.png")
         phi = torch.from_numpy(phi).float()
-        print(phi.size())
 
         for _ in range(params['max_episode_length']):
             step += 1
@@ -107,19 +106,20 @@ def main():
             done = terminated or truncated
 
             # Clip reward to range [-1, 1]
-            # reward = max(-1.0, min(reward, 1.0))
+            reward = max(-1.0, min(reward, 1.0))
             if reward: print(reward)
 
             H.add(obs)
             new_phi = np.asarray(H.get())
-            new_phi = np.transpose(new_phi,(0,1,2,3))
-            # img = Image.fromarray(np.transpose(new_phi[0, :3, :, :]))
+            # img = Image.fromarray(np.transpose(new_phi[0, 0, :, :])) # first value framestacking
+            # img.save(f"img2{step}.png")
             new_phi = torch.from_numpy(new_phi).float()
             phi_prev, phi = phi, new_phi
             
             D[params['cur_env_id']].add(phi_prev, action, reward, done)
             phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D[params['cur_env_id']].memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
-            
+            phi_mb = np.transpose(phi_mb,(1,0,2,3))
+            phi_plus1_mb = np.transpose(phi_plus1_mb,(1,0,2,3))
             # these images should be relatively similar
             # phi1 = phi_mb
             # phi2 = phi_prev.cpu().detach().numpy().astype(np.uint8)

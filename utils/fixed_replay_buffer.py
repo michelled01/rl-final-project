@@ -219,7 +219,7 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
 
 class History():
 
-    def __init__(self, length=4):
+    def __init__(self, length=1):
         self.length = length
         self.list = []
 
@@ -240,7 +240,7 @@ class History():
         '''
         Returns a copy of the list
         '''
-        return self.list
+        return self.list[-1]
 
     @staticmethod
     def initial(env):
@@ -249,6 +249,7 @@ class History():
         Repeats initial state to fill list.
         '''
         s = env.reset()[0]
+        print("s is ",s.shape)
         H = History()
         for _ in range(H.length):
             H.add(s)
