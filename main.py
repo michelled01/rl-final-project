@@ -1,34 +1,13 @@
 import multitask_atari
 import gymnasium as gym
-
 import numpy as np
 import torch
-from torch import optim
 import warnings
 
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
-# from utils.preprocess import phi_map
 from utils.dqn import DeepQNetwork, Q_targets, Q_values, copy_network, gradient_descent
-# from learn.py import e_greedy_action
-
-def e_greedy_action(Q, phi, env, step):
-    initial_epsilon, final_epsilon = 1.0, .1
-    decay_steps = float(1e6)
-    step_size = (initial_epsilon - final_epsilon) / decay_steps
-    ann_eps = initial_epsilon - step * step_size
-    min_eps = 0.1
-    epsilon = max(min_eps, ann_eps)
-
-    rand = np.random.uniform()
-
-    if rand < epsilon:
-        return env.action_space.sample(), epsilon
-    else:
-        # a_t = argmax_a Q(phi, a)
-        max_q = Q(phi).max(1)[1]
-        return max_q.data[0], epsilon
-    
+from utils.learn import e_greedy_action
 
 config = {
     'in_dir' : [
@@ -98,7 +77,7 @@ def main():
     
     Q_ = copy_network(Q)
     
-    optimizer = optim.RMSprop(
+    optimizer = torch.optim.RMSprop(
         Q.parameters(), lr=0.00025, alpha=0.95, eps=.01
     )
     

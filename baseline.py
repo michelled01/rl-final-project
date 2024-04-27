@@ -31,7 +31,6 @@ def main():
 
     algo = getattr(sb3, config['algo'])
     path = pathlib.Path('baselines') / f"{'-'.join(sorted(config['atari-env-names']))}_{config['algo']}_{config['total-timesteps']}"
-    print(path)
     path.mkdir(parents=True, exist_ok=True)
     log_dir = path / 'logs'
     model_path = path / 'model.zip'
