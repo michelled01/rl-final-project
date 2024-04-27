@@ -12,7 +12,7 @@ from utils.learn import e_greedy_action
 
 config = {
     'in_dir' : [
-        # "Pong/1/replay_logs",
+        "Pong/1/replay_logs",
         "Breakout/1/replay_logs"
     ],
     'log_dir' : "logs/",
@@ -20,7 +20,7 @@ config = {
     # seed for random, np.random
     #seed: 42,
     'atari-env-names': [
-        # 'Pong',
+        'Pong',
         'Breakout',
     ],
     'algo': 'PPO',
@@ -42,7 +42,7 @@ def id(env_name):
     if "Pong" in env_name:
         return 0
     elif "Breakout" in env_name:
-        return 0
+        return 1
     else:
         return -1
 
@@ -54,9 +54,9 @@ def main():
     gym.wrappers.FrameStack(env, 4)
     env = gym.wrappers.HumanRendering(env)
     params = {
-        'num_episodes': 36,
-        'minibatch_size': 1,
-        'max_episode_length': 100, #int(10e6),  # T
+        'num_episodes': 1000,
+        'minibatch_size': 4,
+        'max_episode_length': 400, #int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
         'train_freq': 1000,
@@ -89,7 +89,7 @@ def main():
         print(ep)
 
         phi = np.asarray(H.get())
-        phi = np.transpose(phi,(3, 0, 1, 2))
+        phi = np.transpose(phi,(0,1,2,3))
         # ck similarity to the other transpose using PIL to images
         # img = Image.fromarray(np.transpose(phi[0, :3, :, :])) # assuming r g b are first 3 values
         phi = torch.from_numpy(phi).float()
@@ -110,7 +110,7 @@ def main():
 
             H.add(obs)
             new_phi = np.asarray(H.get())
-            new_phi = np.transpose(new_phi,(3, 0, 1, 2))
+            new_phi = np.transpose(new_phi,(0,1,2,3))
             # img = Image.fromarray(np.transpose(new_phi[0, :3, :, :]))
             new_phi = torch.from_numpy(new_phi).float()
             phi_prev, phi = phi, new_phi
