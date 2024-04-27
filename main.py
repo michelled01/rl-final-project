@@ -51,7 +51,8 @@ def main():
     gen_seed(config)
 
     env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
-    gym.wrappers.FrameStack(env, 4)
+    print(env.observation_space)
+    env = gym.wrappers.FrameStack(env, 4)
     env = gym.wrappers.HumanRendering(env)
     params = {
         'num_episodes': 1000,
@@ -93,6 +94,7 @@ def main():
         # ck similarity to the other transpose using PIL to images
         # img = Image.fromarray(np.transpose(phi[0, :3, :, :])) # assuming r g b are first 3 values
         phi = torch.from_numpy(phi).float()
+        print(phi.size())
 
         for _ in range(params['max_episode_length']):
             step += 1
