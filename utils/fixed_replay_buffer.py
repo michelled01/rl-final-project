@@ -38,6 +38,7 @@ class FixedReplayBuffer(object):
   def __init__(self,
                data_dir,
                replay_suffix,
+               action_mappings,
                *args,
                replay_file_start_index=0,
                replay_file_end_index=None,
@@ -60,6 +61,7 @@ class FixedReplayBuffer(object):
     self._loaded_buffers = False
     self.add_count = np.array(0)
     self._replay_suffix = replay_suffix
+    self._action_mappings = action_mappings
     self._replay_indices = self._get_checkpoint_suffixes(
         replay_file_start_index, replay_file_end_index)
     while not self._loaded_buffers:
@@ -126,7 +128,7 @@ class FixedReplayBuffer(object):
     return replay_indices
 
   def _load_replay_buffers(self, num_buffers):
-    print("loading ",num_buffers,"buffers")
+    print("loading",num_buffers,"buffers")
     """Loads multiple checkpoints into a list of replay buffers."""
     if not self._loaded_buffers:  # pytype: disable=attribute-error
       ckpt_suffixes = np.random.choice(
@@ -178,6 +180,7 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
   def __init__(self,
                data_dir,
                replay_suffix,
+               action_mappings,
                observation_shape,
                stack_size,
                replay_capacity=1000000, # 1M
@@ -195,7 +198,7 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
     """Initializes WrappedFixedReplayBuffer."""
 
     memory = FixedReplayBuffer(
-        data_dir, replay_suffix, observation_shape, stack_size, replay_capacity,
+        data_dir, replay_suffix, action_mappings, observation_shape, stack_size, replay_capacity,
         batch_size, update_horizon, gamma, max_sample_attempts,
         extra_storage_types=extra_storage_types,
         observation_dtype=observation_dtype)
@@ -203,6 +206,7 @@ class WrappedFixedReplayBuffer(circular_replay_buffer.WrappedReplayBuffer):
     super(WrappedFixedReplayBuffer, self).__init__(
         observation_shape,
         stack_size,
+        action_mappings,
         replay_capacity=replay_capacity,
         batch_size=batch_size,
         update_horizon=update_horizon,
@@ -249,7 +253,6 @@ class History():
         Repeats initial state to fill list.
         '''
         s = env.reset()[0]
-        print("s is ",s.shape)
         H = History()
         for _ in range(H.length):
             H.add(s)

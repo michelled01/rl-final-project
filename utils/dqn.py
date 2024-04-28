@@ -20,19 +20,19 @@ class DeepQNetwork(nn.Module):
 
         super(DeepQNetwork, self).__init__()
         self.conv1 = nn.Sequential(
-            nn.Conv2d(4, 32, kernel_size=3, stride=4, padding=1),
+            nn.Conv2d(4, 32, kernel_size=3, stride=8, padding=4),
             nn.ReLU()
         )
         self.conv2 = nn.Sequential(
-            nn.Conv2d(32, 64, kernel_size=3, stride=2, padding=1),
+            nn.Conv2d(32, 64, kernel_size=3, stride=4, padding=2),
             nn.ReLU()
         )
         self.conv3 = nn.Sequential(
-            nn.Conv2d(64, 64, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(64, 64, kernel_size=3, stride=3, padding=1),
             nn.ReLU()
         )
         self.hidden = nn.Sequential(
-            nn.Linear(7744, 512, bias=True),
+            nn.Linear(256, 512, bias=True),
             nn.ReLU()
         ) 
         self.out = nn.Sequential(
@@ -73,7 +73,6 @@ def Q_targets(phi_plus1_mb, r_mb, done_mb, model, gamma=0.99):
     '''
     # Calculate Q value with given model
     x = torch.from_numpy(phi_plus1_mb).float()
-    # print("calling phi from Q_targets")
     max_Q, argmax_a = model(x).max(1)
     max_Q = max_Q.detach()
     # Terminates = 0 if ep. teriminates at step j+1, or = 1 otherwise
@@ -85,7 +84,6 @@ def Q_targets(phi_plus1_mb, r_mb, done_mb, model, gamma=0.99):
 
 def Q_values(model, phi_mb, action_mb):
     # Obtain Q values of minibatch
-    # print("calling phi from Q_values")
     q_phi = model(torch.from_numpy(phi_mb).float())
     # Obtain actions matrix
     action_mb = torch.from_numpy(action_mb).long().unsqueeze(1)
@@ -102,7 +100,7 @@ def gradient_descent(y, q, optimizer):
     error = (y - q)
 
     # Clip error to range [-1, 1]
-    error = error.clamp(min=-1, max=1)
+    # error = error.clamp(min=-1, max=1)
     # Square error
     error = error**2
     error = error.sum()

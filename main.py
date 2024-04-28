@@ -15,6 +15,10 @@ config = {
         "Pong/1/replay_logs",
         "Breakout/1/replay_logs"
     ],
+    'action_mappings' : [
+        np.array([0,1,3,4,11,12,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
+        np.array([0,1,3,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
+    ],
     'log_dir' : "logs/",
     'log_freq' : 1,
     # seed for random, np.random
@@ -55,9 +59,9 @@ def main():
     env = gym.wrappers.FrameStack(env, config['frame_stack_size'])
     env = gym.wrappers.HumanRendering(env)
     params = {
-        'num_episodes': 20,
+        'num_episodes': 40,
         'minibatch_size': 4,
-        'max_episode_length': 30, #int(10e6),  # T
+        'max_episode_length': 1000, #int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
         'train_freq': 1000,
@@ -72,7 +76,7 @@ def main():
     log = Logger(log_dir=config['log_dir'])
     
     # Initialize replay memory D to capacity N
-    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, observation_shape=(84, 84), stack_size=config['frame_stack_size']) for path in config['in_dir']]
+    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, action_mappings=config['action_mappings'][i], observation_shape=(84, 84), stack_size=config['frame_stack_size']) for i,path in enumerate(config['in_dir'])]
    
     # Initialize action-value function Q with random weights
     Q = DeepQNetwork(params['num_actions'])
@@ -99,6 +103,7 @@ def main():
             step += 1
             # Select action a_t for current state s_t
             action, epsilon = e_greedy_action(Q, phi, env, step)
+
             if step % config['log_freq'] == 0:
                 log.epsilon(epsilon, step)
             # Execute action a_t in emulator and observe reward r_t and obs x_(t+1)
@@ -106,7 +111,7 @@ def main():
             done = terminated or truncated
 
             # Clip reward to range [-1, 1]
-            reward = max(-1.0, min(reward, 1.0))
+            # reward = max(-1.0, min(reward, 1.0))
             if reward: print(reward)
 
             H.add(obs)
@@ -115,9 +120,11 @@ def main():
             # img.save(f"img2{step}.png")
             new_phi = torch.from_numpy(new_phi).float()
             phi_prev, phi = phi, new_phi
-            
+
             D[params['cur_env_id']].add(phi_prev, action, reward, done)
             phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D[params['cur_env_id']].memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
+            # a_mb = (config['action_mappings'][params['cur_env_id']])[np.array(a_mb)]
+
             phi_mb = np.transpose(phi_mb,(1,0,2,3))
             phi_plus1_mb = np.transpose(phi_plus1_mb,(1,0,2,3))
             # these images should be relatively similar
@@ -132,7 +139,6 @@ def main():
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
-            # print("loss",loss.item())
             if step % (params['train_freq'] * config['log_freq']) == 0:
                 log.q_loss(q_phi, loss, step)
             # Reset Q_
@@ -147,9 +153,7 @@ def main():
                 H = History.initial(env)
                 log.reset_episode()
                 params['cur_env_id'] = id(str(env.unwrapped.get_cur_env()))
-                print(params['cur_env_id'])
                 break
-# TODO: optuna?
 
 if __name__ == '__main__':
     main()
