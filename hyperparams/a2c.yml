@@ -8,13 +8,13 @@ multitask-atari:
   use_rms_prop: False
   gae_lambda: 0.99
   n_steps: 64
-  lr_schedule: linear
+  #lr_schedule: linear
   learning_rate: 0.006279355789228186
   ent_coef: 1.0421682143411585e-05
   vf_coef: 0.10611607736145362
-  ortho_init: True
-  net_arch: small
-  activation_fn: relu
+  #ortho_init: True
+  #net_arch: small
+  #activation_fn: relu
 
 atari:
   env_wrapper:
