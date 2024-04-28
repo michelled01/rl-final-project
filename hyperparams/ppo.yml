@@ -1,7 +1,18 @@
 multitask-atari:
   n_timesteps: 3600
   policy: 'CnnPolicy'
-  batch_size: 8                                                                                                                                                                                             n_steps: 32                                                                                                                                                                                               gamma: 0.95                                                                                                                                                                                               learning_rate: 4.551835986821376e-05                                                                                                                                                                      ent_coef: 7.471297410891365e-08                                                                                                                                                                           clip_range: 0.4                                                                                                                                                                                           n_epochs: 20                                                                                                                                                                                              gae_lambda: 1.0                                                                                                                                                                                           max_grad_norm: 1                                                                                                                                                                                          vf_coef: 0.6098449016363978                                                                                                                                                                               net_arch: small                                                                                                                                                                                           activation_fn: tanh
+  batch_size: 8
+  n_steps: 32
+  gamma: 0.95
+  learning_rate: 4.551835986821376e-05
+  ent_coef: 7.471297410891365e-08
+  clip_range: 0.4
+  n_epochs: 20
+  gae_lambda: 1.0
+  max_grad_norm: 1
+  vf_coef: 0.6098449016363978
+  #net_arch: small
+  #activation_fn: tanh
 
 atari:
   env_wrapper:
