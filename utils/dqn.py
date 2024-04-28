@@ -44,15 +44,10 @@ class DeepQNetwork(nn.Module):
         self.apply(self.weights_init)
 
     def forward(self, x):
-        # print("1",x.size())
         x = self.conv1(x)
-        # print("2",x.size())
         x = self.conv2(x)
-        # print("3",x.size())
         x = self.conv3(x)
-        # print("4",x.size())
         x = x.view(x.size(0), -1)
-        # print("5",x.size())
         x = self.hidden(x)
         x = self.out(x)
         return x
@@ -118,14 +113,6 @@ def gradient_descent(y, q, optimizer):
     optimizer.step()
 
     return q, error
-
-
-def save_network(model, episode, out_dir):
-    out_dir = '{}/models'.format(out_dir)
-    # Make Dir
-    make_dir(out_dir)
-    # Save model
-    torch.save(model.state_dict(), '{}/episode_{}'.format(out_dir, episode))
 
 
 def copy_network(Q):

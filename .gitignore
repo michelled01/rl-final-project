@@ -4,3 +4,4 @@ deep-q-learning/
 utils/__pycache__/
 google-cloud-sdk/
 *.swp
+*/__pycache__/*

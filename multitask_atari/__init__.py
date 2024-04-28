@@ -23,7 +23,7 @@ def make_env(env_ids, *, render_mode=None):
 class MultitaskAtari(gym.Env):
     metadata = {'render_modes': ['rgb_array'], 'render_fps': 60}
     action_space = gym.spaces.Discrete(18)
-    observation_space = gym.spaces.Box(0, 255, (84, 84, 1), np.uint8)
+    observation_space = gym.spaces.Box(0, 255, (4, 84, 84), np.uint8)
 
     def __init__(self, *,
         env_names: list[str],
@@ -34,17 +34,23 @@ class MultitaskAtari(gym.Env):
         self.render_mode = render_mode
         self._env_names = env_names
         self._envs = [
-            gym.wrappers.AtariPreprocessing(
-                gym.make(
-                    f"ALE/{env_name}-v5",
-                    frameskip=1,
-                    full_action_space=True,
-                    render_mode=render_mode,
+            gym.wrappers.FrameStack(
+                gym.wrappers.AtariPreprocessing(
+                    gym.make(
+                        f"ALE/{env_name}-v5",
+                        frameskip=1,
+                        full_action_space=True,
+                        render_mode=render_mode,
+                    ),
+                    grayscale_newaxis=False
                 ),
-                grayscale_newaxis=True
+                4
             )
             for env_name in env_names
         ]
+        for env in self._envs:
+            assert self.action_space == env.action_space
+            assert self.observation_space == env.observation_space
         self._env_step_counts = np.zeros(len(self._envs), dtype=int)
         self._cur_env_idx = None
 
@@ -52,11 +58,15 @@ class MultitaskAtari(gym.Env):
         #print('env step counts:', list(zip(self._env_names, self._env_step_counts)))
         self._cur_env_idx = self._env_step_counts.argmin()
         #self._cur_env_idx = self.np_random.choice(len(self._envs), p=self._env_weights)
-        return self._cur_env.reset(*args, **kwargs)
+        obs, info = self._cur_env.reset(*args, **kwargs)
+        obs = np.asarray(obs)
+        return obs, info
 
     def step(self, *args, **kwargs):
         self._env_step_counts[self._cur_env_idx] += 1
-        return self._cur_env.step(*args, **kwargs)
+        obs, reward, term, trunc, info = self._cur_env.step(*args, **kwargs)
+        obs = np.asarray(obs)
+        return obs, reward, term, trunc, info
 
     def render(self, *args, **kwargs):
         return self._cur_env.render(*args, **kwargs)
@@ -64,6 +74,9 @@ class MultitaskAtari(gym.Env):
     def close(self, *args, **kwargs):
         for env in self._envs:
             env.close(*args, **kwargs)
+
+    def get_cur_env(self):
+        return None if self._cur_env_idx is None else self._envs[self._cur_env_idx]
 
     @property
     def _cur_env(self):

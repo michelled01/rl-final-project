@@ -1,156 +1,155 @@
-import gymnasium
+import multitask_atari
+import gymnasium as gym
 import numpy as np
 import torch
-from torch import optim
+import warnings
+from PIL import Image
 
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
-# from utils.preprocess import phi_map
-from utils.dqn import DeepQNetwork, Q_targets, Q_values, save_network, copy_network, gradient_descent
+from utils.dqn import DeepQNetwork, Q_targets, Q_values, copy_network, gradient_descent
+from utils.learn import e_greedy_action
 
-flags = {
-    'out_dir' : "Pong/1",
-    'in_dir' : "Pong/1/replay_logs",
+config = {
+    'in_dir' : [
+        "Pong/1/replay_logs",
+        "Breakout/1/replay_logs"
+    ],
     'log_dir' : "logs/",
     'log_freq' : 1,
-    'save_freq' : 100
+    # seed for random, np.random
+    #seed: 42,
+    'atari-env-names': [
+        'Pong',
+        'Breakout',
+    ],
+    'algo': 'PPO',
+    'policy': 'CnnPolicy',
+    'total-timesteps': 216000, # 1 hour of gameplay
+    'max-episode-steps': 600,  # 10 seconds of gameplay
+    'frame_stack_size': 4
 }
 
-# Learning
-
-def e_greedy_action(Q, phi, env, step):
-    # Initial values
-    initial_epsilon, final_epsilon = 1.0, .1
-    # Decay steps
-    decay_steps = float(1e6)
-    # Calculate step size to move from final to initial epsilon with #decay_steps
-    step_size = (initial_epsilon - final_epsilon) / decay_steps
-    # Calculate annealed epsilon
-    ann_eps = initial_epsilon - step * step_size
-    # Define allowsd min. epsilon
-    min_eps = 0.1
-    # Set epsilon as max(min_eps, annealed_epsilon)
-    epsilon = max(min_eps, ann_eps)
-
-    # Obtain a random value in range [0,1)
-    rand = np.random.uniform()
-
-    # With probability e select random action a_t
-    if rand < epsilon:
-        return env.action_space.sample(), epsilon
-
+def gen_seed(config):
+    if 'seed' in config:
+        import random, numpy as np, torch
+        random.seed(config['seed'])
+        np.random.seed(config['seed'])
+        torch.manual_seed(config['seed'])
     else:
-    # if (0 < 1):
-        # Otherwise select action that maximises Q(phi)
-        # In other words: a_t = argmax_a Q(phi, a)
-        # print("calling phi from e_greedy_method")
-        max_q = Q(phi).max(1)[1]
-        return max_q.data[0], epsilon
+        warnings.warn('random number generators have not been seeded')
+
+def id(env_name):
+    if "Pong" in env_name:
+        return 0
+    elif "Breakout" in env_name:
+        return 1
+    else:
+        return -1
+
+
+def main():
+    gen_seed(config)
+
+    env = gym.make('multitask-atari', max_episode_steps=config['max-episode-steps'], env_names=config['atari-env-names'], render_mode='rgb_array')
+    env = gym.wrappers.FrameStack(env, config['frame_stack_size'])
+    env = gym.wrappers.HumanRendering(env)
+    params = {
+        'num_episodes': 20,
+        'minibatch_size': 4,
+        'max_episode_length': 30, #int(10e6),  # T
+        'memory_size': int(4.5e5),  # N
+        'history_size': 4,  # k
+        'train_freq': 1000,
+        'target_update_freq': 10000,  # C: Target nerwork update frequency
+        'num_actions': env.action_space.n,
+        'min_steps_train': 50000,
+        'cur_env_id': 0
+    }
+
+    step = 0
     
+    log = Logger(log_dir=config['log_dir'])
+    
+    # Initialize replay memory D to capacity N
+    D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, observation_shape=(84, 84), stack_size=config['frame_stack_size']) for path in config['in_dir']]
+   
+    # Initialize action-value function Q with random weights
+    Q = DeepQNetwork(params['num_actions'])
+    log.network(Q)
+    
+    Q_ = copy_network(Q)
+    
+    optimizer = torch.optim.RMSprop(
+        Q.parameters(), lr=0.0009722687647902346, alpha=0.9999, eps=.04629326552135021
+    )
+    
+    H = History.initial(env)
 
-# Tranining
+    for ep in range(params['num_episodes']):
+        print(ep)
 
-env = gymnasium.wrappers.AtariPreprocessing(
-    gymnasium.make('ALE/Pong-v5', 
-    render_mode=None, 
-    frameskip=1),
-    grayscale_newaxis=True)
-# Current iteration
-step = 0
-# Has trained model
-has_trained_model = False
-# Init training params
-params = {
-    'num_episodes': 40, # 4000
-    'minibatch_size': 32,
-    'max_episode_length': 200, # int(10e6),  # T
-    'memory_size': int(4.5e5),  # N
-    'history_size': 4,  # k
-    'train_freq': 4,
-    'target_update_freq': 10000,  # C: Target nerwork update frequency
-    'num_actions': env.action_space.n,
-    'min_steps_train': 50000
-}
-# Initialize logger
-log = Logger(log_dir=flags['log_dir'])
-# Initialize replay memory D to capacity N
-D = WrappedFixedReplayBuffer(data_dir=flags['in_dir'], replay_suffix=0, observation_shape=(84, 84), stack_size=4)
-skip_fill_memory = True
-# Initialize action-value function Q with random weights
-Q = DeepQNetwork(params['num_actions'])
-log.network(Q)
-# Initialize target action-value function Q^
-Q_ = copy_network(Q)
-# Init network optimizer
-optimizer = optim.RMSprop(
-    Q.parameters(), lr=0.00025, alpha=0.95, eps=.01  # ,momentum=0.95,
-)
-# Initialize sequence s1 = {x1} and preprocessed sequence phi = phi(s1)
-H = History.initial(env)
+        phi = np.asarray(H.get())
+        # ck similarity to the other transpose using PIL to images
+        # img = Image.fromarray(np.transpose(phi[0, 0, :, :])) # first value framestacking
+        # img.save(f"img{step}.png")
+        phi = torch.from_numpy(phi).float()
 
-for ep in range(params['num_episodes']):
-    print(ep)
+        for _ in range(params['max_episode_length']):
+            step += 1
+            # Select action a_t for current state s_t
+            action, epsilon = e_greedy_action(Q, phi, env, step)
+            if step % config['log_freq'] == 0:
+                log.epsilon(epsilon, step)
+            # Execute action a_t in emulator and observe reward r_t and obs x_(t+1)
+            obs, reward, terminated, truncated, info = env.step(action)
+            done = terminated or truncated
 
-    phi = np.asarray(H.get())
-    phi = np.transpose(phi,(3, 0, 1, 2))
-    phi = torch.from_numpy(phi).float()
-    # print("phi is ",phi.size())
-    # del phi
+            # Clip reward to range [-1, 1]
+            reward = max(-1.0, min(reward, 1.0))
+            if reward: print(reward)
 
-    if (ep % flags['save_freq']) == 0:
-        save_network(Q, ep, out_dir=flags['out_dir'])
+            H.add(obs)
+            new_phi = np.asarray(H.get())
+            # img = Image.fromarray(np.transpose(new_phi[0, 0, :, :])) # first value framestacking
+            # img.save(f"img2{step}.png")
+            new_phi = torch.from_numpy(new_phi).float()
+            phi_prev, phi = phi, new_phi
+            
+            D[params['cur_env_id']].add(phi_prev, action, reward, done)
+            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D[params['cur_env_id']].memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
+            phi_mb = np.transpose(phi_mb,(1,0,2,3))
+            phi_plus1_mb = np.transpose(phi_plus1_mb,(1,0,2,3))
+            # these images should be relatively similar
+            # phi1 = phi_mb
+            # phi2 = phi_prev.cpu().detach().numpy().astype(np.uint8)
+            # img = Image.fromarray(np.transpose(phi1[0, :3, :, :]))
+            # img.save(f"phi{step}.png")
+            # img = Image.fromarray(np.transpose(phi2[0, :3, :, :]))
+            # img.save(f"phi{step}.png")
 
-    for _ in range(params['max_episode_length']):
-        step += 1
-        # Select action a_t for current state s_t
-        action, epsilon = e_greedy_action(Q, phi, env, step)
-        if step % flags['log_freq'] == 0:
-            log.epsilon(epsilon, step)
-        # Execute action a_t in emulator and observe reward r_t and image x_(t+1)
-        image, reward, done, _, _ = env.step(action)
-
-        # Clip reward to range [-1, 1]
-        reward = max(-1.0, min(reward, 1.0))
-        # Set s_(t+1) = s_t, a_t, x_(t+1) and preprocess phi_(t+1) =  phi_map( s_(t+1) )
-        H.add(image)
-        new_phi = np.asarray(H.get())
-        new_phi = np.transpose(new_phi,(3, 0, 1, 2))
-        new_phi = torch.from_numpy(new_phi).float()
-        phi_prev, phi = phi, new_phi
-        # Store transition (phi_t, a_t, r_t, phi_(t+1)) in D
-        D.add(phi_prev, action, reward, done)
-
-        should_train_model = skip_fill_memory or \
-            ((step > params['min_steps_train']) and
-             D.can_sample(params['minibatch_size']) and
-             (step % params['train_freq'] == 0))
-
-        if should_train_model:
-            if not (skip_fill_memory or has_trained_model):
-                D.save(params['min_steps_train'])
-            has_trained_model = True
-
-            # Sample random minibatch of transitions ( phi_j, a_j, r_j, phi_(j+1)) from D
-            phi_mb, a_mb, r_mb, phi_plus1_mb, done_mb, indices = D.memory.sample_transition_batch(batch_size=params['minibatch_size'], indices=None)
             # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
-            # print("phi from transition batch", torch.from_numpy(phi_mb).float().size())
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
-            # Log Loss
-            if step % (params['train_freq'] * flags['log_freq']) == 0:
+            # print("loss",loss.item())
+            if step % (params['train_freq'] * config['log_freq']) == 0:
                 log.q_loss(q_phi, loss, step)
             # Reset Q_
             if step % params['target_update_freq'] == 0:
                 del Q_
                 Q_ = copy_network(Q)
 
-        log.episode(reward)
-        # if FLAGS["log_console"]:
-        #     log.display()
+            log.episode(reward)
 
-        # Restart game if done
-        if done:
-            H = History.initial(env)
-            log.reset_episode()
-            break
+            # Restart game if done
+            if done:
+                H = History.initial(env)
+                log.reset_episode()
+                params['cur_env_id'] = id(str(env.unwrapped.get_cur_env()))
+                print(params['cur_env_id'])
+                break
+# TODO: optuna?
+
+if __name__ == '__main__':
+    main()
