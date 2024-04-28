@@ -29,6 +29,7 @@ import gzip
 import math
 import os
 import pickle
+import torch
 
 from absl import logging
 import numpy as np
@@ -833,6 +834,7 @@ class WrappedReplayBuffer(object):
       self,
       observation_shape,
       stack_size,
+      action_mappings,
       use_staging=False,
       replay_capacity=1000000,
       batch_size=32,
@@ -899,6 +901,7 @@ class WrappedReplayBuffer(object):
       self.memory = OutOfGraphReplayBuffer(
           observation_shape,
           stack_size,
+          action_mappings,
           replay_capacity,
           batch_size,
           update_horizon,
@@ -913,7 +916,7 @@ class WrappedReplayBuffer(object):
           reward_dtype=reward_dtype,
       )
 
-    self.create_sampling_ops(use_staging)
+    self.create_sampling_ops(use_staging, action_mappings)
 
   def add(self, observation, action, reward, terminal, *args):
     """Adds a transition to the replay memory.
@@ -934,7 +937,7 @@ class WrappedReplayBuffer(object):
     """
     self.memory.add(observation, action, reward, terminal, *args)
 
-  def create_sampling_ops(self, use_staging):
+  def create_sampling_ops(self, use_staging, action_mappings):
     """Creates the ops necessary to sample from the replay buffer.
 
     Creates the transition dictionary containing the sampling tensors.
@@ -956,7 +959,7 @@ class WrappedReplayBuffer(object):
         )
         self._set_transition_shape(transition_tensors, transition_type)
         # Unpack sample transition into member variables.
-        self.unpack_transition(transition_tensors, transition_type)
+        self.unpack_transition(transition_tensors, transition_type, action_mappings)
 
   def _set_transition_shape(self, transition, transition_type):
     """Set shape for each element in the transition.
@@ -986,7 +989,7 @@ class WrappedReplayBuffer(object):
     del transition  # Unused.
     raise NotImplementedError
 
-  def unpack_transition(self, transition_tensors, transition_type):
+  def unpack_transition(self, transition_tensors, transition_type, action_mappings):
     """Unpacks the given transition into member variables.
 
     Args:
@@ -1000,6 +1003,7 @@ class WrappedReplayBuffer(object):
     # TODO(bellemare): These are legacy and should probably be removed in
     # future versions.
     self.states = self.transition['state']
+    self.transition['action'] = torch.from_numpy(action_mappings[self.transition['action'].numpy()])
     self.actions = self.transition['action']
     self.rewards = self.transition['reward']
     self.next_states = self.transition['next_state']
