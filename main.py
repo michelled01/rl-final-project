@@ -15,9 +15,7 @@ config = {
         "Pong/1/replay_logs",
         "Breakout/1/replay_logs"
     ],
-    'out_dir' : [
-        "Pong_and_Breakout",
-    ],
+    'out_dir' : "Pong_and_Breakout",
     'action_mappings' : [
         np.array([0,1,3,4,11,12,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
         np.array([0,1,3,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
