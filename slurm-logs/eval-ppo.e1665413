@@ -1,0 +1,14 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-28 18:38:34.342142: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+slurmstepd: error: *** JOB 1665413 ON c313-092 CANCELLED AT 2024-04-28T19:38:27 DUE TO TIME LIMIT ***

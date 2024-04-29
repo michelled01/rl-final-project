@@ -1,0 +1,88 @@
+
+Currently Loaded Modules:
+  1) intel/19.1.1   3) autotools/1.4   5) cmake/3.24.2   7) xalt/2.10.32
+  2) impi/19.0.9    4) python3/3.9.7   6) pmix/3.2.3     8) TACC
+
+ 
+
+2024-04-27 19:46:48.289327: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+A.L.E: Arcade Learning Environment (version 0.8.1+53f58b7)
+[Powered by Stella]
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/samplers/_tpe/sampler.py:319: ExperimentalWarning: ``multivariate`` option is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-04-27 19:46:58,629] A new study created in memory with name: no-name-bf6e015a-bac4-4db2-95bb-8b9042b93368
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/gymnasium/envs/registration.py:877: UserWarning: [33mWARN: `gymnasium.make(..., autoreset=True)` is deprecated and will be removed in v1.0[0m
+  logger.warn(
+[I 2024-04-27 19:47:32,312] Trial 2 finished with value: -4.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.0009971986033477343, 'batch_size': 128, 'buffer_size': 50000, 'exploration_final_eps': 0.09912407218780195, 'exploration_fraction': 0.43231313468027194, 'target_update_interval': 1000, 'learning_starts': 10000, 'train_freq': 128, 'subsample_steps': 1, 'net_arch': 'tiny'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:47:40,942] Trial 4 finished with value: -6.4 and parameters: {'gamma': 0.99, 'learning_rate': 0.0002063997008257251, 'batch_size': 512, 'buffer_size': 1000000, 'exploration_final_eps': 0.07666784353844924, 'exploration_fraction': 0.2060304495030928, 'target_update_interval': 15000, 'learning_starts': 20000, 'train_freq': 128, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:48:09,779] Trial 3 finished with value: -6.4 and parameters: {'gamma': 0.999, 'learning_rate': 0.0750471117921974, 'batch_size': 128, 'buffer_size': 10000, 'exploration_final_eps': 0.18319368329143615, 'exploration_fraction': 0.1368975018057338, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 4, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:48:12,437] Trial 7 finished with value: -6.4 and parameters: {'gamma': 0.95, 'learning_rate': 2.1600009571688162e-05, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.018079985774520014, 'exploration_fraction': 0.0424190632688764, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 4, 'net_arch': 'small'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:48:50,431] Trial 11 finished with value: -6.4 and parameters: {'gamma': 0.99, 'learning_rate': 0.009094342197333611, 'batch_size': 64, 'buffer_size': 10000, 'exploration_final_eps': 0.07947798253993804, 'exploration_fraction': 0.056863432113905876, 'target_update_interval': 1, 'learning_starts': 20000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:48:53,096] Trial 1 finished with value: -6.4 and parameters: {'gamma': 0.99, 'learning_rate': 0.001070918542964699, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.12849383725014457, 'exploration_fraction': 0.22903686139406354, 'target_update_interval': 5000, 'learning_starts': 0, 'train_freq': 128, 'subsample_steps': 8, 'net_arch': 'tiny'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:49:19,850] Trial 12 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 3.908469068728467e-05, 'batch_size': 512, 'buffer_size': 10000, 'exploration_final_eps': 0.18771671476520277, 'exploration_fraction': 0.1902635428359693, 'target_update_interval': 5000, 'learning_starts': 5000, 'train_freq': 256, 'subsample_steps': 1, 'net_arch': 'medium'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:49:22,195] Trial 13 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 0.00019202064986068186, 'batch_size': 64, 'buffer_size': 1000000, 'exploration_final_eps': 0.12813425399583758, 'exploration_fraction': 0.19073540688541735, 'target_update_interval': 5000, 'learning_starts': 20000, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'small'}. Best is trial 2 with value: -4.8.
+[I 2024-04-27 19:49:42,112] Trial 0 finished with value: -6.4 and parameters: {'gamma': 0.9, 'learning_rate': 0.24976692460443453, 'batch_size': 32, 'buffer_size': 50000, 'exploration_final_eps': 0.07801559913124644, 'exploration_fraction': 0.18858620716054814, 'target_update_interval': 20000, 'learning_starts': 0, 'train_freq': 16, 'subsample_steps': 4, 'net_arch': 'medium'}. Best is trial 2 with value: -4.8.
+[W 2024-04-27 19:49:42,385] Trial 16 failed with parameters: {'gamma': 0.9999, 'learning_rate': 0.8141019571984477, 'batch_size': 100, 'buffer_size': 1000000, 'exploration_final_eps': 0.10821247156289644, 'exploration_fraction': 0.18820446914219602, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1000, 'subsample_steps': 1, 'net_arch': 'tiny'} because of the following error: MemoryError((1000000, 1, 4, 84, 84), dtype('uint8')).
+Traceback (most recent call last):
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 196, in _run_trial
+    value_or_values = func(trial)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 753, in objective
+    model = ALGOS[self.algo](
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/dqn/dqn.py", line 141, in __init__
+    self._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/dqn/dqn.py", line 144, in _setup_model
+    super()._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 189, in _setup_model
+    self.replay_buffer = self.replay_buffer_class(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/buffers.py", line 216, in __init__
+    self.next_observations = np.zeros((self.buffer_size, self.n_envs, *self.obs_shape), dtype=observation_space.dtype)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 26.3 GiB for an array with shape (1000000, 1, 4, 84, 84) and data type uint8
+[W 2024-04-27 19:49:42,414] Trial 16 failed with value None.
+[I 2024-04-27 19:50:00,721] Trial 14 finished with value: -3.2 and parameters: {'gamma': 0.9, 'learning_rate': 0.00036033094772718825, 'batch_size': 128, 'buffer_size': 100000, 'exploration_final_eps': 0.19897172403586189, 'exploration_fraction': 0.28371611984013073, 'target_update_interval': 1, 'learning_starts': 5000, 'train_freq': 1, 'subsample_steps': 8, 'net_arch': 'small'}. Best is trial 14 with value: -3.2.
+[I 2024-04-27 19:50:02,043] Trial 15 finished with value: -3.2 and parameters: {'gamma': 0.9999, 'learning_rate': 1.0059458954206296e-05, 'batch_size': 64, 'buffer_size': 10000, 'exploration_final_eps': 0.0390099713608993, 'exploration_fraction': 0.3143759626713541, 'target_update_interval': 1, 'learning_starts': 10000, 'train_freq': 1, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 14 with value: -3.2.
+[I 2024-04-27 19:50:09,060] Trial 9 finished with value: -1.8 and parameters: {'gamma': 0.99, 'learning_rate': 0.9469909070651373, 'batch_size': 64, 'buffer_size': 10000, 'exploration_final_eps': 0.1010175375672797, 'exploration_fraction': 0.29967114941624823, 'target_update_interval': 5000, 'learning_starts': 0, 'train_freq': 16, 'subsample_steps': 4, 'net_arch': 'tiny'}. Best is trial 9 with value: -1.8.
+[I 2024-04-27 19:50:34,419] Trial 6 finished with value: -6.4 and parameters: {'gamma': 0.995, 'learning_rate': 0.00039610980187089164, 'batch_size': 16, 'buffer_size': 10000, 'exploration_final_eps': 0.1416373684628955, 'exploration_fraction': 0.2126547101914409, 'target_update_interval': 20000, 'learning_starts': 1000, 'train_freq': 1, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 9 with value: -1.8.
+[I 2024-04-27 19:51:06,871] Trial 10 finished with value: -1.8 and parameters: {'gamma': 0.9, 'learning_rate': 3.2116333311717706e-05, 'batch_size': 16, 'buffer_size': 50000, 'exploration_final_eps': 0.1886097883669874, 'exploration_fraction': 0.37419378372878015, 'target_update_interval': 1, 'learning_starts': 1000, 'train_freq': 8, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 9 with value: -1.8.
+[I 2024-04-27 19:52:17,560] Trial 8 finished with value: -1.8 and parameters: {'gamma': 0.98, 'learning_rate': 0.6958117010327359, 'batch_size': 100, 'buffer_size': 50000, 'exploration_final_eps': 0.13592204185131104, 'exploration_fraction': 0.49848314809718214, 'target_update_interval': 10000, 'learning_starts': 0, 'train_freq': 8, 'subsample_steps': 2, 'net_arch': 'medium'}. Best is trial 9 with value: -1.8.
+[I 2024-04-27 19:53:37,192] Trial 5 finished with value: -3.2 and parameters: {'gamma': 0.999, 'learning_rate': 0.007338457169114555, 'batch_size': 100, 'buffer_size': 10000, 'exploration_final_eps': 0.0018015941260390855, 'exploration_fraction': 0.022718074027578916, 'target_update_interval': 5000, 'learning_starts': 1000, 'train_freq': 8, 'subsample_steps': 1, 'net_arch': 'small'}. Best is trial 9 with value: -1.8.
+Traceback (most recent call last):
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/train.py", line 279, in <module>
+    train()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/train.py", line 275, in train
+    exp_manager.hyperparameters_optimization()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 873, in hyperparameters_optimization
+    study.optimize(self.objective, n_jobs=self.n_jobs, n_trials=self.n_trials)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/study.py", line 451, in optimize
+    _optimize(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 99, in _optimize
+    f.result()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 159, in _optimize_sequential
+    frozen_trial = _run_trial(study, func, catch)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 247, in _run_trial
+    raise func_err
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/optuna/study/_optimize.py", line 196, in _run_trial
+    value_or_values = func(trial)
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/exp_manager.py", line 753, in objective
+    model = ALGOS[self.algo](
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/dqn/dqn.py", line 141, in __init__
+    self._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/dqn/dqn.py", line 144, in _setup_model
+    super()._setup_model()
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/off_policy_algorithm.py", line 189, in _setup_model
+    self.replay_buffer = self.replay_buffer_class(
+  File "/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/stable_baselines3/common/buffers.py", line 216, in __init__
+    self.next_observations = np.zeros((self.buffer_size, self.n_envs, *self.obs_shape), dtype=observation_space.dtype)
+numpy.core._exceptions._ArrayMemoryError: Unable to allocate 26.3 GiB for an array with shape (1000000, 1, 4, 84, 84) and data type uint8
