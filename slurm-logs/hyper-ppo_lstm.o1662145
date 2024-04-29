@@ -1,0 +1,31 @@
+/work/09894/nicolas_/ls6/rl-final-project
+Sat Apr 27 19:49:21 CDT 2024
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/bin:/work/09894/nicolas_/ls6/miniconda3/condabin:/work/09894/nicolas_/ls6/rl-final-project/google-cloud-sdk/bin:/opt/apps/xalt/xalt/bin:/opt/apps/pmix/3.2.3/bin:/opt/apps/cmake/3.24.2/bin:/opt/apps/intel19/python3/3.9.7/bin:/opt/apps/autotools/1.4/bin:/opt/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/opt/intel/compilers_and_libraries_2020.1.217/linux/bin/intel64:/opt/apps/gcc/9.4.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:.
+========== multitask-atari ==========
+Seed: 884283273
+Loading hyperparameters from: /work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/hyperparams/ppo_lstm.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('n_timesteps', 3600), ('policy', 'CnnLstmPolicy')])
+Using 1 environments
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median
+Number of finished trials:  500
+Best trial:
+Value:  1.8
+Params: 
+    batch_size: 128
+    n_steps: 8
+    gamma: 0.9
+    learning_rate: 4.8624636696159724e-05
+    ent_coef: 6.471651902640064e-06
+    clip_range: 0.2
+    n_epochs: 1
+    gae_lambda: 0.99
+    max_grad_norm: 0.7
+    vf_coef: 0.5094679802780085
+    net_arch: small
+    activation_fn: tanh
+    enable_critic_lstm: False
+    lstm_hidden_size: 16
+Writing report to logs/ppo_lstm/report_multitask-atari_500-trials-3600-tpe-median_1714280058

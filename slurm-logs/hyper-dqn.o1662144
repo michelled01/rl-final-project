@@ -1,0 +1,22 @@
+/work/09894/nicolas_/ls6/rl-final-project
+Sat Apr 27 19:46:40 CDT 2024
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/bin:/work/09894/nicolas_/ls6/miniconda3/condabin:/work/09894/nicolas_/ls6/rl-final-project/google-cloud-sdk/bin:/opt/apps/xalt/xalt/bin:/opt/apps/pmix/3.2.3/bin:/opt/apps/cmake/3.24.2/bin:/opt/apps/intel19/python3/3.9.7/bin:/opt/apps/autotools/1.4/bin:/opt/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/opt/intel/compilers_and_libraries_2020.1.217/linux/bin/intel64:/opt/apps/gcc/9.4.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:.
+========== multitask-atari ==========
+Seed: 3267255664
+Loading hyperparameters from: /work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/hyperparams/dqn.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('batch_size', 512),
+             ('buffer_size', 5000),
+             ('exploration_final_eps', 0.17198966248243439),
+             ('exploration_fraction', 0.04629326552135021),
+             ('gamma', 0.9999),
+             ('learning_rate', 0.0009722687647902346),
+             ('learning_starts', 0),
+             ('n_timesteps', 3600),
+             ('policy', 'CnnPolicy'),
+             ('target_update_interval', 10000),
+             ('train_freq', 1000)])
+Using 1 environments
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median

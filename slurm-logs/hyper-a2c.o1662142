@@ -1,0 +1,60 @@
+/work/09894/nicolas_/ls6/rl-final-project
+Sat Apr 27 19:41:06 CDT 2024
+/work/09894/nicolas_/ls6/miniconda3/envs/rl-final/bin:/work/09894/nicolas_/ls6/miniconda3/condabin:/work/09894/nicolas_/ls6/rl-final-project/google-cloud-sdk/bin:/opt/apps/xalt/xalt/bin:/opt/apps/pmix/3.2.3/bin:/opt/apps/cmake/3.24.2/bin:/opt/apps/intel19/python3/3.9.7/bin:/opt/apps/autotools/1.4/bin:/opt/intel/compilers_and_libraries_2020.4.304/linux/mpi/intel64/bin:/opt/intel/compilers_and_libraries_2020.1.217/linux/bin/intel64:/opt/apps/gcc/9.4.0/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:.
+========== multitask-atari ==========
+Seed: 87291447
+Loading hyperparameters from: /work/09894/nicolas_/ls6/miniconda3/envs/rl-final/lib/python3.10/site-packages/rl_zoo3/hyperparams/a2c.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('ent_coef', 1.0421682143411585e-05),
+             ('gae_lambda', 0.99),
+             ('gamma', 0.9),
+             ('learning_rate', 0.006279355789228186),
+             ('max_grad_norm', 0.7),
+             ('n_steps', 64),
+             ('n_timesteps', 3600),
+             ('normalize_advantage', False),
+             ('policy', 'CnnPolicy'),
+             ('use_rms_prop', False),
+             ('vf_coef', 0.10611607736145362)])
+Using 1 environments
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median
+Expected parameter logits (Tensor of shape (1, 18)) of distribution Categorical(logits: torch.Size([1, 18])) to satisfy the constraint IndependentConstraint(Real(), 1), but found invalid values:
+tensor([[nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan]])
+============
+Sampled hyperparams:
+{'ent_coef': 0.00017707291013341708,
+ 'gae_lambda': 0.95,
+ 'gamma': 0.95,
+ 'learning_rate': 0.9550150060980952,
+ 'max_grad_norm': 0.7,
+ 'n_steps': 128,
+ 'normalize_advantage': True,
+ 'policy_kwargs': {'activation_fn': <class 'torch.nn.modules.activation.ReLU'>,
+                   'net_arch': {'pi': [256, 256], 'vf': [256, 256]},
+                   'optimizer_class': <class 'torch.optim.rmsprop.RMSprop'>,
+                   'optimizer_kwargs': {'alpha': 0.99,
+                                        'eps': 1e-05,
+                                        'weight_decay': 0},
+                   'ortho_init': True},
+ 'use_rms_prop': True,
+ 'vf_coef': 0.8770536125545606}
+Number of finished trials:  500
+Best trial:
+Value:  -1.8
+Params: 
+    gamma: 0.95
+    normalize_advantage: False
+    max_grad_norm: 1
+    use_rms_prop: True
+    gae_lambda: 0.8
+    n_steps: 256
+    lr_schedule: constant
+    learning_rate: 0.2639483765900524
+    ent_coef: 2.4772847159542594e-06
+    vf_coef: 0.1990617811319626
+    ortho_init: False
+    net_arch: medium
+    activation_fn: relu
+Writing report to logs/a2c/report_multitask-atari_500-trials-3600-tpe-median_1714272390
