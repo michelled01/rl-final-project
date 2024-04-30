@@ -32,6 +32,7 @@
 #SBATCH -A IRI24006        # Project/Allocation name (req'd if you have more than 1)
 #SBATCH --mail-user=nicolas.hsu@utexas.edu
 #SBATCH --cpus-per-task 2  # halving pruner requires 2 cpus
+#SBATCH --mem=32G
 
 # Any other commands must follow all #SBATCH directives...
 module list
