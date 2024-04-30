@@ -99,8 +99,6 @@ def gradient_descent(y, q, optimizer):
     # Run backward pass
     error = (y - q)
 
-    # Clip error to range [-1, 1]
-    # error = error.clamp(min=-1, max=1)
     # Square error
     error = error**2
     error = error.sum()
@@ -118,3 +116,8 @@ def copy_network(Q):
     if torch.cuda.is_available():
         return q2.cuda()
     return q2
+
+def save_network(model, episode, out_dir):
+    out_dir = '{}/models'.format(out_dir)
+    make_dir(out_dir)
+    torch.save(model.state_dict(), '{}/episode_{}'.format(out_dir, episode))

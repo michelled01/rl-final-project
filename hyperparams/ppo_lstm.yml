@@ -1,6 +1,27 @@
 multitask-atari:
-  n_timesteps: 3600
+  n_timesteps: !!float 1e7
   policy: 'CnnLstmPolicy'
+  batch_size: 128
+  n_steps: 8
+  gamma: 0.9
+  learning_rate: 4.8624636696159724e-05
+  ent_coef: 6.471651902640064e-06
+  clip_range: 0.2
+  n_epochs: 1
+  gae_lambda: 0.99
+  max_grad_norm: 0.7
+  vf_coef: 0.5094679802780085
+  #net_arch: small
+  #activation_fn: tanh
+  #enable_critic_lstm: False
+  #lstm_hidden_size: 16
+  policy_kwargs: "dict(
+                    ortho_init=False,
+                    activation_fn=nn.ReLU,
+                    lstm_hidden_size=16,
+                    enable_critic_lstm=False,
+                    net_arch=dict(pi=[64,64], vf=[64,64])
+                  )"
 
 atari:
   env_wrapper:

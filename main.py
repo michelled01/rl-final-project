@@ -7,7 +7,7 @@ from PIL import Image
 
 from utils.logger import Logger
 from utils.fixed_replay_buffer import WrappedFixedReplayBuffer, History
-from utils.dqn import DeepQNetwork, Q_targets, Q_values, copy_network, gradient_descent
+from utils.dqn import DeepQNetwork, Q_targets, Q_values, copy_network, save_network, gradient_descent
 from utils.learn import e_greedy_action
 
 config = {
@@ -15,6 +15,7 @@ config = {
         "Pong/1/replay_logs",
         "Breakout/1/replay_logs"
     ],
+    'out_dir' : "Pong_and_Breakout",
     'action_mappings' : [
         np.array([0,1,3,4,11,12,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
         np.array([0,1,3,4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1], dtype=np.int32),
@@ -31,7 +32,8 @@ config = {
     'policy': 'CnnPolicy',
     'total-timesteps': 216000, # 1 hour of gameplay
     'max-episode-steps': 600,  # 10 seconds of gameplay
-    'frame_stack_size': 4
+    'frame_stack_size': 4,
+    'save_model_freq': 10
 }
 
 def gen_seed(config):
@@ -61,10 +63,10 @@ def main():
     params = {
         'num_episodes': 40,
         'minibatch_size': 4,
-        'max_episode_length': 1000, #int(10e6),  # T
+        'max_episode_length': 100, #int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
-        'train_freq': 1000,
+        'train_freq': 1,
         'target_update_freq': 10000,  # C: Target nerwork update frequency
         'num_actions': env.action_space.n,
         'min_steps_train': 50000,
@@ -99,6 +101,9 @@ def main():
         # img.save(f"img{step}.png")
         phi = torch.from_numpy(phi).float()
 
+        if (ep % config['save_model_freq']) == 0:
+            save_network(Q, ep, out_dir=config['out_dir'])
+
         for _ in range(params['max_episode_length']):
             step += 1
             # Select action a_t for current state s_t
@@ -106,12 +111,11 @@ def main():
 
             if step % config['log_freq'] == 0:
                 log.epsilon(epsilon, step)
+                log.reset_episode()
             # Execute action a_t in emulator and observe reward r_t and obs x_(t+1)
             obs, reward, terminated, truncated, info = env.step(action)
             done = terminated or truncated
 
-            # Clip reward to range [-1, 1]
-            # reward = max(-1.0, min(reward, 1.0))
             if reward: print(reward)
 
             H.add(obs)
@@ -141,6 +145,7 @@ def main():
             q_phi, loss = gradient_descent(y, q_values, optimizer)
             if step % (params['train_freq'] * config['log_freq']) == 0:
                 log.q_loss(q_phi, loss, step)
+
             # Reset Q_
             if step % params['target_update_freq'] == 0:
                 del Q_
@@ -151,7 +156,7 @@ def main():
             # Restart game if done
             if done:
                 H = History.initial(env)
-                log.reset_episode()
+                
                 params['cur_env_id'] = id(str(env.unwrapped.get_cur_env()))
                 break
 
