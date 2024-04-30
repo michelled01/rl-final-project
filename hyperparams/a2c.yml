@@ -1,20 +1,35 @@
 multitask-atari:
-  n_timesteps: 3600
+  n_timesteps: !!float 1e7
   policy: 'CnnPolicy'
-  # optimized
-  gamma: 0.9
-  normalize_advantage: False
-  max_grad_norm: 0.7
-  use_rms_prop: False
-  gae_lambda: 0.99
-  n_steps: 64
+  #gamma: 0.9
+  #normalize_advantage: False
+  #max_grad_norm: 0.7
+  #use_rms_prop: False
+  #gae_lambda: 0.99
+  #n_steps: 64
   #lr_schedule: linear
-  learning_rate: 0.006279355789228186
-  ent_coef: 1.0421682143411585e-05
-  vf_coef: 0.10611607736145362
+  #learning_rate: 0.006279355789228186
+  #ent_coef: 1.0421682143411585e-05
+  #vf_coef: 0.10611607736145362
   #ortho_init: True
   #net_arch: small
   #activation_fn: relu
+  #
+  # optimized
+  gamma: 0.95
+  normalize_advantage: False
+  max_grad_norm: 1
+  use_rms_prop: True
+  gae_lambda: 0.8
+  n_steps: 256
+  #lr_schedule: constant
+  learning_rate: 0.2639483765900524
+  ent_coef: 2.4772847159542594e-06
+  vf_coef: 0.1990617811319626
+  #ortho_init: False
+  #net_arch: medium
+  #activation_fn: relu
+  policy_kwargs: "dict(ortho_init=False, net_arch=dict(pi=[256,256],vf=[256,256]), activation_fn=nn.ReLU)"
 
 atari:
   env_wrapper:

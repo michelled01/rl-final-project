@@ -1,6 +1,16 @@
 multitask-atari:
-  n_timesteps: 3600
+  n_timesteps: !!float 1e7
   policy: 'MlpPolicy'
+  #n_delta: 32
+  #learning_rate: 0.3740639260296208
+  #delta_std: 0.05
+  #top_frac_size: 0.2
+  #zero_policy: False
+  n_delta: 32
+  learning_rate: 0.01102734211262095
+  delta_std: 0.025
+  #top_frac_size: 1.0
+  zero_policy: False
 
 # Tuned
 CartPole-v1:
