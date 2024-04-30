@@ -13,7 +13,6 @@ def e_greedy_action(Q, phi, env, step):
     if rand < epsilon:
         return env.action_space.sample(), epsilon
     else:
-        # a_t = argmax_a Q(phi, a)
         max_q = Q(phi).max(1)[1]
         return max_q.data[0], epsilon
     

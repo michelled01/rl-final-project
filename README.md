@@ -19,7 +19,8 @@ Other folders
 * `hyperparams`: baseline parameters for DQN, PPO, QRDQN PPO_LSTM, TRPO, A2C, ARS`
 * `slurm-logs`: Configuration files for hyperparameter search on TACC
 * `multitask_atari`: Configuration for the multitask Atari environment for preprocessing
-* `logs`: Logged runs from Tensorboard setup
+* `logs`: Logged model runs from Tensorboard setup
+* `slurm-logs`: Logged baseline runs from Tensorboard setup
 * `tacc_results`: Graphs generated from Tensorboard setup
 * `pong-is-hard.png`: Depiction of a typical agent on A2C and ARS which both go to one side of the screen instead of moving around
 * `requirements.txt`: Please install the listed packages

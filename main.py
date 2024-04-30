@@ -23,7 +23,7 @@ config = {
     'log_dir' : "logs/",
     'log_freq' : 1,
     # seed for random, np.random
-    #seed: 42,
+    # seed: 42,
     'atari-env-names': [
         'Pong',
         'Breakout',
@@ -61,13 +61,13 @@ def main():
     env = gym.wrappers.FrameStack(env, config['frame_stack_size'])
     env = gym.wrappers.HumanRendering(env)
     params = {
-        'num_episodes': 40,
+        'num_episodes': 4000,
         'minibatch_size': 4,
-        'max_episode_length': 100, #int(10e6),  # T
+        'max_episode_length': int(10e6),  # T
         'memory_size': int(4.5e5),  # N
         'history_size': 4,  # k
         'train_freq': 1,
-        'target_update_freq': 10000,  # C: Target nerwork update frequency
+        'target_update_freq': 10000,  # C
         'num_actions': env.action_space.n,
         'min_steps_train': 50000,
         'cur_env_id': 0
@@ -77,10 +77,8 @@ def main():
     
     log = Logger(log_dir=config['log_dir'])
     
-    # Initialize replay memory D to capacity N
     D = [WrappedFixedReplayBuffer(data_dir=path, replay_suffix=0, action_mappings=config['action_mappings'][i], observation_shape=(84, 84), stack_size=config['frame_stack_size']) for i,path in enumerate(config['in_dir'])]
    
-    # Initialize action-value function Q with random weights
     Q = DeepQNetwork(params['num_actions'])
     log.network(Q)
     
@@ -106,13 +104,13 @@ def main():
 
         for _ in range(params['max_episode_length']):
             step += 1
-            # Select action a_t for current state s_t
+            
             action, epsilon = e_greedy_action(Q, phi, env, step)
 
             if step % config['log_freq'] == 0:
                 log.epsilon(epsilon, step)
                 log.reset_episode()
-            # Execute action a_t in emulator and observe reward r_t and obs x_(t+1)
+                
             obs, reward, terminated, truncated, info = env.step(action)
             done = terminated or truncated
 
@@ -138,25 +136,21 @@ def main():
             # img.save(f"phi{step}.png")
             # img = Image.fromarray(np.transpose(phi2[0, :3, :, :]))
             # img.save(f"phi{step}.png")
-
-            # Perform a gradient descent step on ( y_j - Q(phi_j, a_j) )^2
             y = Q_targets(phi_plus1_mb, r_mb, done_mb, Q_)
             q_values = Q_values(Q, phi_mb, a_mb)
             q_phi, loss = gradient_descent(y, q_values, optimizer)
             if step % (params['train_freq'] * config['log_freq']) == 0:
                 log.q_loss(q_phi, loss, step)
 
-            # Reset Q_
+
             if step % params['target_update_freq'] == 0:
                 del Q_
                 Q_ = copy_network(Q)
 
             log.episode(reward)
 
-            # Restart game if done
             if done:
                 H = History.initial(env)
-                
                 params['cur_env_id'] = id(str(env.unwrapped.get_cur_env()))
                 break
 

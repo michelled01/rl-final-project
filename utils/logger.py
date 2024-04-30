@@ -5,20 +5,19 @@ class Logger:
 
     def __init__(self, log_dir):
         self.env_name = 'Pong-v0'
-        # TensorBoard
         self.writer = SummaryWriter(log_dir=log_dir)
-        # Episode Values
+
         self.ep = 0
         self.ep_rewards = []
         self.ep_max_reward = 0.0
         self.ep_min_reward = 0.0
-        # Updates Values
+
         self.grad_count = int(0)
         self.total_q = 0.0
         self.total_loss = 0.0
         self.mb_loss = 0.0
         self.mb_q = 0.0
-        # Counters
+        
         self.epsilon_val = 0.0
         self.update_count = 0.0
         self.step = 0.0
@@ -99,9 +98,7 @@ class Logger:
         self.ep_min_reward = 0.0
 
     def _log(self, name, value, step, type='scalar'):
-        # Add Env.Name to name
         name = '{}/{}'.format(self.env_name, name)
-        # Log in Tensorboard
         if type == 'scalar':
             self.writer.add_scalar(name, value, step)
             self.writer.scalar_dict = {}
