@@ -61,8 +61,9 @@ class Logger:
         avg_q = None if self.update_count == 0 else self.total_q / self.update_count
         nonzero_reward_list = [
             reward for reward in self.ep_rewards if reward != 0]
-        avg_ep_nonzero_reward = None if len(nonzero_reward_list) == 0 else sum(
-            nonzero_reward_list) / float(len(nonzero_reward_list))
+        if (len(nonzero_reward_list) != 0):
+            avg_ep_nonzero_reward = None if len(nonzero_reward_list) == 0 else sum(
+                nonzero_reward_list) / float(len(nonzero_reward_list))
 
         values = {
             'Episode': self.ep,
@@ -77,22 +78,20 @@ class Logger:
             'Minibatch Q': self.mb_q,
             'Epsilon': self.epsilon_val
         }
-        print('-------')
-        for key in values:
-            print('{}: {}'.format(key, values[key]))
 
     def reset_episode(self):
-        avg_ep_reward = sum(self.ep_rewards) / float(len(self.ep_rewards))
-        nonzero_reward_list = [
-            reward for reward in self.ep_rewards if reward != 0]
-        if (len(nonzero_reward_list) != 0):
-            avg_ep_nonzero_reward = sum(
-                nonzero_reward_list) / float(len(nonzero_reward_list))
+        if len(self.ep_rewards) != 0:
+            avg_ep_reward = sum(self.ep_rewards) / float(len(self.ep_rewards))
+            nonzero_reward_list = [
+                reward for reward in self.ep_rewards if reward != 0]
+            if (len(nonzero_reward_list) != 0):
+                avg_ep_nonzero_reward = sum(
+                    nonzero_reward_list) / float(len(nonzero_reward_list))
 
-            self._log('ep.average_reward_nonzero', avg_ep_nonzero_reward, self.ep)
-            self._log('ep.average_reward', avg_ep_reward, self.ep)
-            self._log('ep.min_reward', self.ep_min_reward, self.ep)
-            self._log('ep.max_reward', self.ep_max_reward, self.ep)
+                self._log('ep.average_reward_nonzero', avg_ep_nonzero_reward, self.ep)
+                self._log('ep.average_reward', avg_ep_reward, self.ep)
+                self._log('ep.min_reward', self.ep_min_reward, self.ep)
+                self._log('ep.max_reward', self.ep_max_reward, self.ep)
 
         self.ep += 1
         self.ep_rewards = []
